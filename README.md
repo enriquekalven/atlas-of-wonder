@@ -2,21 +2,25 @@
 
 *Interactive worlds for curious minds, from a first heartbeat to the edge of the universe.*
 
-A tile portal for Enrique Chan's learning projects. It's a static site with no build step and no dependencies.
+A tile portal for Enrique Chan's learning projects, live at **https://atlas-of-wonder.web.app**. It's a static site with no build step and no dependencies.
 
-| Tile | Status (checked 2026-10-21) |
+| Tile | Status (checked 2026-10-23) |
 |---|---|
 | [Cosmic Explorer 3D](https://cosmic-explorer-universe.web.app/) | Live (feature tile) |
 | [Human Body 3D Atlas](https://human-body-atlas.web.app/) | Live |
+| ChronoVerse 3D | **Not live yet**: only runs as a local preview |
+| [DinoVerse 3D](https://dino-portal-3d.web.app/) | Live |
+| [Inside Out Studio](https://inside-out-explorer.web.app/) | Linked, but nothing is deployed there yet (Firebase "Site Not Found") |
+| Take It Apart! | **Not live yet**: only runs as a local preview |
 | [Curious Little Minds](https://curious-little-minds.web.app/) | Live |
 | [SafeKids Portal](https://safe-kids.web.app/) | Live |
-| Prenatal Clinical Atlas | **Not live yet**: `prenatal-clinical-atlas.web.app` returns Firebase "Site Not Found" |
+| [Prenatal Clinical Atlas](https://prenatal-clinical-atlas.web.app/) | Live |
 
 ## Run it
 
 ```bash
 npm start            # preview at http://127.0.0.1:5173 (same security headers as production)
-npm test             # 45 offline tests: data, validator, security hardening
+npm test             # 50 offline tests: data, validator, security hardening
 npm run check:links  # live check: every URL vs. its declared status (needs network)
 ```
 
@@ -37,26 +41,24 @@ You need Node 20 or newer. There's nothing to install.
 
 Links must be `https://` on `*.web.app` or `*.firebaseapp.com`, so a typo or pasted third-party link can't reach kids. To use a custom domain, add it to `ALLOWED_HOST_SUFFIXES` in `public/js/validate.js`.
 
-## When the Prenatal Clinical Atlas goes live
+## When a "Not live yet" creation goes live
 
-`npm run check:links` will print `ACTION ... it's live now`. Then, in `creations.js`:
+ChronoVerse 3D and Take It Apart! only run as local previews for now. Once one is on Firebase Hosting:
 
-1. Set `status: 'live'`.
-2. Replace the placeholder SVG with a real screenshot.
-3. Add 1–3 facts and confirm the description. The current one-liner is inferred from the name only.
-4. Add its link to the `<noscript>` list.
+1. In `creations.js`, add its `https://` url, set `status: 'live'` and add 1–3 facts. The comment on the entry has its old preview address.
+2. Add the same number of facts to each of its five translations in `i18n.js`. A test checks that the counts match.
+3. Add its link to the `<noscript>` list in `public/index.html`.
+4. Run `npm test` and `npm run check:links`.
+
+A live tile can't link to a preview server on your Mac (`http://127.0.0.1:...`): that's a dead link for every visitor, and a test blocks it.
 
 ## Deploy (Firebase Hosting)
 
-Use your **personal** Firebase project, the same one that hosts the other kids' sites, not a work account.
+The repo is already set up: `.firebaserc` points at your **personal** Firebase project, `project-maui` (the one that hosts the other kids' sites), and `firebase.json` deploys to the `atlas-of-wonder` site.
 
 ```bash
-firebase login
-firebase use --add                              # pick your personal project
-firebase hosting:sites:create atlas-of-wonder   # optional: gives you atlas-of-wonder.web.app
-firebase target:apply hosting portal atlas-of-wonder
-# then add  "target": "portal"  inside "hosting" in firebase.json
-npm run deploy                                  # runs the tests first, then deploys
+firebase login     # once, with your personal Google account (not a work account)
+npm run deploy     # runs the tests first, then deploys to https://atlas-of-wonder.web.app
 ```
 
 Once you know the final URL, add `og:image` and `og:url` meta tags (they must be absolute URLs) for nicer link previews.
@@ -90,7 +92,8 @@ public/
 scripts/serve.mjs       local preview server
 scripts/check-links.mjs live link checker
 tests/                  node:test suites
-firebase.json           hosting config + security headers
+firebase.json           hosting config + security headers (deploys to the atlas-of-wonder site)
+.firebaserc             Firebase project: project-maui
 ```
 
 ## Credits
