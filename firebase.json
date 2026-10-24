@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "atlas-of-wonder",
     "public": "public",
     "cleanUrls": true,
     "trailingSlash": false,
