@@ -59,13 +59,14 @@ export const CREATIONS = Object.freeze([
     id: 'timeline-of-everything-3d',
     title: 'ChronoVerse 3D',
     kind: '3D deep-time timeline',
-    url: 'http://127.0.0.1:8090/',
-    status: 'live',
+    // Not deployed yet: it only runs as a local preview (http://127.0.0.1:8090/).
+    // To go live, add its https url, set status: 'live', and restore its facts here and in i18n.js.
+    status: 'coming-soon',
     size: 'standard',
     accent: 'chronoverse',
     description:
       'Fly through 13.8 billion years of history across 30 3D dioramas — from the Big Bang and Pangaea splitting into seven continents to dinosaurs, human evolution and Year 3000.',
-    facts: ['30 3D dioramas', '13.8B YA → 3000 CE', 'Pangaea Split Lab'],
+    facts: [],
     audiences: ['kids', 'students'],
     image: {
       src: 'assets/tiles/timeline-of-everything-3d.webp',
@@ -78,7 +79,7 @@ export const CREATIONS = Object.freeze([
     id: 'dino-portal-3d',
     title: 'DinoVerse 3D',
     kind: '3D paleontology & fossils',
-    url: 'http://127.0.0.1:8092/',
+    url: 'https://dino-portal-3d.web.app/',
     status: 'live',
     size: 'standard',
     accent: 'dino',
@@ -97,7 +98,7 @@ export const CREATIONS = Object.freeze([
     id: 'inside-out-studio',
     title: 'Inside Out Studio',
     kind: '3D engineering & CAD lab',
-    url: 'http://127.0.0.1:8137/',
+    url: 'https://inside-out-explorer.web.app/',
     status: 'live',
     size: 'standard',
     accent: 'studio',
@@ -116,13 +117,14 @@ export const CREATIONS = Object.freeze([
     id: 'take-it-apart',
     title: 'Take It Apart!',
     kind: '3D exploded-view workshop',
-    url: 'http://127.0.0.1:4173/',
-    status: 'live',
+    // Not deployed yet: it only runs as a local preview (http://127.0.0.1:4173/).
+    // To go live, add its https url, set status: 'live', and restore its facts here and in i18n.js.
+    status: 'coming-soon',
     size: 'standard',
     accent: 'storybook',
     description:
       'Pull apart seven everyday machines with Bolt the robot — car, house, jet engine, iPhone, laptop, TV and airplane — then race the clock to snap every piece back home.',
-    facts: ['7 everyday machines', 'X-ray & rebuild race', '23 sticker badges'],
+    facts: [],
     audiences: ['kids'],
     image: {
       src: 'assets/tiles/take-it-apart.webp',

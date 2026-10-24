@@ -548,7 +548,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'Línea del tiempo 3D',
       description:
         'Viaja por 13.800 millones de años en 30 dioramas 3D: del Big Bang y la división de Pangea en siete continentes a los dinosaurios, la evolución humana y el año 3000.',
-      facts: Object.freeze(['30 dioramas 3D', '13.800 M años → 3000', 'Laboratorio Pangea']),
+      facts: Object.freeze([]),
       alt: 'Escena de ChronoVerse 3D con el Sol recién nacido y la proto-Tierra fundida brillando dentro de una nebulosa solar en espiral.',
     }),
     zh: Object.freeze({
@@ -556,7 +556,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '3D 深时历史长卷',
       description:
         '穿越 138 亿年历史与 30 座 3D 全景沙盘——从宇宙大爆炸、盘古大陆分裂为七大洲，到恐龙时代、人类演化与公元 3000 年。',
-      facts: Object.freeze(['30 座 3D 沙盘', '138 亿年前 → 3000 年', '盘古大陆漂移实验室']),
+      facts: Object.freeze([]),
       alt: '时空宇宙 3D 场景：新生的太阳与炽热熔融的原初地球在旋转的太阳星云中闪耀。',
     }),
     ja: Object.freeze({
@@ -564,7 +564,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '3D 138億年タイムライン',
       description:
         '30の3Dジオラマで138億年の歴史を飛行体験——ビッグバンやパンゲア超大陸の分裂から、恐竜、人類の進化、西暦3000年まで。',
-      facts: Object.freeze(['30の3Dジオラマ', '138億年前→西暦3000年', 'パンゲア大陸分裂ラボ']),
+      facts: Object.freeze([]),
       alt: '渦巻く太陽星雲の中で生まれたばかりの太陽と灼熱の原始地球が輝く「クロノバース 3D」のシーン。',
     }),
     ko: Object.freeze({
@@ -572,7 +572,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '3D 빅히스토리 타임라인',
       description:
         '30개의 3D 디오라마를 따라 138억 년의 역사를 비행하세요 — 빅뱅과 판게아 초대륙의 분리부터 공룡, 인류 진화, 서기 3000년까지.',
-      facts: Object.freeze(['30개 3D 디오라마', '138억 년 전 → 3000년', '판게아 대륙 이동 랩']),
+      facts: Object.freeze([]),
       alt: '소용돌이치는 태양 성운 속에서 갓 태어난 태양과 용암으로 빛나는 원시 지구를 보여주는 크로노버스 3D 장면.',
     }),
     fr: Object.freeze({
@@ -580,7 +580,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'Frise du temps profond 3D',
       description:
         'Survolez 13,8 milliards d’années à travers 30 dioramas 3D — du Big Bang et la fracturation de la Pangée aux dinosaures, à l’évolution humaine et à l’an 3000.',
-      facts: Object.freeze(['30 dioramas 3D', '13,8 Md d’ans → 3000', 'Labo dérive Pangée']),
+      facts: Object.freeze([]),
       alt: 'Scène de ChronoVerse 3D montrant le Soleil naissant et la proto-Terre en fusion au cœur d’une nébuleuse solaire tourbillonnante.',
     }),
   }),
@@ -677,7 +677,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'Taller 3D pieza por pieza',
       description:
         'Desarma siete máquinas cotidianas con el robot Bolt — coche, casa, motor a reacción, iPhone, portátil, televisor y avión — y compite contra el reloj para volver a armarlas.',
-      facts: Object.freeze(['7 máquinas cotidianas', 'Rayos X y carrera', '23 insignias']),
+      facts: Object.freeze([]),
       alt: 'Vista explotada en 3D de ¡Desármalo! de un coche rojo con etiquetas flotantes en el motor, el capó, los asientos, la batería y las ruedas.',
     }),
     zh: Object.freeze({
@@ -685,7 +685,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '儿童 3D 拆解工坊',
       description:
         '和小机器人 Bolt 一起拆开七种日常事物——汽车、房屋、喷气发动机、iPhone、笔记本电脑、电视和飞机——再争分夺秒把零件拼回原位。',
-      facts: Object.freeze(['7 种日常机械', 'X 光与拼装竞速', '23 枚贴纸徽章']),
+      facts: Object.freeze([]),
       alt: '《拆开看看！》中一辆红色汽车的 3D 拆解画面，发动机、引擎盖、座椅、电池和车轮上悬浮着名称标签。',
     }),
     ja: Object.freeze({
@@ -693,7 +693,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'キッズ 3D 分解ワークショップ',
       description:
         'ロボットのボルトと一緒に、車・家・ジェットエンジン・iPhone・ノートPC・テレビ・飛行機の7つをバラバラに分解し、タイムアタックで組み立てよう。',
-      facts: Object.freeze(['7つの身近なメカ', 'X線＆組み立てレース', '23枚のステッカー']),
+      facts: Object.freeze([]),
       alt: 'エンジン、ボンネット、シート、バッテリー、タイヤに名前タグが浮かぶ赤い車の 3D 分解図。',
     }),
     ko: Object.freeze({
@@ -701,7 +701,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '어린이 3D 분해 공방',
       description:
         '로봇 볼트와 함께 자동차, 집, 제트 엔진, 아이폰, 노트북, TV, 비행기 등 7가지 일상 기계를 분해하고 시간 안에 다시 조립해 보세요.',
-      facts: Object.freeze(['7가지 일상 기계', 'X-레이 & 조립 레이스', '스티커 배지 23종']),
+      facts: Object.freeze([]),
       alt: '엔진, 보닛, 시트, 배터리, 바퀴에 이름표가 떠 있는 빨간 자동차의 3D 분해 화면.',
     }),
     fr: Object.freeze({
@@ -709,7 +709,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'Atelier 3D pièce par pièce',
       description:
         'Démontez sept objets du quotidien avec le robot Bolt — voiture, maison, turboréacteur, iPhone, ordinateur portable, téléviseur et avion — puis remontez-les contre la montre.',
-      facts: Object.freeze(['7 machines du quotidien', 'Rayons X & course', '23 autocollants']),
+      facts: Object.freeze([]),
       alt: 'Vue éclatée 3D d’une voiture rouge avec des étiquettes flottantes sur le moteur, le capot, les sièges, la batterie et les roues.',
     }),
   }),

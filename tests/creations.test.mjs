@@ -38,3 +38,11 @@ test('coming-soon tiles carry no highlight facts (nothing unverified)', () => {
     assert.deepEqual(c.facts, [], `${c.id} lists facts before it is live`);
   }
 });
+
+// The validator still accepts http://127.0.0.1:<port> for local previews, but the
+// published portal must not link to one: it's a dead link for every visitor.
+test('live tiles link to public https sites, not local preview servers', () => {
+  for (const { id, url } of CREATIONS.filter((entry) => entry.status === 'live')) {
+    assert.equal(new URL(url).protocol, 'https:', `${id} links to ${url}, which only works on this computer`);
+  }
+});
