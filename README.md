@@ -28,7 +28,7 @@ You need Node 20 or newer. There's nothing to install.
 
 ## What the visitor can do
 
-- **Languages (9)**: switch between English (`en`), Español (`es`), 中文 (`zh`), 粵語 (`yue`), 日本語 (`ja`), 한국어 (`ko`), Português (`pt`), Français (`fr`), and Italiano (`it`) — matching the union of all languages across the sibling apps. Auto-detects from `?lang=`, saved preference, or browser locale (`zh-HK` / `yue` resolves to Cantonese).
+- **Languages (11)**: switch between English (`en`), Español (`es`), 中文 (`zh`), 粵語 (`yue`), 日本語 (`ja`), 한국어 (`ko`), Português (`pt`), Français (`fr`), Italiano (`it`), Deutsch (`de`), and العربية (`ar`, with full RTL layout) — matching the union of all languages across the sibling apps plus German and Arabic. Auto-detects from `?lang=`, saved preference, or browser locale (`zh-HK` / `yue` resolves to Cantonese).
 - **Show worlds for**: Everyone, Kids, Students, Parents or Clinicians. Tiles that don't match are dimmed rather than hidden, so the layout never jumps. The choice is kept in the URL (`?for=kids`), so you can share a filtered view.
 - **Explorer passport**: opening a world stamps its tile "Visited" (the stamp lands when you come back to the tab). The counter shows "2 of 6 worlds explored". Stamps stay in this browser only, and there's a Reset link.
 - **Day / Night**: follows the system setting until the visitor picks one.
@@ -47,7 +47,7 @@ Links must be `https://` on `*.web.app` or `*.firebaseapp.com`, so a typo or pas
 ChronoVerse 3D and Take It Apart! only run as local previews for now. Once one is on Firebase Hosting:
 
 1. In `creations.js`, add its `https://` url, set `status: 'live'` and add 1–3 facts. The comment on the entry has its old preview address.
-2. Add the same number of facts to each of its eight translations in `i18n.js`. A test checks that the counts match.
+2. Add the same number of facts to each of its ten translations in `i18n.js`. A test checks that the counts match.
 3. Add its link to the `<noscript>` list in `public/index.html`.
 4. Run `npm test` and `npm run check:links`.
 

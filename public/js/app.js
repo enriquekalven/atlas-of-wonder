@@ -1,6 +1,6 @@
 /**
  * Atlas of Wonder: renders the tiles and wires four small interactions.
- *   1. Multi-language switcher (EN, ES, 中文, 粵語, 日本語, 한국어, PT, FR, IT) with ?lang= and localStorage.
+ *   1. Multi-language switcher (EN, ES, 中文, 粵語, 日本語, 한국어, PT, FR, IT, DE, العربية) with ?lang= and localStorage.
  *   2. "Show worlds for" chips: dim tiles that don't match (shareable ?for=).
  *   3. Explorer passport: a tile gets a "Visited" stamp once it's opened.
  *   4. Day / Night toggle.
@@ -11,6 +11,7 @@ import {
   DEFAULT_LANG,
   LANGUAGES,
   UI_STRINGS,
+  getLanguageDir,
   isSupportedLanguage,
   localizeCreation,
   resolveLanguage,
@@ -305,6 +306,7 @@ function renderLangSwitch() {
 function paintStaticChrome() {
   const strings = t();
   document.documentElement.lang = currentLang;
+  document.documentElement.dir = getLanguageDir(currentLang);
   document.title = strings.pageTitle;
   document.querySelector('meta[name="description"]')?.setAttribute('content', strings.metaDescription);
   $('skip-link').textContent = strings.skipLink;

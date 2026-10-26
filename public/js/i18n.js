@@ -1,7 +1,7 @@
 /**
  * Localization dictionary and pure language-resolution helpers.
  *
- * Supported languages (9 languages across all Atlas of Wonder apps):
+ * Supported languages (11 languages across all Atlas of Wonder apps):
  *   - en:  English
  *   - es:  Español (Spanish)
  *   - zh:  中文 (Simplified Chinese / Mandarin)
@@ -11,6 +11,8 @@
  *   - pt:  Português (Portuguese)
  *   - fr:  Français (French)
  *   - it:  Italiano (Italian)
+ *   - de:  Deutsch (German)
+ *   - ar:  العربية (Arabic, RTL)
  */
 import { CREATIONS } from './creations.js';
 
@@ -26,9 +28,18 @@ export const LANGUAGES = Object.freeze([
   Object.freeze({ code: 'pt', label: 'PT', nativeName: 'Português', ariaLabel: 'PT · Português' }),
   Object.freeze({ code: 'fr', label: 'FR', nativeName: 'Français', ariaLabel: 'FR · Français' }),
   Object.freeze({ code: 'it', label: 'IT', nativeName: 'Italiano', ariaLabel: 'IT · Italiano' }),
+  Object.freeze({ code: 'de', label: 'DE', nativeName: 'Deutsch', ariaLabel: 'DE · Deutsch' }),
+  Object.freeze({ code: 'ar', label: 'العربية', nativeName: 'العربية', ariaLabel: 'العربية' }),
 ]);
 
 export const LANGUAGE_CODES = Object.freeze(LANGUAGES.map((l) => l.code));
+
+export const RTL_LANGUAGES = Object.freeze(['ar']);
+
+/** Returns 'rtl' for right-to-left languages (Arabic) and 'ltr' otherwise. */
+export function getLanguageDir(code) {
+  return typeof code === 'string' && RTL_LANGUAGES.includes(code) ? 'rtl' : 'ltr';
+}
 
 const listFormatters = new Map(
   LANGUAGE_CODES.map((code) => [
@@ -543,6 +554,118 @@ export const UI_STRINGS = Object.freeze({
         : `${visitedCount} su ${totalLive} mondi esplorati`;
     },
   }),
+
+  de: Object.freeze({
+    pageTitle: 'Atlas der Wunder · Interaktive Lernwelten von Enrique Chan',
+    metaDescription:
+      'Interaktive Lernwelten von Enrique Chan: ein 3D-Universum, ein 3D-Atlas des menschlichen Körpers, Gutenachtgeschichten über KI und ein ruhiger, wissenschaftlich fundierter Elternratgeber.',
+    skipLink: 'Zu den Werken springen',
+    langGroupLabel: 'Sprache',
+    nightMode: 'Nachtmodus',
+    mastheadTitle: 'Atlas der Wunder',
+    mastheadLede:
+      'Interaktive Welten für neugierige Köpfe – vom ersten Herzschlag bis zum Rand des Universums.',
+    worldsHeading: 'Werke',
+    filterLabel: 'Welten zeigen für',
+    everyone: 'Alle',
+    audiences: Object.freeze({
+      kids: 'Kinder',
+      students: 'Studierende',
+      parents: 'Eltern',
+      clinicians: 'Fachpersonal',
+    }),
+    audienceNouns: Object.freeze({
+      kids: 'Kinder',
+      students: 'Studierende',
+      parents: 'Eltern',
+      clinicians: 'medizinisches Fachpersonal',
+    }),
+    passportLabel: 'Entdeckerpass',
+    passportReset: 'Zurücksetzen',
+    stampVisited: 'Besucht',
+    opensInNewTab: ' (öffnet in einem neuen Tab)',
+    highlightsLabel: 'Highlights',
+    openCta: 'Öffnen',
+    notLiveYet: 'Demnächst verfügbar',
+    emptyWorlds: 'Noch keine Welten zum Anzeigen.',
+    footerCalm:
+      'Bewusst ruhig gestaltet: keine Werbung, keine Konten, kein Autoplay und kein Tracking auf dieser Seite. Pass-Stempel bleiben in Ihrem Browser.',
+    footerCredits:
+      'Die Kachelbilder sind Screenshots der jeweiligen Projekte. Weltraumbilder: NASA & ESO. Anatomiemodell: BodyParts3D © DBCLS & NIH HuBMAP, CC BY 4.0.',
+    formatSummary(live, soon) {
+      const parts = [`${live} ${live === 1 ? 'aktive Welt' : 'aktive Welten'}`];
+      if (soon > 0) parts.push(`${soon} in Vorbereitung`);
+      return parts.join(' · ');
+    },
+    formatAudiencePhrase(keys) {
+      return `Für ${formatList('de', keys.map((k) => this.audienceNouns[k]))}`;
+    },
+    formatFilterStatus(audienceKey, matchCount, totalCount) {
+      if (audienceKey === 'all') return `Alle ${totalCount} Welten werden angezeigt.`;
+      return `${matchCount} von ${totalCount} Welten sind für ${this.audienceNouns[audienceKey]}.`;
+    },
+    formatPassport(visitedCount, totalLive) {
+      return visitedCount === totalLive
+        ? `Alle ${totalLive} Welten erkundet!`
+        : `${visitedCount} von ${totalLive} Welten erkundet`;
+    },
+  }),
+
+  ar: Object.freeze({
+    pageTitle: 'أطلس العجائب · عوالم تعليمية تفاعلية من ابتكار إنريكي تشان',
+    metaDescription:
+      'عوالم تعليمية تفاعلية من ابتكار إنريكي تشان: كون ثلاثي الأبعاد، أطلس ثلاثي الأبعاد لجسم الإنسان، قصص ما قبل النوم لشرح الذكاء الاصطناعي، ودليل هادئ للآباء.',
+    skipLink: 'انتقل إلى الإبداعات',
+    langGroupLabel: 'اللغة',
+    nightMode: 'الوضع الليلي',
+    mastheadTitle: 'أطلس العجائب',
+    mastheadLede:
+      'عوالم تفاعلية للعقول الفضولية، من أول نبضة قلب إلى حافة الكون.',
+    worldsHeading: 'الإبداعات',
+    filterLabel: 'عرض العوالم لـ',
+    everyone: 'الجميع',
+    audiences: Object.freeze({
+      kids: 'الأطفال',
+      students: 'الطلاب',
+      parents: 'الآباء',
+      clinicians: 'الأطباء',
+    }),
+    audienceNouns: Object.freeze({
+      kids: 'الأطفال',
+      students: 'الطلاب',
+      parents: 'الآباء',
+      clinicians: 'الأطباء',
+    }),
+    passportLabel: 'جواز المستكشف',
+    passportReset: 'إعادة ضبط',
+    stampVisited: 'تمت الزيارة',
+    opensInNewTab: ' (يفتح في علامة تبويب جديدة)',
+    highlightsLabel: 'أبرز المزايا',
+    openCta: 'افتح',
+    notLiveYet: 'قريباً',
+    emptyWorlds: 'لا توجد عوالم لعرضها بعد.',
+    footerCalm:
+      'هادئ بالتصميم: بلا إعلانات، بلا حسابات، بلا تشغيل تلقائي وبلا تتبع في هذه الصفحة. تُحفظ أختام الجواز في متصفحك فقط.',
+    footerCredits:
+      'صور البطاقات هي لقطات شاشة لكل مشروع. صور الفضاء: NASA و ESO. النموذج التشريحي: BodyParts3D © DBCLS و NIH HuBMAP، برخصة CC BY 4.0.',
+    formatSummary(live, soon) {
+      const parts = [`${live} عوالم متاحة`];
+      if (soon > 0) parts.push(`${soon} قيد الإعداد`);
+      return parts.join(' · ');
+    },
+    formatAudiencePhrase(keys) {
+      return `مناسب لـ ${formatList('ar', keys.map((k) => this.audienceNouns[k]))}`;
+    },
+    formatFilterStatus(audienceKey, matchCount, totalCount) {
+      if (audienceKey === 'all') return `يتم عرض جميع العوالم الـ ${totalCount}.`;
+      return `${matchCount} من أصل ${totalCount} عوالم مخصصة لـ ${this.audienceNouns[audienceKey]}.`;
+    },
+    formatPassport(visitedCount, totalLive) {
+      return visitedCount === totalLive
+        ? `تم استكشاف جميع العوالم الـ ${totalLive}!`
+        : `تم استكشاف ${visitedCount} من ${totalLive} عوالم`;
+    },
+  }),
 });
 
 export const CREATION_TRANSLATIONS = Object.freeze({
@@ -611,6 +734,22 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       facts: Object.freeze(['6.451 esopianeti', 'Tour guidato', 'Quiz spaziale']),
       alt: 'Esploratore Cosmico 3D che mostra la Terra vista dallo spazio, con la Stazione Spaziale Internazionale etichettata su un campo stellato.',
     }),
+    de: Object.freeze({
+      title: 'Kosmischer Entdecker 3D',
+      kind: '3D-Universum',
+      description:
+        'Fliege von Erde und Mond über die Voyager-Sonden hinaus zu nahen Exoplaneten, der Milchstraße und dem Rand des sichtbaren Universums – mit echten Bildern von NASA und ESO.',
+      facts: Object.freeze(['6.451 Exoplaneten', 'Geführte Tour', 'Weltraum-Quiz']),
+      alt: 'Kosmischer Entdecker 3D zeigt die Erde aus dem All mit der beschrifteten Internationalen Raumstation vor einem Sternenfeld.',
+    }),
+    ar: Object.freeze({
+      title: 'المستكشف الكوني ثلاثي الأبعاد',
+      kind: 'كون ثلاثي الأبعاد',
+      description:
+        'حلّق من الأرض والقمر متجاوزاً مسبارَي فوياجر إلى الكواكب الخارجية القريبة ودرب التبانة وحافة الكون المرئي، مع صور حقيقية من NASA و ESO.',
+      facts: Object.freeze(['6,451 كوكباً خارجياً', 'جولة إرشادية', 'مسابقة فضائية']),
+      alt: 'المستكشف الكوني ثلاثي الأبعاد يعرض كوكب الأرض من الفضاء مع تسمية محطة الفضاء الدولية أمام حقل من النجوم.',
+    }),
   }),
 
   'human-body-atlas': Object.freeze({
@@ -677,6 +816,22 @@ export const CREATION_TRANSLATIONS = Object.freeze({
         'Anatomia 3D realistica da esplorare strato dopo strato: pelle, muscoli, scheletro, organi, cervello e nervi, con flusso sanguigno animato.',
       facts: Object.freeze(['2.225 strutture', 'Modalità bimbi e clinica', '9 lingue']),
       alt: 'Atlante 3D del Corpo Umano che mostra una figura 3D in piedi con muscoli e scheletro visibili.',
+    }),
+    de: Object.freeze({
+      title: '3D-Atlas des menschlichen Körpers',
+      kind: '3D-Anatomie',
+      description:
+        'Realistische 3D-Anatomie zum Schicht-für-Schicht-Entdecken: Haut, Muskeln, Skelett, Organe, Gehirn und Nerven mit animiertem Blutfluss.',
+      facts: Object.freeze(['2.225 Strukturen', 'Kinder- & Klinikmodus', '9 Sprachen']),
+      alt: '3D-Atlas des menschlichen Körpers mit einer stehenden 3D-Figur, deren Muskeln und Skelett sichtbar sind.',
+    }),
+    ar: Object.freeze({
+      title: 'أطلس جسم الإنسان ثلاثي الأبعاد',
+      kind: 'تشريح ثلاثي الأبعاد',
+      description:
+        'تشريح ثلاثي الأبعاد واقعي يمكنك تقشيره طبقة تلو الأخرى: الجلد والعضلات والهيكل العظمي والأعضاء والدماغ والأعصاب مع تدفق دموي حي.',
+      facts: Object.freeze(['2,225 بنية تشريحية', 'وضع للأطفال والأطباء', '9 لغات']),
+      alt: 'أطلس جسم الإنسان ثلاثي الأبعاد يعرض مجسماً واقفاً تظهر فيه العضلات والهيكل العظمي بوضوح.',
     }),
   }),
 
@@ -745,6 +900,22 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       facts: Object.freeze(['3–7 anni', 'EN · ES · 中文', 'Lettura audio gratuita']),
       alt: 'Copertina di Lily & Robo: Avventure di giorno e di notte, un albo illustrato ad acquerello con una bambina e un piccolo robot rotondo sotto un cielo stellato.',
     }),
+    de: Object.freeze({
+      title: 'Kleine Neugierige Köpfe',
+      kind: 'Bilderbücher & Vorlesegeschichten',
+      description:
+        'Warmherzige Aquarell-Gutenachtgeschichten, die KI kindgerecht erklären – beginnend mit Lily & Robo: Abenteuer bei Tag und Nacht.',
+      facts: Object.freeze(['3 bis 7 Jahre', 'EN · ES · 中文', 'Kostenloses Vorlesen']),
+      alt: 'Buchcover von Lily & Robo: Abenteuer bei Tag und Nacht – ein Aquarell-Bilderbuch mit einem Mädchen und einem kleinen runden Roboter unter dem Sternenhimmel.',
+    }),
+    ar: Object.freeze({
+      title: 'عقول صغيرة فضولية',
+      kind: 'كتب مصوّرة وقراءة مسموعة',
+      description:
+        'قصص دافئة بالألوان المائية قبل النوم تشرح الذكاء الاصطناعي ببساطة، بدءاً من قصة ليلي وروبو: مغامرات النهار والليل.',
+      facts: Object.freeze(['من 3 إلى 7 سنوات', 'EN · ES · 中文', 'قراءة صوتية مجانية']),
+      alt: 'غلاف كتاب ليلي وروبو: مغامرات النهار والليل المرسوم بالألوان المائية ويُظهر طفلة وروبوتاً صغيراً مستديراً تحت سماء مرصعة بالنجوم.',
+    }),
   }),
 
   'safekids-portal': Object.freeze({
@@ -811,6 +982,22 @@ export const CREATION_TRANSLATIONS = Object.freeze({
         'Una guida serena e basata sulla ricerca per i genitori: programmi a basso stimolo, giochi senza pubblicità, merende genuine e audio senza schermo per fascia d’età.',
       facts: Object.freeze(['119 selezioni', '0–12 anni', '30 studi citati']),
       alt: 'Illustrazione del Portale SafeKids: un bambino costruisce con blocchi di legno accanto a un lettore audio senza schermo e a una pila di libri illustrati.',
+    }),
+    de: Object.freeze({
+      title: 'SafeKids-Portal',
+      kind: 'Elternratgeber',
+      description:
+        'Ein ruhiger, wissenschaftlich fundierter Elternratgeber: reizarme Serien, werbefreie Spiele, gesunde Snack-Alternativen und bildschirmfreies Audio nach Alter.',
+      facts: Object.freeze(['119 Empfehlungen', '0 bis 12 Jahre', '30 zitierte Studien']),
+      alt: 'Illustration des SafeKids-Portals: Ein Kind baut mit Holzklötzen neben einem bildschirmfreien Audioplayer und einem Stapel Bilderbücher.',
+    }),
+    ar: Object.freeze({
+      title: 'بوابة SafeKids',
+      kind: 'دليل للآباء',
+      description:
+        'دليل هادئ ومدعوم بالأبحاث للآباء: عروض منخفضة التحفيز، ألعاب بلا إعلانات، بدائل غذائية طبيعية وصوتيات بلا شاشات حسب عمر طفلك.',
+      facts: Object.freeze(['119 اختياراً منتقى', 'من 0 إلى 12 سنة', '30 دراسة علمية']),
+      alt: 'رسم توضيحي لبوابة SafeKids: طفل يبني بمكعبات خشبية بجانب مشغل صوتي بلا شاشة وكومة من الكتب المصورة.',
     }),
   }),
 
@@ -879,6 +1066,22 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       facts: Object.freeze([]),
       alt: 'Scena di ChronoVerse 3D con il Sole appena nato e la proto-Terra fusa che brillano dentro una nebulosa solare a spirale.',
     }),
+    de: Object.freeze({
+      title: 'ChronoVerse 3D',
+      kind: '3D-Tiefenzeitleiste',
+      description:
+        'Fliege durch 13,8 Milliarden Jahre in 30 3D-Dioramen – vom Urknall und dem Auseinanderbrechen Pangäas über die Dinosaurier und die menschliche Evolution bis zum Jahr 3000.',
+      facts: Object.freeze([]),
+      alt: 'ChronoVerse-3D-Szene mit der neugeborenen Sonne und der geschmolzenen Proto-Erde in einem wirbelnden Sonnennebel.',
+    }),
+    ar: Object.freeze({
+      title: 'ChronoVerse 3D',
+      kind: 'خط زمني ثلاثي الأبعاد للتاريخ العميق',
+      description:
+        'حلّق عبر 13.8 مليار سنة في 30 مشهداً ثلاثي الأبعاد — من الانفجار العظيم وانقسام بانجيا إلى الديناصورات وتطور الإنسان وعام 3000.',
+      facts: Object.freeze([]),
+      alt: 'مشهد من ChronoVerse 3D يُظهر الشمس الوليدة والأرض الأولية المنصهرة تتوهجان داخل سديم شمسي حلزوني.',
+    }),
   }),
 
   'dino-portal-3d': Object.freeze({
@@ -945,6 +1148,22 @@ export const CREATION_TRANSLATIONS = Object.freeze({
         'Esplora 29 specie preistoriche in sei ere geologiche con raggi X 3D a 3 strati, richiami bioacustici, narrazione Chirp 3 HD e simulatore dell’impatto di Chicxulub.',
       facts: Object.freeze(['29 specie preistoriche', 'Raggi X 3D a 3 strati', 'Impatto di Chicxulub']),
       alt: 'DinoVerse 3D che mostra un Tyrannosaurus rex in 3D con squame e denti dettagliati su una piattaforma girevole illuminata.',
+    }),
+    de: Object.freeze({
+      title: 'DinoVerse 3D',
+      kind: '3D-Paläontologie & Fossilien',
+      description:
+        'Erkunde 29 prähistorische Arten aus sechs Erdzeitaltern mit 3-stufigem 3D-Röntgenblick, bioakustischen Rufen, Chirp-3-HD-Erzählung und Chicxulub-Einschlaglabor.',
+      facts: Object.freeze(['29 prähistorische Arten', '3-Schichten-3D-Röntgen', 'Chicxulub-Einschlaglabor']),
+      alt: 'DinoVerse 3D zeigt einen 3D-Tyrannosaurus rex mit detaillierten Schuppen und Zähnen auf einem beleuchteten Drehteller.',
+    }),
+    ar: Object.freeze({
+      title: 'DinoVerse 3D',
+      kind: 'علم الحفريات والديناصورات 3D',
+      description:
+        'استكشف 29 كائناً من عصور ما قبل التاريخ عبر ستة عصور جيولوجية مع أشعة سينية ثلاثية الطبقات، وأصوات حيوية، وسرد Chirp 3 HD ومختبر اصطدام تشيكشولوب.',
+      facts: Object.freeze(['29 كائناً ما قبل التاريخ', 'أشعة سينية 3D من 3 طبقات', 'مختبر نيازك تشيكشولوب']),
+      alt: 'DinoVerse 3D يعرض ديناصور تيرانوصور ركس ثلاثي الأبعاد بحراشف وأسنان مفصلة على منصة دوارة مضيئة.',
     }),
   }),
 
@@ -1013,6 +1232,22 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       facts: Object.freeze(['18 categorie di macchine', '5 modalità interattive', 'Guida, vola e lancia']),
       alt: 'Vista esplosa 3D in Inside Out Studio di una Ferrari SF90 Stradale rossa che mostra il motore V8 biturbo e i motori ibridi.',
     }),
+    de: Object.freeze({
+      title: 'Inside Out Studio',
+      kind: '3D-Ingenieur- & Explosionslabor',
+      description:
+        'Zerlege in 3D und steuere ikonische reale Maschinen aus 18 Kategorien – Supersportwagen, Verkehrsflugzeuge, U-Boote, Raketen, Mars-Rover, Hochgeschwindigkeitszüge und mechanische Uhren.',
+      facts: Object.freeze(['18 Maschinenkategorien', '5 interaktive Modi', 'Fahren, fliegen & starten']),
+      alt: '3D-Explosionsansicht im Inside Out Studio eines roten Ferrari SF90 Stradale mit sichtbarem V8-Biturbomotor und Hybridantrieb.',
+    }),
+    ar: Object.freeze({
+      title: 'Inside Out Studio',
+      kind: 'مختبر الهندسة والتفكيك ثلاثي الأبعاد',
+      description:
+        'فكّك بُعدياً وقُد آلات حقيقية شهيرة عبر 18 فئة — سيارات خارقة، طائرات ركاب، غواصات، صواريخ، مركبات المريخ، قطارات فائقة السرعة وساعات ميكانيكية.',
+      facts: Object.freeze(['18 فئة من الآلات', '5 أوضاع تفاعلية', 'قُد وحلّق وأطلِق']),
+      alt: 'عرض تفصيلي ثلاثي الأبعاد في Inside Out Studio لسيارة فيراري SF90 Stradale حمراء يكشف محرك V8 المزدوج التوربو والمحركات الهجينة.',
+    }),
   }),
 
   'take-it-apart': Object.freeze({
@@ -1080,6 +1315,22 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       facts: Object.freeze([]),
       alt: 'Vista esplosa 3D di un’auto rossa con etichette fluttuanti su motore, cofano, sedili, batteria e ruote.',
     }),
+    de: Object.freeze({
+      title: 'Bau es auseinander!',
+      kind: '3D-Werkstatt Teil für Teil',
+      description:
+        'Nimm mit dem Roboter Bolt sieben Alltagsdinge auseinander – Auto, Haus, Düsentriebwerk, iPhone, Laptop, Fernseher und Flugzeug – und setze jedes Teil gegen die Uhr wieder zusammen.',
+      facts: Object.freeze([]),
+      alt: '3D-Explosionsansicht eines roten Autos mit schwebenden Beschriftungen an Motor, Motorhaube, Sitzen, Batterie und Rädern.',
+    }),
+    ar: Object.freeze({
+      title: 'فكّكها كلها!',
+      kind: 'ورشة ثلاثية الأبعاد قطعة بقطعة',
+      description:
+        'فكّك سبع آلات يومية مع الروبوت بولت — سيارة، منزل، محرك نفاث، آيفون، حاسوب محمول، تلفاز وطائرة — وسابق الزمن لإعادة تجميع كل قطعة.',
+      facts: Object.freeze([]),
+      alt: 'عرض تفصيلي ثلاثي الأبعاد لسيارة حمراء مع بطاقات تعريف عائمة على المحرك والغطاء والمقاعد والبطارية والعجلات.',
+    }),
   }),
 
   'prenatal-clinical-atlas': Object.freeze({
@@ -1146,6 +1397,22 @@ export const CREATION_TRANSLATIONS = Object.freeze({
         'Riferimento clinico allineato ACOG dalle settimane 1 a 42 con embriologia 3D, battito fetale Doppler, piano di 15 visite e triage dei sintomi.',
       facts: Object.freeze(['Settimane 1–42', '3D · Foto · SVG', '8 lingue']),
       alt: 'Atlante Clinico Prenatale che mostra un feto del terzo trimestre rannicchiato nell’utero accanto alla placenta e al cordone ombelicale.',
+    }),
+    de: Object.freeze({
+      title: 'Pränataler Klinischer Atlas',
+      kind: 'Geburtshilfe & klinische Embryologie',
+      description:
+        'ACOG-konformes klinisches Nachschlagewerk für Woche 1 bis 42 mit 3D-Embryologie, Doppler-Herztönen, 15-Termine-Vorsorgeplan und Symptom-Triage.',
+      facts: Object.freeze(['Woche 1 bis 42', '3D · Foto · SVG', '8 Sprachen']),
+      alt: 'Pränataler Klinischer Atlas mit einem Fötus im dritten Trimester in der Gebärmutter neben Plazenta und Nabelschnur.',
+    }),
+    ar: Object.freeze({
+      title: 'الأطلس السريري لما قبل الولادة',
+      kind: 'طب التوليد وعلم الأجنة السريري',
+      description:
+        'مرجع سريري متوافق مع إرشادات ACOG للأسابيع 1 إلى 42 مع علم أجنة ثلاثي الأبعاد، ونبض الجنين بالدوبلر، وخارطة 15 زيارة وفرز الأعراض.',
+      facts: Object.freeze(['الأسابيع 1 إلى 42', '3D · صور · مخططات', '8 لغات']),
+      alt: 'الأطلس السريري لما قبل الولادة يعرض جنيناً في الثلث الثالث من الحمل داخل الرحم بجانب المشيمة والحبل السري.',
     }),
   }),
 });
