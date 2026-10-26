@@ -6,6 +6,13 @@
  *   4. Day / Night toggle.
  * All DOM is built with createElement/textContent. There are no HTML strings.
  */
+import {
+  trackAudienceFilter,
+  trackLanguageSwitch,
+  trackPassportReset,
+  trackThemeToggle,
+  trackWorldOpen,
+} from './analytics.js';
 import { AUDIENCES, CREATIONS } from './creations.js';
 import {
   DEFAULT_LANG,
@@ -112,9 +119,18 @@ function renderLink(creation) {
     { className: 'tile__link', text: creation.title, attrs: { href: creation.url, target: '_blank', rel: 'noopener' } },
     [el('span', { className: 'sr-only', text: t().opensInNewTab })],
   );
-  link.addEventListener('click', () => stampPassport(creation.id));
+  const onOpen = () => {
+    stampPassport(creation.id);
+    trackWorldOpen({
+      id: creation.id,
+      title: creation.title,
+      language: currentLang,
+      audience: currentAudience,
+    });
+  };
+  link.addEventListener('click', onOpen);
   link.addEventListener('auxclick', (event) => {
-    if (event.button === 1) stampPassport(creation.id);
+    if (event.button === 1) onOpen();
   });
   return link;
 }
@@ -210,11 +226,17 @@ function applyAudience(value, { fromUser }) {
     chip.setAttribute('aria-pressed', String(chip.dataset.audience === currentAudience));
   }
   if (!fromUser) return;
+  const matchCount = countFor(currentAudience);
   $('filter-status').textContent = t().formatFilterStatus(
     currentAudience,
-    countFor(currentAudience),
+    matchCount,
     creations.length,
   );
+  trackAudienceFilter({
+    audience: currentAudience,
+    matchCount,
+    language: currentLang,
+  });
   const url = new URL(window.location.href);
   if (currentAudience === ALL) url.searchParams.delete('for');
   else url.searchParams.set('for', currentAudience);
@@ -278,6 +300,7 @@ function resetPassport() {
   writeStore(KEYS.visited, null);
   syncStamps();
   renderPassport();
+  trackPassportReset({ language: currentLang });
   $('passport-text').focus(); // the Reset button just disappeared; keep focus nearby
 }
 
@@ -326,6 +349,7 @@ function paintStaticChrome() {
 }
 
 function applyLanguage(code, { fromUser }) {
+  const prevLang = currentLang;
   currentLang = isSupportedLanguage(code) ? code : DEFAULT_LANG;
   paintStaticChrome();
   renderTiles();
@@ -335,6 +359,9 @@ function applyLanguage(code, { fromUser }) {
   syncStamps();
   renderPassport();
   if (!fromUser) return;
+  if (currentLang !== prevLang) {
+    trackLanguageSwitch({ toLanguage: currentLang, fromLanguage: prevLang });
+  }
   writeStore(KEYS.lang, currentLang);
   const url = new URL(window.location.href);
   if (currentLang === DEFAULT_LANG) url.searchParams.delete('lang');
@@ -361,6 +388,7 @@ function toggleTheme() {
   document.documentElement.dataset.theme = next;
   writeStore(KEYS.theme, next);
   paintTheme();
+  trackThemeToggle({ theme: next, language: currentLang });
 }
 
 function adoptStoredTheme() {

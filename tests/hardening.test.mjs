@@ -11,12 +11,39 @@ const globalHeaders = JSON.parse(read('firebase.json')).hosting.headers.find((ru
 const header = (key) => globalHeaders.find((h) => h.key === key)?.value;
 const directives = (csp) => csp.split(';').map((d) => d.trim()).filter(Boolean);
 
-test('CSP header is strict: self-only scripts, no inline or eval, framing denied', () => {
+test('CSP header is strict: self + GA4 only, no inline or eval, framing denied', () => {
   const csp = header('Content-Security-Policy');
-  assert.ok(directives(csp).includes("default-src 'none'"));
-  assert.ok(directives(csp).includes("script-src 'self'"));
-  assert.ok(directives(csp).includes("frame-ancestors 'none'"));
-  assert.doesNotMatch(csp, /unsafe-inline|unsafe-eval|\*|https?:/);
+  const dirs = directives(csp);
+  assert.ok(dirs.includes("default-src 'none'"));
+  assert.ok(dirs.includes("script-src 'self' https://www.googletagmanager.com"));
+  assert.ok(dirs.includes("frame-ancestors 'none'"));
+  assert.doesNotMatch(csp, /unsafe-inline|unsafe-eval|\*|http:/);
+  const httpsOrigins = csp.match(/https:\/\/[^\s;]+/g) ?? [];
+  const allowedHttps = new Set([
+    'https://www.googletagmanager.com',
+    'https://www.google-analytics.com',
+    'https://analytics.google.com',
+    'https://region1.google-analytics.com',
+  ]);
+  for (const origin of httpsOrigins) {
+    assert.ok(allowedHttps.has(origin), `unexpected CSP origin: ${origin}`);
+  }
+});
+
+test('Google Analytics 4 is configured with privacy-preserving defaults and no inline scripts', async () => {
+  const analytics = await import('../public/js/analytics.js');
+  assert.equal(analytics.GA_MEASUREMENT_ID, 'G-8G4WWQX7N4');
+  assert.equal(analytics.FIREBASE_APP_ID, '1:697625214430:web:834e51e9c305c66982f14f');
+  assert.equal(typeof analytics.initAnalytics, 'function');
+  assert.equal(typeof analytics.trackWorldOpen, 'function');
+  assert.equal(typeof analytics.trackAudienceFilter, 'function');
+  assert.equal(typeof analytics.trackLanguageSwitch, 'function');
+  assert.equal(typeof analytics.trackThemeToggle, 'function');
+  assert.equal(typeof analytics.trackPassportReset, 'function');
+  assert.match(
+    html,
+    /<script async src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-8G4WWQX7N4"><\/script>/,
+  );
 });
 
 test('meta CSP matches the header, minus header-only frame-ancestors', () => {

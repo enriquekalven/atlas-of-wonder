@@ -66,14 +66,12 @@ Once you know the final URL, add `og:image` and `og:url` meta tags (they must be
 
 ## Security
 
-- **Strict CSP** (`default-src 'none'`, self-only scripts, styles and images) sent as a header in `firebase.json` and mirrored in a `<meta>` tag. A test keeps the two in sync.
-- **No inline code**: no inline scripts, styles or event handlers. The theme pre-paint script is an external file.
+- **Strict CSP** (`default-src 'none'`, self + explicit GA4 origins only, no `'unsafe-inline'` or `'unsafe-eval'`) sent as a header in `firebase.json` and mirrored in a `<meta>` tag. A test keeps the two in sync.
+- **No inline code**: no inline scripts, styles or event handlers. Both the theme pre-paint script (`js/theme-init.js`) and Google Analytics 4 initialization (`js/analytics.js`, Measurement ID `G-8G4WWQX7N4`) are external files.
 - **XSS-safe rendering**: all DOM is built with `createElement` and `textContent`. A test fails on `innerHTML`, `document.write`, `eval`, `alert` or `confirm`.
 - **Clickjacking and sniffing**: `frame-ancestors 'none'`, `X-Frame-Options: DENY`, `nosniff`, a locked-down `Permissions-Policy`, and HSTS.
-- **Storage**: only the theme choice and visited-tile ids. When read back, entries are validated against the live tile ids. No accounts, no cookies, no analytics.
+- **Storage & Privacy**: `localStorage` stores only the theme choice, language, and visited-tile ids (validated against live tile ids on read). GA4 (`G-8G4WWQX7N4`) runs with `anonymize_ip: true`, `allow_google_signals: false`, `allow_ad_personalization_signals: false`, and `restricted_data_processing: true` (no ad profiling or cross-site tracking).
 - **Preview server**: binds to `127.0.0.1` only, serves GET/HEAD for known file types, and rejects path traversal, dotfiles and null bytes. All of this is covered by tests.
-
-To add analytics later, add your GA4 ID and extend the CSP in **both** `firebase.json` and the `<meta>` tag. The test will remind you if you only change one.
 
 ## Rename the portal
 
@@ -86,9 +84,11 @@ public/
   index.html            page shell + no-JS fallback
   css/styles.css        tokens (light-dark), bento grid, states
   js/creations.js       ← edit this to add or change tiles
+  js/i18n.js            11-language dictionary + RTL helpers
   js/validate.js        shared validator (browser fails closed, tests enforce)
+  js/analytics.js       privacy-preserving GA4 (G-8G4WWQX7N4) telemetry module
   js/app.js             rendering, filter, passport, theme
-  js/theme-init.js      applies the saved theme before first paint
+  js/theme-init.js      applies the saved theme & language before first paint
   assets/               favicon + tile images
 scripts/serve.mjs       local preview server
 scripts/check-links.mjs live link checker

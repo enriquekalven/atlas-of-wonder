@@ -3,7 +3,7 @@
 (function () {
   var root = document.documentElement;
   root.classList.add('js');
-  var allowedLangs = { en: 1, es: 1, zh: 1, ja: 1, ko: 1, fr: 1 };
+  var allowedLangs = { en: 1, es: 1, zh: 1, yue: 1, ja: 1, ko: 1, pt: 1, fr: 1, it: 1, de: 1, ar: 1 };
   try {
     var paramLang = new URLSearchParams(window.location.search).get('lang');
     var storedLang = window.localStorage.getItem('aow-lang');
@@ -21,7 +21,10 @@
         }
       }
     }
-    if (chosenLang) root.setAttribute('lang', chosenLang);
+    if (chosenLang) {
+      root.setAttribute('lang', chosenLang);
+      root.setAttribute('dir', chosenLang === 'ar' ? 'rtl' : 'ltr');
+    }
   } catch (err) {
     // Storage or URLSearchParams unavailable: keep default lang="en".
   }
