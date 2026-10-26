@@ -15,9 +15,9 @@ import {
 import { validateCreation } from '../public/js/validate.js';
 
 const audiences = Object.keys(AUDIENCES);
-const expectedCodes = ['en', 'es', 'zh', 'ja', 'ko', 'fr'];
+const expectedCodes = ['en', 'es', 'zh', 'yue', 'ja', 'ko', 'pt', 'fr', 'it'];
 
-test('supports all 6 requested languages (en, es, zh, ja, ko, fr)', () => {
+test('supports all 9 languages across the apps (en, es, zh, yue, ja, ko, pt, fr, it)', () => {
   assert.deepEqual(LANGUAGE_CODES, expectedCodes);
   for (const entry of LANGUAGES) {
     assert.ok(entry.label.trim().length > 0);
@@ -30,7 +30,7 @@ test('supports all 6 requested languages (en, es, zh, ja, ko, fr)', () => {
   }
 });
 
-test('UI_STRINGS has complete key parity and non-empty strings across all 6 languages', () => {
+test('UI_STRINGS has complete key parity and non-empty strings across all 9 languages', () => {
   const enKeys = Object.keys(UI_STRINGS.en).sort();
   for (const lang of LANGUAGE_CODES) {
     const bundle = UI_STRINGS[lang];
@@ -59,7 +59,7 @@ test('UI_STRINGS has complete key parity and non-empty strings across all 6 lang
   }
 });
 
-test('every creation has valid localized data in all 6 languages', () => {
+test('every creation has valid localized data in all 9 languages', () => {
   for (const creation of CREATIONS) {
     for (const lang of LANGUAGE_CODES) {
       if (lang !== DEFAULT_LANG) {
@@ -82,21 +82,37 @@ test('every creation has valid localized data in all 6 languages', () => {
 test('resolveLanguage enforces allow-list precedence and rejects untrusted input', () => {
   assert.equal(resolveLanguage({ search: '?lang=es', stored: 'fr', navigatorLanguages: ['ja-JP'] }), 'es');
   assert.equal(resolveLanguage({ search: '?lang=zh', stored: null, navigatorLanguages: [] }), 'zh');
+  assert.equal(resolveLanguage({ search: '?lang=yue', stored: null, navigatorLanguages: [] }), 'yue');
+  assert.equal(resolveLanguage({ search: '?lang=zh-HK', stored: null, navigatorLanguages: [] }), 'yue');
+  assert.equal(resolveLanguage({ search: '?lang=zh-CN', stored: null, navigatorLanguages: [] }), 'zh');
   assert.equal(resolveLanguage({ search: '?lang=ja', stored: null, navigatorLanguages: [] }), 'ja');
   assert.equal(resolveLanguage({ search: '?lang=ko', stored: null, navigatorLanguages: [] }), 'ko');
+  assert.equal(resolveLanguage({ search: '?lang=pt', stored: null, navigatorLanguages: [] }), 'pt');
   assert.equal(resolveLanguage({ search: '?lang=fr', stored: null, navigatorLanguages: [] }), 'fr');
+  assert.equal(resolveLanguage({ search: '?lang=it', stored: null, navigatorLanguages: [] }), 'it');
 
   // Invalid query param falls back to stored preference, then navigatorLanguages, then en.
   assert.equal(resolveLanguage({ search: '?lang=<script>', stored: 'ko', navigatorLanguages: ['es-MX'] }), 'ko');
-  assert.equal(resolveLanguage({ search: '?lang=de', stored: 'invalid', navigatorLanguages: ['pt-BR', 'ja-JP'] }), 'ja');
-  assert.equal(resolveLanguage({ search: '', stored: null, navigatorLanguages: ['zh-Hant-HK', 'en-US'] }), 'zh');
-  assert.equal(resolveLanguage({ search: '', stored: null, navigatorLanguages: ['de-DE', 'it-IT'] }), 'en');
+  assert.equal(resolveLanguage({ search: '?lang=de', stored: 'invalid', navigatorLanguages: ['pt-BR', 'ja-JP'] }), 'pt');
+  assert.equal(resolveLanguage({ search: '', stored: null, navigatorLanguages: ['zh-Hant-HK', 'en-US'] }), 'yue');
+  assert.equal(resolveLanguage({ search: '', stored: null, navigatorLanguages: ['zh-Hans-CN', 'en-US'] }), 'zh');
+  assert.equal(resolveLanguage({ search: '', stored: null, navigatorLanguages: ['de-DE', 'it-IT'] }), 'it');
+  assert.equal(resolveLanguage({ search: '', stored: null, navigatorLanguages: ['de-DE', 'nl-NL'] }), 'en');
   assert.equal(resolveLanguage({}), 'en');
 
   assert.equal(isSupportedLanguage('es'), true);
+  assert.equal(isSupportedLanguage('yue'), true);
+  assert.equal(isSupportedLanguage('pt'), true);
+  assert.equal(isSupportedLanguage('it'), true);
   assert.equal(isSupportedLanguage('de'), false);
   assert.equal(isSupportedLanguage('__proto__'), false);
   assert.equal(matchLanguageTag('fr-CA'), 'fr');
+  assert.equal(matchLanguageTag('pt-BR'), 'pt');
+  assert.equal(matchLanguageTag('it-IT'), 'it');
+  assert.equal(matchLanguageTag('yue-Hant-HK'), 'yue');
+  assert.equal(matchLanguageTag('zh-HK'), 'yue');
+  assert.equal(matchLanguageTag('zh-MO'), 'yue');
+  assert.equal(matchLanguageTag('zh-CN'), 'zh');
   assert.equal(matchLanguageTag('ko_KR'), 'ko');
   assert.equal(matchLanguageTag('de-DE'), null);
 });

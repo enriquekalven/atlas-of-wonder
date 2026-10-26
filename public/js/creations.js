@@ -46,7 +46,7 @@ export const CREATIONS = Object.freeze([
     accent: 'anatomy',
     description:
       'Realistic 3D anatomy you can peel back layer by layer: skin, muscles, skeleton, organs, brain and nerves, with live blood flow.',
-    facts: ['2,225 named structures', 'Kids & clinical modes', 'EN · ES · 中文'],
+    facts: ['2,225 named structures', 'Kids & clinical modes', '9 languages'],
     audiences: ['kids', 'students', 'clinicians'],
     image: {
       src: 'assets/tiles/human-body-atlas.webp',

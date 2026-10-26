@@ -1,6 +1,6 @@
 /**
  * Atlas of Wonder: renders the tiles and wires four small interactions.
- *   1. Multi-language switcher (EN, ES, 中文, 日本語, 한국어, FR) with ?lang= and localStorage.
+ *   1. Multi-language switcher (EN, ES, 中文, 粵語, 日本語, 한국어, PT, FR, IT) with ?lang= and localStorage.
  *   2. "Show worlds for" chips: dim tiles that don't match (shareable ?for=).
  *   3. Explorer passport: a tile gets a "Visited" stamp once it's opened.
  *   4. Day / Night toggle.
