@@ -45,6 +45,9 @@
   --accent-chronoverse: light-dark(#94540f, #f2bd6b);
   --accent-dino: light-dark(#2b6e3f, #82d99b);
   --accent-studio: light-dark(#12607a, #6fd2f0);
+  --accent-dragonball: light-dark(#c2410c, #fdba74);
+  --accent-onepiece: light-dark(#3949ab, #9fa8f7);
+  --accent-pokeverse: light-dark(#7b2cbf, #c9a3f5);
   --accent: var(--ink);
 }
 
@@ -74,6 +77,9 @@
     --accent-chronoverse: #94540f;
     --accent-dino: #2b6e3f;
     --accent-studio: #12607a;
+    --accent-dragonball: #c2410c;
+    --accent-onepiece: #3949ab;
+    --accent-pokeverse: #7b2cbf;
   }
 }
 
@@ -85,6 +91,9 @@
 [data-accent="chronoverse"] { --accent: var(--accent-chronoverse); }
 [data-accent="dino"] { --accent: var(--accent-dino); }
 [data-accent="studio"] { --accent: var(--accent-studio); }
+[data-accent="dragonball"] { --accent: var(--accent-dragonball); }
+[data-accent="onepiece"] { --accent: var(--accent-onepiece); }
+[data-accent="pokeverse"] { --accent: var(--accent-pokeverse); }
 
 /* ---------- base ---------- */
 

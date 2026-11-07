@@ -16,6 +16,9 @@ export const ACCENTS = Object.freeze([
   'chronoverse',
   'dino',
   'studio',
+  'dragonball',
+  'onepiece',
+  'pokeverse',
 ]);
 
 /**

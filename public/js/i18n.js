@@ -1250,89 +1250,6 @@ export const CREATION_TRANSLATIONS = Object.freeze({
     }),
   }),
 
-  'take-it-apart': Object.freeze({
-    es: Object.freeze({
-      title: '¡Desármalo!',
-      kind: 'Taller 3D pieza por pieza',
-      description:
-        'Desarma siete máquinas cotidianas con el robot Bolt — coche, casa, motor a reacción, iPhone, portátil, televisor y avión — y compite contra el reloj para volver a armarlas.',
-      facts: Object.freeze([]),
-      alt: 'Vista explotada en 3D de ¡Desármalo! de un coche rojo con etiquetas flotantes en el motor, el capó, los asientos, la batería y las ruedas.',
-    }),
-    zh: Object.freeze({
-      title: '拆开看看！',
-      kind: '儿童 3D 拆解工坊',
-      description:
-        '和小机器人 Bolt 一起拆开七种日常事物——汽车、房屋、喷气发动机、iPhone、笔记本电脑、电视和飞机——再争分夺秒把零件拼回原位。',
-      facts: Object.freeze([]),
-      alt: '《拆开看看！》中一辆红色汽车的 3D 拆解画面，发动机、引擎盖、座椅、电池和车轮上悬浮着名称标签。',
-    }),
-    yue: Object.freeze({
-      title: '拆開睇下！',
-      kind: '兒童 3D 拆解工坊',
-      description:
-        '同小機械人 Bolt 一齊拆開七種日常事物——汽車、屋企、噴射引擎、iPhone、手提電腦、電視同飛機——再鬥快將零件砌返原位。',
-      facts: Object.freeze([]),
-      alt: '《拆開睇下！》入面一架紅色汽車嘅 3D 拆解畫面，引擎、車頭蓋、座椅、電池同車轆上面浮住名稱標籤。',
-    }),
-    ja: Object.freeze({
-      title: 'ぜんぶ分解してみよう！',
-      kind: 'キッズ 3D 分解ワークショップ',
-      description:
-        'ロボットのボルトと一緒に、車・家・ジェットエンジン・iPhone・ノートPC・テレビ・飛行機の7つをバラバラに分解し、タイムアタックで組み立てよう。',
-      facts: Object.freeze([]),
-      alt: 'エンジン、ボンネット、シート、バッテリー、タイヤに名前タグが浮かぶ赤い車の 3D 分解図。',
-    }),
-    ko: Object.freeze({
-      title: '분해해 볼까!',
-      kind: '어린이 3D 분해 공방',
-      description:
-        '로봇 볼트와 함께 자동차, 집, 제트 엔진, 아이폰, 노트북, TV, 비행기 등 7가지 일상 기계를 분해하고 시간 안에 다시 조립해 보세요.',
-      facts: Object.freeze([]),
-      alt: '엔진, 보닛, 시트, 배터리, 바퀴에 이름표가 떠 있는 빨간 자동차의 3D 분해 화면.',
-    }),
-    pt: Object.freeze({
-      title: 'Desmonte Tudo!',
-      kind: 'Oficina 3D peça por peça',
-      description:
-        'Desmonte sete máquinas do dia a dia com o robô Bolt — carro, casa, motor a jato, iPhone, notebook, TV e avião — e corra contra o relógio para montar tudo de volta.',
-      facts: Object.freeze([]),
-      alt: 'Vista explodida em 3D de um carro vermelho com etiquetas flutuantes no motor, capô, bancos, bateria e rodas.',
-    }),
-    fr: Object.freeze({
-      title: 'Démonte-Tout !',
-      kind: 'Atelier 3D pièce par pièce',
-      description:
-        'Démontez sept objets du quotidien avec le robot Bolt — voiture, maison, turboréacteur, iPhone, ordinateur portable, téléviseur et avion — puis remontez-les contre la montre.',
-      facts: Object.freeze([]),
-      alt: 'Vue éclatée 3D d’une voiture rouge avec des étiquettes flottantes sur le moteur, le capot, les sièges, la batterie et les roues.',
-    }),
-    it: Object.freeze({
-      title: 'Smontalo Tutto!',
-      kind: 'Laboratorio 3D pezzo per pezzo',
-      description:
-        'Smonta sette macchine di tutti i giorni con il robot Bolt — auto, casa, motore a reazione, iPhone, laptop, TV e aereo — e sfida il tempo per rimontare ogni pezzo.',
-      facts: Object.freeze([]),
-      alt: 'Vista esplosa 3D di un’auto rossa con etichette fluttuanti su motore, cofano, sedili, batteria e ruote.',
-    }),
-    de: Object.freeze({
-      title: 'Bau es auseinander!',
-      kind: '3D-Werkstatt Teil für Teil',
-      description:
-        'Nimm mit dem Roboter Bolt sieben Alltagsdinge auseinander – Auto, Haus, Düsentriebwerk, iPhone, Laptop, Fernseher und Flugzeug – und setze jedes Teil gegen die Uhr wieder zusammen.',
-      facts: Object.freeze([]),
-      alt: '3D-Explosionsansicht eines roten Autos mit schwebenden Beschriftungen an Motor, Motorhaube, Sitzen, Batterie und Rädern.',
-    }),
-    ar: Object.freeze({
-      title: 'فكّكها كلها!',
-      kind: 'ورشة ثلاثية الأبعاد قطعة بقطعة',
-      description:
-        'فكّك سبع آلات يومية مع الروبوت بولت — سيارة، منزل، محرك نفاث، آيفون، حاسوب محمول، تلفاز وطائرة — وسابق الزمن لإعادة تجميع كل قطعة.',
-      facts: Object.freeze([]),
-      alt: 'عرض تفصيلي ثلاثي الأبعاد لسيارة حمراء مع بطاقات تعريف عائمة على المحرك والغطاء والمقاعد والبطارية والعجلات.',
-    }),
-  }),
-
   'prenatal-clinical-atlas': Object.freeze({
     es: Object.freeze({
       title: 'Atlas Clínico Prenatal',
@@ -1413,6 +1330,255 @@ export const CREATION_TRANSLATIONS = Object.freeze({
         'مرجع سريري متوافق مع إرشادات ACOG للأسابيع 1 إلى 42 مع علم أجنة ثلاثي الأبعاد، ونبض الجنين بالدوبلر، وخارطة 15 زيارة وفرز الأعراض.',
       facts: Object.freeze(['الأسابيع 1 إلى 42', '3D · صور · مخططات', '8 لغات']),
       alt: 'الأطلس السريري لما قبل الولادة يعرض جنيناً في الثلث الثالث من الحمل داخل الرحم بجانب المشيمة والحبل السري.',
+    }),
+  }),
+
+  'dragonball-3d-portal': Object.freeze({
+    es: Object.freeze({
+      title: 'Portal 3D de Dragon Ball',
+      kind: 'Multiverso anime 3D',
+      description:
+        'Transforma a 25 luchadores en 3D con sus transformaciones canónicas, fusiona héroes en el laboratorio de Capsule Corp, combate cara a cara, busca las siete Bolas de Dragón y sigue la historia de Dragon Ball a Super.',
+      facts: Object.freeze(['25 luchadores', 'Fusiones y combates VS', '13 idiomas']),
+      alt: 'Portal 3D de Dragon Ball con un Son Goku en 3D cargando energía en un aura naranja ardiente sobre una arena luminosa, con una Bola de Dragón flotando a su lado.',
+    }),
+    zh: Object.freeze({
+      title: '龙珠 3D 门户',
+      kind: '3D 动漫多元宇宙',
+      description:
+        '在 3D 中让 25 位战士展开原作变身，在胶囊公司实验室里合体英雄，进行一对一对决，寻找全部七颗龙珠，并从《龙珠》一路追看到《龙珠超》。',
+      facts: Object.freeze(['25 位战士', '合体实验室与对战', '13 种语言']),
+      alt: '龙珠 3D 门户画面：3D 孙悟空在发光的竞技场上释放炽热的橙色气场，身旁漂浮着一颗龙珠。',
+    }),
+    yue: Object.freeze({
+      title: '龍珠 3D 門戶',
+      kind: '3D 動漫多元宇宙',
+      description:
+        '喺 3D 入面幫 25 位戰士變身做原作形態，喺膠囊公司實驗室合體英雄，一對一對決，搵齊七粒龍珠，仲可以由《龍珠》一路睇到《龍珠超》。',
+      facts: Object.freeze(['25 位戰士', '合體實驗室同對戰', '13 種語言']),
+      alt: '龍珠 3D 門戶畫面：3D 孫悟空喺發光嘅競技場上爆發熾熱嘅橙色氣場，身邊浮住一粒龍珠。',
+    }),
+    ja: Object.freeze({
+      title: 'ドラゴンボール 3D ポータル',
+      kind: '3D アニメ・マルチバース',
+      description:
+        '25人の戦士を3Dで原作どおりに変身させ、カプセルコーポレーションのラボでフュージョン、1対1のバトル、7つのドラゴンボール探し、そして『ドラゴンボール』から『超』までのストーリーを楽しもう。',
+      facts: Object.freeze(['戦士 25人', 'フュージョン＆VSバトル', '13言語対応']),
+      alt: '光るアリーナの上で燃えるようなオレンジ色のオーラをまとい気を高める3Dの孫悟空と、そばに浮かぶドラゴンボールが映る「ドラゴンボール 3D ポータル」の画面。',
+    }),
+    ko: Object.freeze({
+      title: '드래곤볼 3D 포털',
+      kind: '3D 애니메이션 멀티버스',
+      description:
+        '25명의 전사를 3D로 원작 그대로 변신시키고, 캡슐 코퍼레이션 연구소에서 퓨전하고, 1대1 대결을 펼치고, 일곱 개의 드래곤볼을 모으며 《드래곤볼》부터 《슈퍼》까지 이야기를 따라가 보세요.',
+      facts: Object.freeze(['전사 25명', '퓨전 랩 & VS 배틀', '13개 언어 지원']),
+      alt: '빛나는 아레나 위에서 타오르는 주황색 오라를 내뿜으며 기를 모으는 3D 손오공과 옆에 떠 있는 드래곤볼을 보여주는 드래곤볼 3D 포털 화면.',
+    }),
+    pt: Object.freeze({
+      title: 'Portal 3D de Dragon Ball',
+      kind: 'Multiverso de anime 3D',
+      description:
+        'Transforme 25 lutadores em 3D com suas transformações canônicas, faça fusões de heróis no laboratório da Capsule Corp, lute frente a frente, cace as sete Esferas do Dragão e acompanhe a história de Dragon Ball a Super.',
+      facts: Object.freeze(['25 lutadores', 'Fusões e batalhas VS', '13 idiomas']),
+      alt: 'Portal 3D de Dragon Ball com um Son Goku em 3D carregando energia numa aura laranja flamejante sobre uma arena brilhante, com uma Esfera do Dragão flutuando ao lado.',
+    }),
+    fr: Object.freeze({
+      title: 'Portail 3D Dragon Ball',
+      kind: 'Multivers anime 3D',
+      description:
+        'Faites évoluer 25 combattants à travers leurs transformations officielles en 3D, fusionnez des héros dans le labo de Capsule Corp, affrontez-vous en duel, cherchez les sept Dragon Balls et suivez l’histoire de Dragon Ball à Super.',
+      facts: Object.freeze(['25 combattants', 'Labo fusion & duels VS', '13 langues']),
+      alt: 'Portail 3D Dragon Ball montrant un Son Goku en 3D qui fait monter son énergie dans une aura orange flamboyante sur une arène lumineuse, avec une Dragon Ball flottant à ses côtés.',
+    }),
+    it: Object.freeze({
+      title: 'Portale 3D di Dragon Ball',
+      kind: 'Multiverso anime 3D',
+      description:
+        'Fai evolvere 25 combattenti attraverso le loro trasformazioni canoniche in 3D, fondi gli eroi nel laboratorio della Capsule Corp, sfidati in duelli, cerca tutte e sette le Sfere del Drago e segui la storia da Dragon Ball a Super.',
+      facts: Object.freeze(['25 combattenti', 'Fusioni e duelli VS', '13 lingue']),
+      alt: 'Portale 3D di Dragon Ball con un Son Goku in 3D che accumula energia in un’aura arancione fiammeggiante su un’arena luminosa, con una Sfera del Drago che fluttua accanto a lui.',
+    }),
+    de: Object.freeze({
+      title: 'Dragon Ball 3D-Portal',
+      kind: '3D-Anime-Multiversum',
+      description:
+        'Lass 25 Kämpfer in 3D ihre kanonischen Verwandlungen durchlaufen, fusioniere Helden im Capsule-Corp-Labor, tritt im Duell an, sammle alle sieben Dragon Balls und folge der Geschichte von Dragon Ball bis Super.',
+      facts: Object.freeze(['25 Kämpfer', 'Fusionslabor & VS-Duelle', '13 Sprachen']),
+      alt: 'Dragon Ball 3D-Portal mit einem 3D-Son-Goku, der in einer lodernden orangefarbenen Aura auf einer leuchtenden Arena Energie sammelt, neben ihm schwebt ein Dragon Ball.',
+    }),
+    ar: Object.freeze({
+      title: 'بوابة دراغون بول ثلاثية الأبعاد',
+      kind: 'عالم أنمي متعدد ثلاثي الأبعاد',
+      description:
+        'طوّر 25 مقاتلاً عبر تحولاتهم الأصلية بتقنية ثلاثية الأبعاد، وادمج الأبطال في مختبر كبسولة كورب، وخض نزالات فردية، واجمع كرات التنين السبع، وتابع القصة من دراغون بول حتى سوبر.',
+      facts: Object.freeze(['25 مقاتلاً', 'مختبر الدمج ونزالات VS', '13 لغة']),
+      alt: 'بوابة دراغون بول ثلاثية الأبعاد تعرض سون غوكو مجسماً وهو يشحن طاقته داخل هالة برتقالية متوهجة فوق حلبة مضيئة، وبجانبه كرة تنين تطفو.',
+    }),
+  }),
+
+  'onepiece-grand-line-atlas': Object.freeze({
+    es: Object.freeze({
+      title: 'Atlas Grand Line de One Piece',
+      kind: 'Atlas 3D de un mundo anime',
+      description:
+        'Gira un globo 3D del Grand Line, navega por la línea temporal del Log Pose, conoce a 38 personajes con sus Vivre Cards, forma tu tripulación pirata soñada y colecciona Frutas del Diablo, sin spoilers en cada era.',
+      facts: Object.freeze(['38 personajes', 'Eras sin spoilers', '11 idiomas']),
+      alt: 'Atlas Grand Line de One Piece con un globo 3D atravesado por la Red Line y el Grand Line, con mares e islas rotulados como East Blue, Alabasta y Skypiea.',
+    }),
+    zh: Object.freeze({
+      title: '海贼王伟大航路图鉴',
+      kind: '3D 动漫世界图鉴',
+      description:
+        '旋转伟大航路 3D 地球仪，沿着记录指针时间线航行，通过生命卡认识 38 位角色，组建梦想海贼团，收集恶魔果实，每个时代都有防剧透保护。',
+      facts: Object.freeze(['38 位角色', '分时代防剧透', '11 种语言']),
+      alt: '海贼王伟大航路图鉴画面：红土大陆与伟大航路交叉穿过的 3D 地球仪，标注着东海、阿拉巴斯坦和空岛等海域与岛屿。',
+    }),
+    yue: Object.freeze({
+      title: '海賊王偉大航道圖鑑',
+      kind: '3D 動漫世界圖鑑',
+      description:
+        '轉動偉大航道 3D 地球儀，跟住記錄指針時間線出航，用生命卡認識 38 個角色，組建夢想海賊團，收集惡魔果實，每個年代都有防劇透保護。',
+      facts: Object.freeze(['38 個角色', '分年代防劇透', '11 種語言']),
+      alt: '海賊王偉大航道圖鑑畫面：紅土大陸同偉大航道交叉穿過嘅 3D 地球儀，標示住東海、阿拉巴斯坦同空島等海域同島嶼。',
+    }),
+    ja: Object.freeze({
+      title: 'ワンピース グランドライン・アトラス',
+      kind: '3D アニメ世界アトラス',
+      description:
+        '偉大なる航路の3D地球儀を回し、ログポースの年表をたどって航海し、ビブルカードで38人のキャラクターに出会い、夢の海賊団を結成して悪魔の実を集めよう。時代ごとのネタバレ防止つき。',
+      facts: Object.freeze(['キャラクター 38人', '時代別ネタバレ防止', '11言語対応']),
+      alt: '赤い土の大陸と偉大なる航路が交差する3D地球儀に、東の海・アラバスタ・空島などの海域や島の名前が表示された「ワンピース グランドライン・アトラス」の画面。',
+    }),
+    ko: Object.freeze({
+      title: '원피스 그랜드 라인 아틀라스',
+      kind: '3D 애니메이션 세계 지도책',
+      description:
+        '그랜드 라인 3D 지구본을 돌리고, 로그 포스 연대기를 따라 항해하며, 비브르 카드로 38명의 캐릭터를 만나고, 꿈의 해적단을 꾸리고 악마의 열매를 모아 보세요. 시대별 스포일러 방지 기능도 있습니다.',
+      facts: Object.freeze(['캐릭터 38명', '시대별 스포일러 방지', '11개 언어 지원']),
+      alt: '레드 라인과 그랜드 라인이 가로지르는 3D 지구본 위에 이스트 블루, 알라바스타, 스카이피아 등 바다와 섬 이름이 표시된 원피스 그랜드 라인 아틀라스 화면.',
+    }),
+    pt: Object.freeze({
+      title: 'Atlas Grand Line de One Piece',
+      kind: 'Atlas 3D de um mundo anime',
+      description:
+        'Gire um globo 3D da Grand Line, navegue pela linha do tempo do Log Pose, conheça 38 personagens em seus Vivre Cards, monte sua tripulação pirata dos sonhos e colecione Frutas do Diabo, sem spoilers em cada era.',
+      facts: Object.freeze(['38 personagens', 'Eras sem spoilers', '11 idiomas']),
+      alt: 'Atlas Grand Line de One Piece com um globo 3D cortado pela Red Line e pela Grand Line, com mares e ilhas identificados como East Blue, Alabasta e Skypiea.',
+    }),
+    fr: Object.freeze({
+      title: 'Atlas Grand Line de One Piece',
+      kind: 'Atlas 3D d’un monde anime',
+      description:
+        'Faites tourner un globe 3D de Grand Line, naviguez sur la frise du Log Pose, rencontrez 38 personnages et leurs Vivre Cards, formez votre équipage de rêve et collectionnez les Fruits du Démon, sans spoilers.',
+      facts: Object.freeze(['38 personnages', 'Époques sans spoilers', '11 langues']),
+      alt: 'Atlas Grand Line de One Piece montrant un globe 3D traversé par la Red Line et Grand Line, avec des mers et îles nommées comme East Blue, Alabasta et Skypiea.',
+    }),
+    it: Object.freeze({
+      title: 'Atlante della Rotta Maggiore di One Piece',
+      kind: 'Atlante 3D di un mondo anime',
+      description:
+        'Fai girare un globo 3D della Rotta Maggiore, naviga sulla linea del tempo del Log Pose, incontra 38 personaggi con le loro Vivre Card, crea la tua ciurma dei sogni e colleziona Frutti del Diavolo, senza spoiler.',
+      facts: Object.freeze(['38 personaggi', 'Ere senza spoiler', '11 lingue']),
+      alt: 'Atlante della Rotta Maggiore di One Piece con un globo 3D attraversato dalla Linea Rossa e dalla Rotta Maggiore, con mari e isole come il Mare Orientale, Alabasta e Skypiea.',
+    }),
+    de: Object.freeze({
+      title: 'One Piece Grand-Line-Atlas',
+      kind: '3D-Atlas einer Anime-Welt',
+      description:
+        'Dreh einen 3D-Globus der Grand Line, segle entlang der Log-Port-Zeitleiste, triff 38 Figuren mit ihren Vivre Cards, stelle deine Traum-Piratencrew zusammen und sammle Teufelsfrüchte – mit Spoiler-Schutz für jede Ära.',
+      facts: Object.freeze(['38 Figuren', 'Spoilerfreie Epochen', '11 Sprachen']),
+      alt: 'One Piece Grand-Line-Atlas mit einem 3D-Globus, den die Red Line und die Grand Line kreuzen, mit beschrifteten Meeren und Inseln wie East Blue, Alabasta und Skypiea.',
+    }),
+    ar: Object.freeze({
+      title: 'أطلس الخط العظيم من ون بيس',
+      kind: 'أطلس عالم أنمي ثلاثي الأبعاد',
+      description:
+        'أدر كرة أرضية ثلاثية الأبعاد للخط العظيم، وأبحر عبر الخط الزمني لبوصلة اللوغ بوز، وتعرّف إلى 38 شخصية عبر بطاقات الحياة، وكوّن طاقم القراصنة الذي تحلم به واجمع فواكه الشيطان، دون حرق للأحداث.',
+      facts: Object.freeze(['38 شخصية', 'حقب بلا حرق للأحداث', '11 لغة']),
+      alt: 'أطلس الخط العظيم من ون بيس يعرض كرة أرضية ثلاثية الأبعاد يعبرها الخط الأحمر والخط العظيم، مع بحار وجزر مُسمّاة مثل البحر الشرقي وألاباستا وسكاي بيا.',
+    }),
+  }),
+
+  'pokeverse-3d-atlas': Object.freeze({
+    es: Object.freeze({
+      title: 'PokéVerse 3D',
+      kind: 'Pokédex 3D y tarjetas',
+      description:
+        'Explora los 1.025 Pokémon de nueve generaciones y 18 tipos, gira evoluciones y formas en un visor 3D, escucha sus gritos y pon a prueba lo que sabes con tarjetas y cuestionarios.',
+      facts: Object.freeze(['1.025 Pokémon', '9 generaciones', '11 idiomas']),
+      alt: 'Página de inicio de PokéVerse 3D con Pikachu en un escenario 3D iluminado junto a una cuadrícula de tarjetas Pokémon, de Bulbasaur y Charmander a Squirtle y Butterfree.',
+    }),
+    zh: Object.freeze({
+      title: '宝可梦宇宙 3D',
+      kind: '3D 宝可梦图鉴与闪卡',
+      description:
+        '浏览九个世代、18 种属性的全部 1,025 只宝可梦，在 3D 查看器中旋转查看进化与形态，聆听叫声，再用闪卡和小测验检验所学。',
+      facts: Object.freeze(['1,025 只宝可梦', '9 个世代', '11 种语言']),
+      alt: '宝可梦宇宙 3D 首页：皮卡丘站在发光的 3D 舞台上，旁边是宝可梦卡片网格，从妙蛙种子、小火龙到杰尼龟和巴大蝶。',
+    }),
+    yue: Object.freeze({
+      title: '寶可夢宇宙 3D',
+      kind: '3D 寶可夢圖鑑同閃卡',
+      description:
+        '瀏覽九個世代、18 種屬性嘅全部 1,025 隻寶可夢，喺 3D 檢視器入面轉嚟睇進化同形態，聽佢哋嘅叫聲，再用閃卡同小測驗考吓自己。',
+      facts: Object.freeze(['1,025 隻寶可夢', '9 個世代', '11 種語言']),
+      alt: '寶可夢宇宙 3D 首頁：比卡超企喺發光嘅 3D 舞台上，旁邊係寶可夢卡片格，由奇異種子、小火龍到傑尼龜同巴大蝴。',
+    }),
+    ja: Object.freeze({
+      title: 'ポケバース 3D',
+      kind: '3D ポケモン図鑑＆フラッシュカード',
+      description:
+        '9世代・18タイプ、全1,025匹のポケモンを閲覧し、3Dビューアーで進化やフォルムを回転させ、鳴き声を聴いて、フラッシュカードやクイズで知識を試そう。',
+      facts: Object.freeze(['ポケモン 1,025匹', '9世代', '11言語対応']),
+      alt: '光る3Dステージに立つピカチュウと、フシギダネやヒトカゲからゼニガメ、バタフリーまで並ぶポケモンカードの一覧が表示された「ポケバース 3D」のトップページ。',
+    }),
+    ko: Object.freeze({
+      title: '포케버스 3D',
+      kind: '3D 포켓몬 도감 & 플래시카드',
+      description:
+        '9세대 18가지 타입에 걸친 포켓몬 1,025마리를 모두 둘러보고, 3D 뷰어에서 진화와 폼을 돌려 보며, 울음소리를 듣고, 플래시카드와 퀴즈로 실력을 확인해 보세요.',
+      facts: Object.freeze(['포켓몬 1,025마리', '9개 세대', '11개 언어 지원']),
+      alt: '빛나는 3D 무대 위의 피카츄와 이상해씨, 파이리부터 꼬부기, 버터플까지 이어지는 포켓몬 카드 목록을 보여주는 포케버스 3D 홈페이지.',
+    }),
+    pt: Object.freeze({
+      title: 'PokéVerse 3D',
+      kind: 'Pokédex 3D e flashcards',
+      description:
+        'Explore todos os 1.025 Pokémon de nove gerações e 18 tipos, gire evoluções e formas em um visualizador 3D, ouça seus gritos e teste seus conhecimentos com flashcards e quizzes.',
+      facts: Object.freeze(['1.025 Pokémon', '9 gerações', '11 idiomas']),
+      alt: 'Página inicial do PokéVerse 3D com Pikachu em um palco 3D iluminado ao lado de uma grade de cartões de Pokémon, de Bulbasaur e Charmander a Squirtle e Butterfree.',
+    }),
+    fr: Object.freeze({
+      title: 'PokéVerse 3D',
+      kind: 'Pokédex 3D & cartes mémo',
+      description:
+        'Parcourez les 1 025 Pokémon de neuf générations et 18 types, faites tourner évolutions et formes dans une visionneuse 3D, écoutez leurs cris et testez vos connaissances avec des cartes mémo et des quiz.',
+      facts: Object.freeze(['1 025 Pokémon', '9 générations', '11 langues']),
+      alt: 'Page d’accueil de PokéVerse 3D avec Pikachu sur une scène 3D lumineuse à côté d’une grille de cartes Pokémon, de Bulbizarre et Salamèche à Carapuce et Papilusion.',
+    }),
+    it: Object.freeze({
+      title: 'PokéVerse 3D',
+      kind: 'Pokédex 3D e flashcard',
+      description:
+        'Sfoglia tutti i 1.025 Pokémon di nove generazioni e 18 tipi, fai ruotare evoluzioni e forme in un visualizzatore 3D, ascolta i loro versi e metti alla prova ciò che sai con flashcard e quiz.',
+      facts: Object.freeze(['1.025 Pokémon', '9 generazioni', '11 lingue']),
+      alt: 'Home page di PokéVerse 3D con Pikachu su un palco 3D luminoso accanto a una griglia di carte Pokémon, da Bulbasaur e Charmander a Squirtle e Butterfree.',
+    }),
+    de: Object.freeze({
+      title: 'PokéVerse 3D',
+      kind: '3D-Pokédex & Lernkarten',
+      description:
+        'Stöbere durch alle 1.025 Pokémon aus neun Generationen und 18 Typen, dreh Entwicklungen und Formen im 3D-Viewer, hör dir ihre Rufe an und teste dein Wissen mit Lernkarten und Quiz.',
+      facts: Object.freeze(['1.025 Pokémon', '9 Generationen', '11 Sprachen']),
+      alt: 'Startseite von PokéVerse 3D mit Pikachu auf einer leuchtenden 3D-Bühne neben einem Raster aus Pokémon-Karten, von Bisasam und Glumanda bis Schiggy und Smettbo.',
+    }),
+    ar: Object.freeze({
+      title: 'PokéVerse 3D',
+      kind: 'موسوعة بوكيمون ثلاثية الأبعاد',
+      description:
+        'تصفّح جميع البوكيمون الـ 1,025 عبر تسعة أجيال و18 نوعاً، وأدر التطورات والأشكال في عارض ثلاثي الأبعاد، واستمع إلى أصواتها، واختبر معلوماتك بالبطاقات التعليمية والاختبارات.',
+      facts: Object.freeze(['1,025 بوكيمون', '9 أجيال', '11 لغة']),
+      alt: 'الصفحة الرئيسية لـ PokéVerse 3D تعرض بيكاتشو على منصة ثلاثية الأبعاد مضيئة بجانب شبكة من بطاقات البوكيمون، من بلباسور وتشارماندر إلى سكويرتل وباترفري.',
     }),
   }),
 });

@@ -2,7 +2,8 @@
  * The single source of truth for the portal tiles.
  *
  * Facts below were checked against each live site and local project on 2026-10-23;
- * ChronoVerse 3D, DinoVerse 3D and Human Body 3D Atlas were re-checked on 2026-11-07.
+ * ChronoVerse 3D, DinoVerse 3D and Human Body 3D Atlas were re-checked, and Dragon Ball 3D Portal,
+ * One Piece Grand Line Atlas and PokéVerse 3D were checked, on 2026-11-07.
  * To add a creation: append an entry, drop its image in assets/tiles/,
  * then run `npm test` (it validates every field) and `npm run check:links`.
  *
@@ -114,26 +115,6 @@ export const CREATIONS = Object.freeze([
     },
   },
   {
-    id: 'take-it-apart',
-    title: 'Take It Apart!',
-    kind: '3D exploded-view workshop',
-    // Not deployed yet: it only runs as a local preview (http://127.0.0.1:4173/).
-    // To go live, add its https url, set status: 'live', and restore its facts here and in i18n.js.
-    status: 'coming-soon',
-    size: 'standard',
-    accent: 'storybook',
-    description:
-      'Pull apart seven everyday machines with Bolt the robot — car, house, jet engine, iPhone, laptop, TV and airplane — then race the clock to snap every piece back home.',
-    facts: [],
-    audiences: ['kids'],
-    image: {
-      src: 'assets/tiles/take-it-apart.webp',
-      alt: 'Take It Apart 3D exploded view of a red car with floating name tags on the engine, hood, seats, battery and wheels.',
-      width: 1200,
-      height: 750,
-    },
-  },
-  {
     id: 'curious-little-minds',
     title: 'Curious Little Minds',
     kind: 'Picture books & read-alouds',
@@ -186,6 +167,63 @@ export const CREATIONS = Object.freeze([
     image: {
       src: 'assets/tiles/prenatal-clinical-atlas.webp',
       alt: 'Prenatal Clinical Atlas showing a third-trimester fetus curled peacefully in utero next to the placenta and umbilical cord.',
+      width: 1200,
+      height: 750,
+    },
+  },
+  {
+    id: 'dragonball-3d-portal',
+    title: 'Dragon Ball 3D Portal',
+    kind: '3D anime multiverse',
+    url: 'https://dragonball-3d-portal.web.app/',
+    status: 'live',
+    size: 'standard',
+    accent: 'dragonball',
+    description:
+      'Power up 25 fighters through their canon transformations in 3D, fuse heroes in the Capsule Corp lab, battle head-to-head, hunt all seven Dragon Balls and follow the story from Dragon Ball to Super.',
+    facts: ['25 fighters', 'Fusion lab & VS battles', '13 languages'],
+    audiences: ['kids'],
+    image: {
+      src: 'assets/tiles/dragonball-3d-portal.webp',
+      alt: 'Dragon Ball 3D Portal showing a 3D Son Goku powering up in a blazing orange aura on a glowing arena grid, with a Dragon Ball floating beside him.',
+      width: 1200,
+      height: 750,
+    },
+  },
+  {
+    id: 'onepiece-grand-line-atlas',
+    title: 'One Piece Grand Line Atlas',
+    kind: '3D anime world atlas',
+    url: 'https://onepiece-grand-line-atlas.web.app/',
+    status: 'live',
+    size: 'standard',
+    accent: 'onepiece',
+    description:
+      'Spin a 3D globe of the Grand Line, sail the Log Pose timeline, meet 38 characters on their Vivre Cards, build a dream pirate crew and collect Devil Fruits, with a spoiler shield for every era.',
+    facts: ['38 characters', 'Spoiler-safe eras', '11 languages'],
+    audiences: ['kids'],
+    image: {
+      src: 'assets/tiles/onepiece-grand-line-atlas.webp',
+      alt: 'One Piece Grand Line Atlas showing a 3D globe crossed by the Red Line and the Grand Line, with labeled seas and islands such as East Blue, Alabasta and Skypiea.',
+      width: 1200,
+      height: 750,
+    },
+  },
+  {
+    id: 'pokeverse-3d-atlas',
+    title: 'PokéVerse 3D',
+    kind: '3D Pokédex & flashcards',
+    url: 'https://pokeverse-3d-atlas.web.app/',
+    status: 'live',
+    size: 'standard',
+    accent: 'pokeverse',
+    description:
+      'Browse all 1,025 Pokémon across nine generations and 18 types, spin evolutions and forms in a 3D viewer, hear their cries, and test what you know with flashcards and quizzes.',
+    facts: ['1,025 Pokémon', '9 generations', '11 languages'],
+    audiences: ['kids'],
+    image: {
+      src: 'assets/tiles/pokeverse-3d-atlas.webp',
+      alt: 'PokéVerse 3D home page with Pikachu on a glowing 3D stage next to a grid of Pokémon cards, from Bulbasaur and Charmander to Squirtle and Butterfree.',
       width: 1200,
       height: 750,
     },

@@ -11,10 +11,12 @@ A tile portal for Enrique Chan's learning projects, live at **https://atlas-of-w
 | [ChronoVerse 3D](https://chronoverse-3d.web.app/) | Live |
 | [DinoVerse 3D](https://dino-portal-3d.web.app/) | Live |
 | [Inside Out Studio](https://inside-out-explorer.web.app/) | Live |
-| Take It Apart! | **Not live yet**: only runs as a local preview |
 | [Curious Little Minds](https://curious-little-minds.web.app/) | Live |
 | [SafeKids Portal](https://safe-kids.web.app/) | Live |
 | [Prenatal Clinical Atlas](https://prenatal-clinical-atlas.web.app/) | Live |
+| [Dragon Ball 3D Portal](https://dragonball-3d-portal.web.app/) | Live |
+| [One Piece Grand Line Atlas](https://onepiece-grand-line-atlas.web.app/) | Live |
+| [PokéVerse 3D](https://pokeverse-3d-atlas.web.app/) | Live |
 
 ## Run it
 
@@ -44,7 +46,7 @@ Links must be `https://` on `*.web.app` or `*.firebaseapp.com`, so a typo or pas
 
 ## When a "Not live yet" creation goes live
 
-Take It Apart! only runs as a local preview for now. Once it's on Firebase Hosting:
+Every tile is live right now. If you add a creation that only runs as a local preview, give it `status: 'coming-soon'` and no facts. Once it's on Firebase Hosting:
 
 1. In `creations.js`, add its `https://` url, set `status: 'live'` and add 1–3 facts. The comment on the entry has its old preview address.
 2. Add the same number of facts to each of its ten translations in `i18n.js`. A test checks that the counts match.
