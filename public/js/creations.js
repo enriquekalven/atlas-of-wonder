@@ -1,7 +1,8 @@
 /**
  * The single source of truth for the portal tiles.
  *
- * Facts below were checked against each live site and local project on 2026-10-23.
+ * Facts below were checked against each live site and local project on 2026-10-23;
+ * ChronoVerse 3D, DinoVerse 3D and Human Body 3D Atlas were re-checked on 2026-11-07.
  * To add a creation: append an entry, drop its image in assets/tiles/,
  * then run `npm test` (it validates every field) and `npm run check:links`.
  *
@@ -46,7 +47,7 @@ export const CREATIONS = Object.freeze([
     accent: 'anatomy',
     description:
       'Realistic 3D anatomy you can peel back layer by layer: skin, muscles, skeleton, organs, brain and nerves, with live blood flow.',
-    facts: ['2,225 named structures', 'Kids & clinical modes', '9 languages'],
+    facts: ['2,225 named structures', 'Kids & clinical modes', '11 languages'],
     audiences: ['kids', 'students', 'clinicians'],
     image: {
       src: 'assets/tiles/human-body-atlas.webp',
@@ -59,14 +60,13 @@ export const CREATIONS = Object.freeze([
     id: 'timeline-of-everything-3d',
     title: 'ChronoVerse 3D',
     kind: '3D deep-time timeline',
-    // Not deployed yet: it only runs as a local preview (http://127.0.0.1:8090/).
-    // To go live, add its https url, set status: 'live', and restore its facts here and in i18n.js.
-    status: 'coming-soon',
+    url: 'https://chronoverse-3d.web.app/',
+    status: 'live',
     size: 'standard',
     accent: 'chronoverse',
     description:
       'Fly through 13.8 billion years of history across 30 3D dioramas — from the Big Bang and Pangaea splitting into seven continents to dinosaurs, human evolution and Year 3000.',
-    facts: [],
+    facts: ['30 3D dioramas', '13.8B YA → 3000 CE', 'Pangaea Split Lab'],
     audiences: ['kids', 'students'],
     image: {
       src: 'assets/tiles/timeline-of-everything-3d.webp',
@@ -84,8 +84,8 @@ export const CREATIONS = Object.freeze([
     size: 'standard',
     accent: 'dino',
     description:
-      'Explore 29 prehistoric species across six geological eras with 3-layer 3D X-ray dissection, bio-acoustic dinosaur calls, Chirp 3 HD read-alouds and a 66 MYA Chicxulub impact lab.',
-    facts: ['29 prehistoric species', '3-layer 3D X-ray', 'Chicxulub impact lab'],
+      'Explore 74 prehistoric species across six geological eras with 3-layer 3D X-ray dissection, bio-acoustic dinosaur calls, Chirp 3 HD read-alouds and a 66 MYA Chicxulub impact lab.',
+    facts: ['74 prehistoric species', '3-layer 3D X-ray', 'Chicxulub impact lab'],
     audiences: ['kids', 'students'],
     image: {
       src: 'assets/tiles/dino-portal-3d.webp',

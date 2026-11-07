@@ -8,7 +8,7 @@ A tile portal for Enrique Chan's learning projects, live at **https://atlas-of-w
 |---|---|
 | [Cosmic Explorer 3D](https://cosmic-explorer-universe.web.app/) | Live (feature tile) |
 | [Human Body 3D Atlas](https://human-body-atlas.web.app/) | Live |
-| ChronoVerse 3D | **Not live yet** on the portal, but it's now deployed at https://chronoverse-3d.web.app/ (see "When a 'Not live yet' creation goes live") |
+| [ChronoVerse 3D](https://chronoverse-3d.web.app/) | Live |
 | [DinoVerse 3D](https://dino-portal-3d.web.app/) | Live |
 | [Inside Out Studio](https://inside-out-explorer.web.app/) | Live |
 | Take It Apart! | **Not live yet**: only runs as a local preview |
@@ -44,7 +44,7 @@ Links must be `https://` on `*.web.app` or `*.firebaseapp.com`, so a typo or pas
 
 ## When a "Not live yet" creation goes live
 
-ChronoVerse 3D and Take It Apart! only run as local previews for now. Once one is on Firebase Hosting:
+Take It Apart! only runs as a local preview for now. Once it's on Firebase Hosting:
 
 1. In `creations.js`, add its `https://` url, set `status: 'live'` and add 1–3 facts. The comment on the entry has its old preview address.
 2. Add the same number of facts to each of its ten translations in `i18n.js`. A test checks that the counts match.

@@ -758,7 +758,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'Anatomía 3D',
       description:
         'Anatomía 3D realista que puedes explorar capa por capa: piel, músculos, esqueleto, órganos, cerebro y nervios, con flujo sanguíneo en vivo.',
-      facts: Object.freeze(['2.225 estructuras', 'Modo infantil y clínico', '9 idiomas']),
+      facts: Object.freeze(['2.225 estructuras', 'Modo infantil y clínico', '11 idiomas']),
       alt: 'Atlas 3D del Cuerpo Humano mostrando una figura 3D de pie con los músculos y el esqueleto visibles.',
     }),
     zh: Object.freeze({
@@ -766,7 +766,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '3D 解剖学',
       description:
         '可逐层剖析的写实 3D 人体解剖：皮肤、肌肉、骨骼、器官、大脑与神经，并配有动态血液循环演示。',
-      facts: Object.freeze(['2,225 个命名结构', '儿童与临床双模式', '支持 9 种语言']),
+      facts: Object.freeze(['2,225 个命名结构', '儿童与临床双模式', '支持 11 种语言']),
       alt: '人体 3D 图谱展示一具清晰可见肌肉与骨骼的站立 3D 人体模型。',
     }),
     yue: Object.freeze({
@@ -774,7 +774,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '3D 解剖學',
       description:
         '可以逐層揭開嚟睇嘅寫實 3D 人體解剖：皮膚、肌肉、骨骼、器官、大腦同神經，仲有即時血液循環演示。',
-      facts: Object.freeze(['2,225 個解剖結構', '兒童及臨床雙模式', '支援 9 種語言']),
+      facts: Object.freeze(['2,225 個解剖結構', '兒童及臨床雙模式', '支援 11 種語言']),
       alt: '人體 3D 圖譜展示一具清晰見到肌肉同骨骼嘅企立 3D 人體模型。',
     }),
     ja: Object.freeze({
@@ -782,7 +782,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '3D 解剖図鑑',
       description:
         '皮膚、筋肉、骨格、臓器、脳、神経まで一層ずつめくって学べるリアルな 3D 解剖モデル。血流アニメーションも搭載。',
-      facts: Object.freeze(['2,225 の部位名称', 'キッズ＆臨床モード', '9言語対応']),
+      facts: Object.freeze(['2,225 の部位名称', 'キッズ＆臨床モード', '11言語対応']),
       alt: '筋肉と骨格が見える立位の 3D 人体モデルを表示する「人体 3D アトラス」の画面。',
     }),
     ko: Object.freeze({
@@ -790,7 +790,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '3D 해부학',
       description:
         '피부, 근육, 골격, 장기, 뇌와 신경을 한 겹씩 벗겨 보며 생생한 혈류까지 확인할 수 있는 실감형 3D 인체 해부도입니다.',
-      facts: Object.freeze(['2,225개 해부 구조', '어린이·임상 모드', '9개 언어 지원']),
+      facts: Object.freeze(['2,225개 해부 구조', '어린이·임상 모드', '11개 언어 지원']),
       alt: '근육과 골격이 드러난 직립 3D 인체 모델을 보여주는 인체 3D 아틀라스 화면.',
     }),
     pt: Object.freeze({
@@ -798,7 +798,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'Anatomia 3D',
       description:
         'Anatomia 3D realista para explorar camada por camada: pele, músculos, esqueleto, órgãos, cérebro e nervos, com fluxo sanguíneo ao vivo.',
-      facts: Object.freeze(['2.225 estruturas', 'Modos infantil e clínico', '9 idiomas']),
+      facts: Object.freeze(['2.225 estruturas', 'Modos infantil e clínico', '11 idiomas']),
       alt: 'Atlas 3D do Corpo Humano mostrando uma figura 3D em pé com músculos e esqueleto visíveis.',
     }),
     fr: Object.freeze({
@@ -806,7 +806,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'Anatomie 3D',
       description:
         'Une anatomie 3D réaliste à explorer couche par couche : peau, muscles, squelette, organes, cerveau et nerfs, avec circulation sanguine animée.',
-      facts: Object.freeze(['2 225 structures nommées', 'Modes enfant & clinique', '9 langues']),
+      facts: Object.freeze(['2 225 structures nommées', 'Modes enfant & clinique', '11 langues']),
       alt: 'Atlas 3D du Corps Humain montrant une silhouette 3D debout avec ses muscles et son squelette visibles.',
     }),
     it: Object.freeze({
@@ -814,7 +814,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'Anatomia 3D',
       description:
         'Anatomia 3D realistica da esplorare strato dopo strato: pelle, muscoli, scheletro, organi, cervello e nervi, con flusso sanguigno animato.',
-      facts: Object.freeze(['2.225 strutture', 'Modalità bimbi e clinica', '9 lingue']),
+      facts: Object.freeze(['2.225 strutture', 'Modalità bimbi e clinica', '11 lingue']),
       alt: 'Atlante 3D del Corpo Umano che mostra una figura 3D in piedi con muscoli e scheletro visibili.',
     }),
     de: Object.freeze({
@@ -822,7 +822,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '3D-Anatomie',
       description:
         'Realistische 3D-Anatomie zum Schicht-für-Schicht-Entdecken: Haut, Muskeln, Skelett, Organe, Gehirn und Nerven mit animiertem Blutfluss.',
-      facts: Object.freeze(['2.225 Strukturen', 'Kinder- & Klinikmodus', '9 Sprachen']),
+      facts: Object.freeze(['2.225 Strukturen', 'Kinder- & Klinikmodus', '11 Sprachen']),
       alt: '3D-Atlas des menschlichen Körpers mit einer stehenden 3D-Figur, deren Muskeln und Skelett sichtbar sind.',
     }),
     ar: Object.freeze({
@@ -830,7 +830,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'تشريح ثلاثي الأبعاد',
       description:
         'تشريح ثلاثي الأبعاد واقعي يمكنك تقشيره طبقة تلو الأخرى: الجلد والعضلات والهيكل العظمي والأعضاء والدماغ والأعصاب مع تدفق دموي حي.',
-      facts: Object.freeze(['2,225 بنية تشريحية', 'وضع للأطفال والأطباء', '9 لغات']),
+      facts: Object.freeze(['2,225 بنية تشريحية', 'وضع للأطفال والأطباء', '11 لغة']),
       alt: 'أطلس جسم الإنسان ثلاثي الأبعاد يعرض مجسماً واقفاً تظهر فيه العضلات والهيكل العظمي بوضوح.',
     }),
   }),
@@ -1007,7 +1007,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'Línea del tiempo 3D',
       description:
         'Viaja por 13.800 millones de años en 30 dioramas 3D: del Big Bang y la división de Pangea en siete continentes a los dinosaurios, la evolución humana y el año 3000.',
-      facts: Object.freeze([]),
+      facts: Object.freeze(['30 dioramas 3D', '13.800 M años → 3000', 'Laboratorio Pangea']),
       alt: 'Escena de ChronoVerse 3D con el Sol recién nacido y la proto-Tierra fundida brillando dentro de una nebulosa solar en espiral.',
     }),
     zh: Object.freeze({
@@ -1015,7 +1015,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '3D 深时历史长卷',
       description:
         '穿越 138 亿年历史与 30 座 3D 全景沙盘——从宇宙大爆炸、盘古大陆分裂为七大洲，到恐龙时代、人类演化与公元 3000 年。',
-      facts: Object.freeze([]),
+      facts: Object.freeze(['30 座 3D 沙盘', '138 亿年前 → 3000 年', '盘古大陆漂移实验室']),
       alt: '时空宇宙 3D 场景：新生的太阳与炽热熔融的原初地球在旋转的太阳星云中闪耀。',
     }),
     yue: Object.freeze({
@@ -1023,7 +1023,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '3D 深時歷史長卷',
       description:
         '飛越 138 億年歷史同 30 個 3D 全景模型——由宇宙大爆炸、盤古大陸分裂做七大洲，到恐龍時代、人類演化同西元 3000 年。',
-      facts: Object.freeze([]),
+      facts: Object.freeze(['30 個 3D 全景模型', '138 億年前 → 3000 年', '盤古大陸漂移實驗室']),
       alt: '時空宇宙 3D 場景：初生嘅太陽同熾熱熔融嘅原始地球喺旋轉緊嘅太陽星雲入面發光。',
     }),
     ja: Object.freeze({
@@ -1031,7 +1031,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '3D 138億年タイムライン',
       description:
         '30の3Dジオラマで138億年の歴史を飛行体験——ビッグバンやパンゲア超大陸の分裂から、恐竜、人類の進化、西暦3000年まで。',
-      facts: Object.freeze([]),
+      facts: Object.freeze(['30の3Dジオラマ', '138億年前→西暦3000年', 'パンゲア大陸分裂ラボ']),
       alt: '渦巻く太陽星雲の中で生まれたばかりの太陽と灼熱の原始地球が輝く「クロノバース 3D」のシーン。',
     }),
     ko: Object.freeze({
@@ -1039,7 +1039,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '3D 빅히스토리 타임라인',
       description:
         '30개의 3D 디오라마를 따라 138억 년의 역사를 비행하세요 — 빅뱅과 판게아 초대륙의 분리부터 공룡, 인류 진화, 서기 3000년까지.',
-      facts: Object.freeze([]),
+      facts: Object.freeze(['30개 3D 디오라마', '138억 년 전 → 3000년', '판게아 대륙 이동 랩']),
       alt: '소용돌이치는 태양 성운 속에서 갓 태어난 태양과 용암으로 빛나는 원시 지구를 보여주는 크로노버스 3D 장면.',
     }),
     pt: Object.freeze({
@@ -1047,7 +1047,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'Linha do tempo 3D',
       description:
         'Voe por 13,8 bilhões de anos em 30 dioramas 3D — do Big Bang e da divisão da Pangeia em sete continentes aos dinossauros, à evolução humana e ao ano 3000.',
-      facts: Object.freeze([]),
+      facts: Object.freeze(['30 dioramas 3D', '13,8 bi de anos → 3000', 'Laboratório Pangeia']),
       alt: 'Cena do ChronoVerse 3D com o Sol recém-nascido e a proto-Terra derretida brilhando dentro de uma nebulosa solar em espiral.',
     }),
     fr: Object.freeze({
@@ -1055,7 +1055,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'Frise du temps profond 3D',
       description:
         'Survolez 13,8 milliards d’années à travers 30 dioramas 3D — du Big Bang et la fracturation de la Pangée aux dinosaures, à l’évolution humaine et à l’an 3000.',
-      facts: Object.freeze([]),
+      facts: Object.freeze(['30 dioramas 3D', '13,8 Md d’ans → 3000', 'Labo dérive Pangée']),
       alt: 'Scène de ChronoVerse 3D montrant le Soleil naissant et la proto-Terre en fusion au cœur d’une nébuleuse solaire tourbillonnante.',
     }),
     it: Object.freeze({
@@ -1063,7 +1063,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'Linea del tempo profondo 3D',
       description:
         'Vola attraverso 13,8 miliardi di anni in 30 diorami 3D — dal Big Bang e la divisione della Pangea ai dinosauri, all’evoluzione umana e all’anno 3000.',
-      facts: Object.freeze([]),
+      facts: Object.freeze(['30 diorami 3D', '13,8 mld di anni → 3000', 'Laboratorio Pangea']),
       alt: 'Scena di ChronoVerse 3D con il Sole appena nato e la proto-Terra fusa che brillano dentro una nebulosa solare a spirale.',
     }),
     de: Object.freeze({
@@ -1071,7 +1071,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: '3D-Tiefenzeitleiste',
       description:
         'Fliege durch 13,8 Milliarden Jahre in 30 3D-Dioramen – vom Urknall und dem Auseinanderbrechen Pangäas über die Dinosaurier und die menschliche Evolution bis zum Jahr 3000.',
-      facts: Object.freeze([]),
+      facts: Object.freeze(['30 3D-Dioramen', '13,8 Mrd. Jahre → 3000', 'Pangäa-Labor']),
       alt: 'ChronoVerse-3D-Szene mit der neugeborenen Sonne und der geschmolzenen Proto-Erde in einem wirbelnden Sonnennebel.',
     }),
     ar: Object.freeze({
@@ -1079,7 +1079,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       kind: 'خط زمني ثلاثي الأبعاد للتاريخ العميق',
       description:
         'حلّق عبر 13.8 مليار سنة في 30 مشهداً ثلاثي الأبعاد — من الانفجار العظيم وانقسام بانجيا إلى الديناصورات وتطور الإنسان وعام 3000.',
-      facts: Object.freeze([]),
+      facts: Object.freeze(['30 مشهداً ثلاثي الأبعاد', 'من 13.8 مليار سنة إلى عام 3000', 'مختبر انقسام بانجيا']),
       alt: 'مشهد من ChronoVerse 3D يُظهر الشمس الوليدة والأرض الأولية المنصهرة تتوهجان داخل سديم شمسي حلزوني.',
     }),
   }),
@@ -1089,80 +1089,80 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       title: 'DinoVerse 3D',
       kind: 'Paleontología y fósiles 3D',
       description:
-        'Explora 29 especies prehistóricas en seis eras geológicas con rayos X 3D en 3 capas, rugidos bioacústicos, narración Chirp 3 HD y simulador del impacto de Chicxulub.',
-      facts: Object.freeze(['29 especies prehistóricas', 'Rayos X 3D en 3 capas', 'Impacto de Chicxulub']),
+        'Explora 74 especies prehistóricas en seis eras geológicas con rayos X 3D en 3 capas, rugidos bioacústicos, narración Chirp 3 HD y simulador del impacto de Chicxulub.',
+      facts: Object.freeze(['74 especies prehistóricas', 'Rayos X 3D en 3 capas', 'Impacto de Chicxulub']),
       alt: 'DinoVerse 3D mostrando un Tyrannosaurus rex en 3D con escamas y dientes detallados sobre una plataforma giratoria iluminada.',
     }),
     zh: Object.freeze({
       title: '恐龙纪元 3D',
       kind: '3D 古生物与化石图鉴',
       description:
-        '探索横跨六个地质时代的 29 种史前生物，支持三层 3D X 光解剖、生物声学恐龙鸣叫、Chirp 3 HD 语音伴读与 6600 万年前小行星撞击模拟。',
-      facts: Object.freeze(['29 种史前生物', '三层 3D X 光透视', '希克苏鲁伯撞击模拟']),
+        '探索横跨六个地质时代的 74 种史前生物，支持三层 3D X 光解剖、生物声学恐龙鸣叫、Chirp 3 HD 语音伴读与 6600 万年前小行星撞击模拟。',
+      facts: Object.freeze(['74 种史前生物', '三层 3D X 光透视', '希克苏鲁伯撞击模拟']),
       alt: '恐龙纪元 3D 画面：发光旋转展台上站立着细节逼真的 3D 霸王龙。',
     }),
     yue: Object.freeze({
       title: '恐龍紀元 3D',
       kind: '3D 古生物與化石圖鑑',
       description:
-        '探索橫跨六個地質時代嘅 29 種史前生物，支援三層 3D X 光解剖、生物聲學恐龍叫聲、Chirp 3 HD 語音伴讀同 6600 萬年前小行星撞擊模擬。',
-      facts: Object.freeze(['29 種史前生物', '三層 3D X 光透視', '希克蘇魯伯撞擊實驗室']),
+        '探索橫跨六個地質時代嘅 74 種史前生物，支援三層 3D X 光解剖、生物聲學恐龍叫聲、Chirp 3 HD 語音伴讀同 6600 萬年前小行星撞擊模擬。',
+      facts: Object.freeze(['74 種史前生物', '三層 3D X 光透視', '希克蘇魯伯撞擊實驗室']),
       alt: '恐龍紀元 3D 畫面：發光旋轉展台上面企住細節逼真嘅 3D 霸王龍。',
     }),
     ja: Object.freeze({
       title: 'ディノバース 3D',
       kind: '3D 恐竜・古生物図鑑',
       description:
-        '6つの地質時代にわたる29種の古生物を3層3D X線解剖、生体音響の鳴き声、Chirp 3 HD 読み上げ、6600万年前の小惑星衝突ラボで探検。',
-      facts: Object.freeze(['古生物 29種', '3層 3D X線解剖', '小惑星衝突ラボ']),
+        '6つの地質時代にわたる74種の古生物を3層3D X線解剖、生体音響の鳴き声、Chirp 3 HD 読み上げ、6600万年前の小惑星衝突ラボで探検。',
+      facts: Object.freeze(['古生物 74種', '3層 3D X線解剖', '小惑星衝突ラボ']),
       alt: '光るターンテーブルの上に立つ、鱗や歯まで精密な 3D ティラノサウルス・レックスを表示する「ディノバース 3D」。',
     }),
     ko: Object.freeze({
       title: '다이노버스 3D',
       kind: '3D 고생물학 & 화석 도감',
       description:
-        '6개 지질 시대의 고생물 29종을 3단계 3D X-레이 해부, 생체음향 공룡 울음소리, Chirp 3 HD 구연 내레이션, 칙술루브 소행성 충돌 랩으로 탐험하세요.',
-      facts: Object.freeze(['고생물 29종 수록', '3단계 3D X-레이', '소행성 충돌 실험실']),
+        '6개 지질 시대의 고생물 74종을 3단계 3D X-레이 해부, 생체음향 공룡 울음소리, Chirp 3 HD 구연 내레이션, 칙술루브 소행성 충돌 랩으로 탐험하세요.',
+      facts: Object.freeze(['고생물 74종 수록', '3단계 3D X-레이', '소행성 충돌 실험실']),
       alt: '빛나는 턴테이블 위에서 정교한 비늘과 이빨을 드러낸 3D 티라노사우루스 렉스를 보여주는 다이노버스 3D 화면.',
     }),
     pt: Object.freeze({
       title: 'DinoVerse 3D',
       kind: 'Paleontologia e fósseis 3D',
       description:
-        'Explore 29 espécies pré-históricas em seis eras geológicas com raio-X 3D em 3 camadas, rugidos bioacústicos, narração Chirp 3 HD e laboratório do impacto de Chicxulub.',
-      facts: Object.freeze(['29 espécies pré-históricas', 'Raio-X 3D em 3 camadas', 'Impacto de Chicxulub']),
+        'Explore 74 espécies pré-históricas em seis eras geológicas com raio-X 3D em 3 camadas, rugidos bioacústicos, narração Chirp 3 HD e laboratório do impacto de Chicxulub.',
+      facts: Object.freeze(['74 espécies pré-históricas', 'Raio-X 3D em 3 camadas', 'Impacto de Chicxulub']),
       alt: 'DinoVerse 3D mostrando um Tyrannosaurus rex em 3D com escamas e dentes detalhados sobre uma plataforma giratória iluminada.',
     }),
     fr: Object.freeze({
       title: 'DinoVerse 3D',
       kind: 'Paléontologie & fossiles 3D',
       description:
-        'Explorez 29 espèces préhistoriques sur six ères géologiques avec rayons X 3D à 3 couches, cris bio-acoustiques, narration Chirp 3 HD et simulateur d’impact de Chicxulub.',
-      facts: Object.freeze(['29 espèces préhistoriques', 'Rayons X 3D 3 couches', 'Impact de Chicxulub']),
+        'Explorez 74 espèces préhistoriques sur six ères géologiques avec rayons X 3D à 3 couches, cris bio-acoustiques, narration Chirp 3 HD et simulateur d’impact de Chicxulub.',
+      facts: Object.freeze(['74 espèces préhistoriques', 'Rayons X 3D 3 couches', 'Impact de Chicxulub']),
       alt: 'DinoVerse 3D montrant un Tyrannosaurus rex en 3D aux écailles et aux dents détaillées sur un plateau tournant lumineux.',
     }),
     it: Object.freeze({
       title: 'DinoVerse 3D',
       kind: 'Paleontologia e fossili 3D',
       description:
-        'Esplora 29 specie preistoriche in sei ere geologiche con raggi X 3D a 3 strati, richiami bioacustici, narrazione Chirp 3 HD e simulatore dell’impatto di Chicxulub.',
-      facts: Object.freeze(['29 specie preistoriche', 'Raggi X 3D a 3 strati', 'Impatto di Chicxulub']),
+        'Esplora 74 specie preistoriche in sei ere geologiche con raggi X 3D a 3 strati, richiami bioacustici, narrazione Chirp 3 HD e simulatore dell’impatto di Chicxulub.',
+      facts: Object.freeze(['74 specie preistoriche', 'Raggi X 3D a 3 strati', 'Impatto di Chicxulub']),
       alt: 'DinoVerse 3D che mostra un Tyrannosaurus rex in 3D con squame e denti dettagliati su una piattaforma girevole illuminata.',
     }),
     de: Object.freeze({
       title: 'DinoVerse 3D',
       kind: '3D-Paläontologie & Fossilien',
       description:
-        'Erkunde 29 prähistorische Arten aus sechs Erdzeitaltern mit 3-stufigem 3D-Röntgenblick, bioakustischen Rufen, Chirp-3-HD-Erzählung und Chicxulub-Einschlaglabor.',
-      facts: Object.freeze(['29 prähistorische Arten', '3-Schichten-3D-Röntgen', 'Chicxulub-Einschlaglabor']),
+        'Erkunde 74 prähistorische Arten aus sechs Erdzeitaltern mit 3-stufigem 3D-Röntgenblick, bioakustischen Rufen, Chirp-3-HD-Erzählung und Chicxulub-Einschlaglabor.',
+      facts: Object.freeze(['74 prähistorische Arten', '3-Schichten-3D-Röntgen', 'Chicxulub-Einschlaglabor']),
       alt: 'DinoVerse 3D zeigt einen 3D-Tyrannosaurus rex mit detaillierten Schuppen und Zähnen auf einem beleuchteten Drehteller.',
     }),
     ar: Object.freeze({
       title: 'DinoVerse 3D',
       kind: 'علم الحفريات والديناصورات 3D',
       description:
-        'استكشف 29 كائناً من عصور ما قبل التاريخ عبر ستة عصور جيولوجية مع أشعة سينية ثلاثية الطبقات، وأصوات حيوية، وسرد Chirp 3 HD ومختبر اصطدام تشيكشولوب.',
-      facts: Object.freeze(['29 كائناً ما قبل التاريخ', 'أشعة سينية 3D من 3 طبقات', 'مختبر نيازك تشيكشولوب']),
+        'استكشف 74 كائناً من عصور ما قبل التاريخ عبر ستة عصور جيولوجية مع أشعة سينية ثلاثية الطبقات، وأصوات حيوية، وسرد Chirp 3 HD ومختبر اصطدام تشيكشولوب.',
+      facts: Object.freeze(['74 كائناً ما قبل التاريخ', 'أشعة سينية 3D من 3 طبقات', 'مختبر نيازك تشيكشولوب']),
       alt: 'DinoVerse 3D يعرض ديناصور تيرانوصور ركس ثلاثي الأبعاد بحراشف وأسنان مفصلة على منصة دوارة مضيئة.',
     }),
   }),
