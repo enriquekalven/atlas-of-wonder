@@ -147,9 +147,9 @@ export const CREATIONS = Object.freeze([
     audiences: ['kids', 'parents'],
     image: {
       src: 'assets/tiles/curious-little-minds.webp',
-      alt: 'Cover of Lily & Robo: Day & Night Adventures, a watercolor picture book with a girl and a small round robot under a starry sky.',
-      width: 960,
-      height: 600,
+      alt: 'Curious Little Minds home page: the cozy bedtime-stories headline and read-aloud button beside the watercolor cover of Lily & Robo: Day & Night Adventures.',
+      width: 1200,
+      height: 750,
     },
   },
   {
@@ -166,7 +166,7 @@ export const CREATIONS = Object.freeze([
     audiences: ['parents'],
     image: {
       src: 'assets/tiles/safekids-portal.webp',
-      alt: 'Illustration from SafeKids Portal: a child builds with wooden blocks next to a screen-free audio player and a stack of picture books.',
+      alt: 'SafeKids Portal home page: a parent hub headline, counts of calm channels, games, whole-food swaps and screen-free audio, and illustrated cards for Watch, Play, Nourish and Listen.',
       width: 1200,
       height: 750,
     },

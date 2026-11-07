@@ -4,13 +4,13 @@
 
 A tile portal for Enrique Chan's learning projects, live at **https://atlas-of-wonder.web.app**. It's a static site with no build step and no dependencies.
 
-| Tile | Status (checked 2026-10-23) |
+| Tile | Status (checked 2026-11-07) |
 |---|---|
 | [Cosmic Explorer 3D](https://cosmic-explorer-universe.web.app/) | Live (feature tile) |
 | [Human Body 3D Atlas](https://human-body-atlas.web.app/) | Live |
-| ChronoVerse 3D | **Not live yet**: only runs as a local preview |
+| ChronoVerse 3D | **Not live yet** on the portal, but it's now deployed at https://chronoverse-3d.web.app/ (see "When a 'Not live yet' creation goes live") |
 | [DinoVerse 3D](https://dino-portal-3d.web.app/) | Live |
-| [Inside Out Studio](https://inside-out-explorer.web.app/) | Linked, but nothing is deployed there yet (Firebase "Site Not Found") |
+| [Inside Out Studio](https://inside-out-explorer.web.app/) | Live |
 | Take It Apart! | **Not live yet**: only runs as a local preview |
 | [Curious Little Minds](https://curious-little-minds.web.app/) | Live |
 | [SafeKids Portal](https://safe-kids.web.app/) | Live |

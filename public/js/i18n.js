@@ -842,7 +842,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'Cálidos cuentos en acuarela para antes de dormir que explican la IA con sencillez, comenzando con Lily y Robo: Aventuras de día y de noche.',
       facts: Object.freeze(['3 a 7 años', 'EN · ES · 中文', 'Lectura narrada gratis']),
-      alt: 'Portada de Lily y Robo: Aventuras de día y de noche, un libro ilustrado en acuarela con una niña y un pequeño robot redondo bajo un cielo estrellado.',
+      alt: 'Página de inicio de Pequeñas Mentes Curiosas: el titular sobre cuentos para dormir y el botón de lectura narrada junto a la portada en acuarela de Lily y Robo: Aventuras de día y de noche.',
     }),
     zh: Object.freeze({
       title: '好奇小脑袋',
@@ -850,7 +850,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         '温馨的水彩睡前故事，用孩子听得懂的方式讲述人工智能，首部绘本为《莉莉与小罗博：昼夜奇遇记》。',
       facts: Object.freeze(['3–7 岁适用', 'EN · ES · 中文', '免费有声伴读']),
-      alt: '《莉莉与小罗博：昼夜奇遇记》水彩绘本封面：星空下站着一个小女孩和一个圆滚滚的小机器人。',
+      alt: '好奇小脑袋网站首页：温馨睡前故事标题和有声伴读按钮，旁边是水彩绘本《莉莉与小罗博：昼夜奇遇记》的封面。',
     }),
     yue: Object.freeze({
       title: '好奇小腦袋',
@@ -858,7 +858,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         '溫馨嘅水彩睡前故事，用小朋友聽得明嘅方式講解人工智能，由《莉莉與小羅博：日與夜歷險記》開始。',
       facts: Object.freeze(['適合 3–7 歲', 'EN · ES · 中文', '免費有聲伴讀']),
-      alt: '《莉莉與小羅博：日與夜歷險記》水彩繪本封面：星空下企住一個小女孩同一個圓碌碌嘅小機械人。',
+      alt: '好奇小腦袋網站首頁：溫馨睡前故事標題同有聲伴讀按鈕，旁邊係水彩繪本《莉莉與小羅博：日與夜歷險記》嘅封面。',
     }),
     ja: Object.freeze({
       title: 'ちいさな好奇心',
@@ -866,7 +866,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'AI のしくみをやさしく伝える水彩画のおやすみ絵本。『リリーとロボ：昼と夜のぼうけん』から始まります。',
       facts: Object.freeze(['3〜7歳向け', 'EN · ES · 中文', '無料読み聞かせ']),
-      alt: '星空の下に立つ少女と小さな丸いロボットが描かれた水彩絵本『リリーとロボ：昼と夜のぼうけん』の表紙。',
+      alt: '「ちいさな好奇心」のトップページ：おやすみ絵本の見出しと読み聞かせボタンの横に、水彩絵本『リリーとロボ：昼と夜のぼうけん』の表紙が並ぶ画面。',
     }),
     ko: Object.freeze({
       title: '호기심 많은 작은 마음',
@@ -874,7 +874,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'AI를 쉽고 따뜻하게 풀어낸 수채화 잠자리 동화로, 《릴리와 로보: 낮과 밤의 모험》으로 시작합니다.',
       facts: Object.freeze(['3–7세 권장', 'EN · ES · 中文', '무료 읽어주기']),
-      alt: '별이 빛나는 밤하늘 아래 소녀와 작은 둥근 로봇이 그려진 수채화 그림책 《릴리와 로보: 낮과 밤의 모험》 표지.',
+      alt: '호기심 많은 작은 마음 홈페이지: 잠자리 동화 제목과 읽어주기 버튼 옆에 수채화 그림책 《릴리와 로보: 낮과 밤의 모험》 표지가 보이는 화면.',
     }),
     pt: Object.freeze({
       title: 'Pequenas Mentes Curiosas',
@@ -882,7 +882,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'Aconchegantes histórias de ninar em aquarela que explicam a IA de forma simples, começando com Lily & Robo: Aventuras de Dia e de Noite.',
       facts: Object.freeze(['3 a 7 anos', 'EN · ES · 中文', 'Narração gratuita']),
-      alt: 'Capa de Lily & Robo: Aventuras de Dia e de Noite, um livro ilustrado em aquarela com uma menina e um pequeno robô redondo sob um céu estrelado.',
+      alt: 'Página inicial de Pequenas Mentes Curiosas: o título sobre histórias de ninar e o botão de narração ao lado da capa em aquarela de Lily & Robo: Aventuras de Dia e de Noite.',
     }),
     fr: Object.freeze({
       title: 'Petits Esprits Curieux',
@@ -890,7 +890,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'De douces histoires du soir à l’aquarelle pour comprendre l’IA simplement, à commencer par Lily & Robo : Aventures de jour et de nuit.',
       facts: Object.freeze(['3 à 7 ans', 'EN · ES · 中文', 'Lecture audio gratuite']),
-      alt: 'Couverture de Lily & Robo : Aventures de jour et de nuit, un album à l’aquarelle montrant une fillette et un petit robot rond sous un ciel étoilé.',
+      alt: 'Page d’accueil de Petits Esprits Curieux : le titre sur les histoires du soir et le bouton de lecture audio, à côté de la couverture aquarelle de Lily & Robo : Aventures de jour et de nuit.',
     }),
     it: Object.freeze({
       title: 'Piccole Menti Curiose',
@@ -898,7 +898,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'Dolci storie della buonanotte ad acquerello che spiegano l’IA con semplicità, a partire da Lily & Robo: Avventure di giorno e di notte.',
       facts: Object.freeze(['3–7 anni', 'EN · ES · 中文', 'Lettura audio gratuita']),
-      alt: 'Copertina di Lily & Robo: Avventure di giorno e di notte, un albo illustrato ad acquerello con una bambina e un piccolo robot rotondo sotto un cielo stellato.',
+      alt: 'Home page di Piccole Menti Curiose: il titolo sulle storie della buonanotte e il pulsante della lettura audio accanto alla copertina ad acquerello di Lily & Robo: Avventure di giorno e di notte.',
     }),
     de: Object.freeze({
       title: 'Kleine Neugierige Köpfe',
@@ -906,7 +906,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'Warmherzige Aquarell-Gutenachtgeschichten, die KI kindgerecht erklären – beginnend mit Lily & Robo: Abenteuer bei Tag und Nacht.',
       facts: Object.freeze(['3 bis 7 Jahre', 'EN · ES · 中文', 'Kostenloses Vorlesen']),
-      alt: 'Buchcover von Lily & Robo: Abenteuer bei Tag und Nacht – ein Aquarell-Bilderbuch mit einem Mädchen und einem kleinen runden Roboter unter dem Sternenhimmel.',
+      alt: 'Startseite von Kleine Neugierige Köpfe: die Überschrift zu Gutenachtgeschichten und der Vorlese-Button neben dem Aquarell-Cover von Lily & Robo: Abenteuer bei Tag und Nacht.',
     }),
     ar: Object.freeze({
       title: 'عقول صغيرة فضولية',
@@ -914,7 +914,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'قصص دافئة بالألوان المائية قبل النوم تشرح الذكاء الاصطناعي ببساطة، بدءاً من قصة ليلي وروبو: مغامرات النهار والليل.',
       facts: Object.freeze(['من 3 إلى 7 سنوات', 'EN · ES · 中文', 'قراءة صوتية مجانية']),
-      alt: 'غلاف كتاب ليلي وروبو: مغامرات النهار والليل المرسوم بالألوان المائية ويُظهر طفلة وروبوتاً صغيراً مستديراً تحت سماء مرصعة بالنجوم.',
+      alt: 'الصفحة الرئيسية لموقع عقول صغيرة فضولية: عنوان قصص ما قبل النوم وزر القراءة المسموعة بجانب غلاف كتاب ليلي وروبو: مغامرات النهار والليل المرسوم بالألوان المائية.',
     }),
   }),
 
@@ -925,7 +925,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'Una guía serena y respaldada por estudios para padres: series de bajo estímulo, juegos sin anuncios, alternativas de comida real y audio sin pantallas según la edad.',
       facts: Object.freeze(['119 selecciones', '0 a 12 años', '30 estudios citados']),
-      alt: 'Ilustración del Portal SafeKids: un niño construye con bloques de madera junto a un reproductor de audio sin pantalla y una pila de libros ilustrados.',
+      alt: 'Inicio del Portal SafeKids: el titular para padres, cifras de canales tranquilos, juegos, comida real y audio sin pantallas, y tarjetas ilustradas de Ver, Jugar, Nutrir y Escuchar.',
     }),
     zh: Object.freeze({
       title: 'SafeKids 育儿指南',
@@ -933,7 +933,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         '科学循证的温和育儿指南：按孩子年龄筛选低刺激动画、无广告游戏、天然饮食替代方案与无屏音频。',
       facts: Object.freeze(['119 项严选推荐', '0–12 岁适用', '引用 30 项研究']),
-      alt: 'SafeKids 育儿指南插画：一个孩子正在搭木积木，旁边放着无屏音频播放器和一摞绘本。',
+      alt: 'SafeKids 育儿指南首页：家长中心标题，低刺激频道、游戏、天然饮食替代和无屏音频的数量统计，以及“观看、游戏、营养、聆听”四张插画卡片。',
     }),
     yue: Object.freeze({
       title: 'SafeKids 育兒指南',
@@ -941,7 +941,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         '有研究根據嘅溫和育兒指南：按小朋友年齡篩選低刺激節目、無廣告遊戲、天然健康小食替代方案同無屏幕音訊。',
       facts: Object.freeze(['119 項精選推薦', '適合 0–12 歲', '引用 30 項研究']),
-      alt: 'SafeKids 育兒指南插畫：一個小朋友砌緊木積木，隔離擺住無屏幕音訊機同一疊圖書。',
+      alt: 'SafeKids 育兒指南首頁：家長中心標題，低刺激頻道、遊戲、天然飲食替代同無屏幕音訊嘅數量統計，仲有「睇、玩、食、聽」四張插畫卡。',
     }),
     ja: Object.freeze({
       title: 'SafeKids ポータル',
@@ -949,7 +949,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         '研究に基づく穏やかな子育てガイド：低刺激の番組、広告なしゲーム、自然派おやつ、画面なしオーディオを年齢別に紹介。',
       facts: Object.freeze(['厳選 119 作品', '0〜12歳向け', '研究論文 30件引用']),
-      alt: 'SafeKids ポータルのイラスト：画面のないオーディオプレーヤーと絵本の横で積み木遊びをする子ども。',
+      alt: 'SafeKids ポータルのトップページ：保護者向けハブの見出し、低刺激チャンネル・ゲーム・自然派フード・画面なしオーディオの件数、「見る・遊ぶ・食べる・聴く」の4枚のイラストカード。',
     }),
     ko: Object.freeze({
       title: '세이프키즈 포털',
@@ -957,7 +957,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         '연구에 기반한 차분한 육아 가이드: 저자극 영상, 무광고 게임, 건강한 간식 대안, 무화면 오디오를 아이 연령별로 찾아보세요.',
       facts: Object.freeze(['엄선된 추천 119선', '0–12세 대상', '연구 30건 인용']),
-      alt: '세이프키즈 포털 일러스트: 화면 없는 오디오 플레이어와 그림책 더미 옆에서 나무 블록을 쌓는 아이.',
+      alt: '세이프키즈 포털 홈페이지: 부모용 허브 제목, 저자극 채널·게임·건강식 대안·무화면 오디오 개수, 그리고 보기·놀이·영양·듣기 일러스트 카드 4장.',
     }),
     pt: Object.freeze({
       title: 'Portal SafeKids',
@@ -965,7 +965,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'Um guia tranquilo e baseado em pesquisas para pais: séries de baixo estímulo, jogos sem anúncios, lanches naturais e áudio sem tela por faixa etária.',
       facts: Object.freeze(['119 escolhas', '0 a 12 anos', '30 estudos citados']),
-      alt: 'Ilustração do Portal SafeKids: uma criança brinca com blocos de madeira ao lado de um player de áudio sem tela e uma pilha de livros ilustrados.',
+      alt: 'Página inicial do Portal SafeKids: título do hub para pais, números de canais tranquilos, jogos, trocas por comida natural e áudio sem tela, e cartões ilustrados de Assistir, Brincar, Nutrir e Ouvir.',
     }),
     fr: Object.freeze({
       title: 'Portail SafeKids',
@@ -973,7 +973,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'Un guide apaisé et fondé sur la recherche pour les parents : émissions à faible stimulation, jeux sans pub, collations saines et audio sans écran selon l’âge.',
       facts: Object.freeze(['119 sélections', '0 à 12 ans', '30 études citées']),
-      alt: 'Illustration du Portail SafeKids : un enfant construit avec des blocs en bois à côté d’un lecteur audio sans écran et d’une pile d’albums illustrés.',
+      alt: 'Page d’accueil du Portail SafeKids : titre du hub parents, chiffres des chaînes apaisantes, jeux, alternatives saines et audio sans écran, et cartes illustrées Regarder, Jouer, Nourrir et Écouter.',
     }),
     it: Object.freeze({
       title: 'Portale SafeKids',
@@ -981,7 +981,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'Una guida serena e basata sulla ricerca per i genitori: programmi a basso stimolo, giochi senza pubblicità, merende genuine e audio senza schermo per fascia d’età.',
       facts: Object.freeze(['119 selezioni', '0–12 anni', '30 studi citati']),
-      alt: 'Illustrazione del Portale SafeKids: un bambino costruisce con blocchi di legno accanto a un lettore audio senza schermo e a una pila di libri illustrati.',
+      alt: 'Home page del Portale SafeKids: titolo dell’hub per genitori, numeri di canali tranquilli, giochi, alternative genuine e audio senza schermo, e schede illustrate Guardare, Giocare, Nutrire e Ascoltare.',
     }),
     de: Object.freeze({
       title: 'SafeKids-Portal',
@@ -989,7 +989,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'Ein ruhiger, wissenschaftlich fundierter Elternratgeber: reizarme Serien, werbefreie Spiele, gesunde Snack-Alternativen und bildschirmfreies Audio nach Alter.',
       facts: Object.freeze(['119 Empfehlungen', '0 bis 12 Jahre', '30 zitierte Studien']),
-      alt: 'Illustration des SafeKids-Portals: Ein Kind baut mit Holzklötzen neben einem bildschirmfreien Audioplayer und einem Stapel Bilderbücher.',
+      alt: 'Startseite des SafeKids-Portals: Überschrift des Eltern-Hubs, Zahlen zu ruhigen Kanälen, Spielen, Vollwert-Alternativen und bildschirmfreiem Audio sowie illustrierte Karten: Schauen, Spielen, Essen, Hören.',
     }),
     ar: Object.freeze({
       title: 'بوابة SafeKids',
@@ -997,7 +997,7 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       description:
         'دليل هادئ ومدعوم بالأبحاث للآباء: عروض منخفضة التحفيز، ألعاب بلا إعلانات، بدائل غذائية طبيعية وصوتيات بلا شاشات حسب عمر طفلك.',
       facts: Object.freeze(['119 اختياراً منتقى', 'من 0 إلى 12 سنة', '30 دراسة علمية']),
-      alt: 'رسم توضيحي لبوابة SafeKids: طفل يبني بمكعبات خشبية بجانب مشغل صوتي بلا شاشة وكومة من الكتب المصورة.',
+      alt: 'الصفحة الرئيسية لبوابة SafeKids: عنوان مركز الآباء، وأعداد القنوات الهادئة والألعاب وبدائل الطعام الطبيعي والصوتيات بلا شاشات، وبطاقات مصوّرة للمشاهدة واللعب والتغذية والاستماع.',
     }),
   }),
 
