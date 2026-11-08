@@ -4,19 +4,19 @@
 
 A tile portal for Enrique Chan's learning projects, live at **https://atlas-of-wonder.web.app**. It's a static site with no build step and no dependencies.
 
-| Tile | Status (checked 2026-11-07) |
-|---|---|
-| [Cosmic Explorer 3D](https://cosmic-explorer-universe.web.app/) | Live (feature tile) |
-| [Human Body 3D Atlas](https://human-body-atlas.web.app/) | Live |
-| [ChronoVerse 3D](https://chronoverse-3d.web.app/) | Live |
-| [DinoVerse 3D](https://dino-portal-3d.web.app/) | Live |
-| [Inside Out Studio](https://inside-out-explorer.web.app/) | Live |
-| [Curious Little Minds](https://curious-little-minds.web.app/) | Live |
-| [SafeKids Portal](https://safe-kids.web.app/) | Live |
-| [Prenatal Clinical Atlas](https://prenatal-clinical-atlas.web.app/) | Live |
-| [Dragon Ball 3D Portal](https://dragonball-3d-portal.web.app/) | Live |
-| [One Piece Grand Line Atlas](https://onepiece-grand-line-atlas.web.app/) | Live |
-| [PokéVerse 3D](https://pokeverse-3d-atlas.web.app/) | Live |
+| Tile | Theme | Status (checked 2026-11-07) |
+|---|---|---|
+| [Cosmic Explorer 3D](https://cosmic-explorer-universe.web.app/) | Explore | Live (feature tile) |
+| [Human Body 3D Atlas](https://human-body-atlas.web.app/) | Explore | Live |
+| [ChronoVerse 3D](https://chronoverse-3d.web.app/) | Explore | Live |
+| [DinoVerse 3D](https://dino-portal-3d.web.app/) | Explore | Live |
+| [Inside Out Studio](https://inside-out-explorer.web.app/) | Explore | Live |
+| [Dragon Ball 3D Portal](https://dragonball-3d-portal.web.app/) | Play | Live |
+| [One Piece Grand Line Atlas](https://onepiece-grand-line-atlas.web.app/) | Play | Live |
+| [PokéVerse 3D](https://pokeverse-3d-atlas.web.app/) | Play | Live |
+| [Curious Little Minds](https://curious-little-minds.web.app/) | Grow | Live |
+| [SafeKids Portal](https://safe-kids.web.app/) | Grow | Live |
+| [Prenatal Clinical Atlas](https://prenatal-clinical-atlas.web.app/) | Grow | Live |
 
 ## Run it
 
@@ -31,6 +31,7 @@ You need Node 20 or newer. There's nothing to install.
 ## What the visitor can do
 
 - **Languages (11)**: switch between English (`en`), Español (`es`), 中文 (`zh`), 粵語 (`yue`), 日本語 (`ja`), 한국어 (`ko`), Português (`pt`), Français (`fr`), Italiano (`it`), Deutsch (`de`), and العربية (`ar`, with full RTL layout) — matching the union of all languages across the sibling apps plus German and Arabic. Auto-detects from `?lang=`, saved preference, or browser locale (`zh-HK` / `yue` resolves to Cantonese).
+- **Themes**: tiles sit on three shelves: **Explore** (space, deep time, dinosaurs, anatomy and machines), **Play** (anime and game fan worlds) and **Grow** (bedtime stories, parenting and pregnancy). A sticky bar jumps to each shelf and highlights the one you're scrolling through; `#explore`, `#play` and `#grow` links work too.
 - **Show worlds for**: Everyone, Kids, Students, Parents or Clinicians. Tiles that don't match are dimmed rather than hidden, so the layout never jumps. The choice is kept in the URL (`?for=kids`), so you can share a filtered view.
 - **Explorer passport**: opening a world stamps its tile "Visited" (the stamp lands when you come back to the tab). The counter shows "2 of 6 worlds explored". Stamps stay in this browser only, and there's a Reset link.
 - **Day / Night**: follows the system setting until the visitor picks one.
@@ -38,7 +39,7 @@ You need Node 20 or newer. There's nothing to install.
 ## Add a new creation
 
 1. Add a screenshot to `public/assets/tiles/` (WebP, about 1200×750; portrait 900×1200 for a `tall` tile).
-2. Append an entry to `public/js/creations.js` and its translations in `public/js/i18n.js`.
+2. Append an entry to `public/js/creations.js` (set its `section` to `explore`, `play` or `grow`) and its translations in `public/js/i18n.js`.
 3. Add its link to the `<noscript>` list in `public/index.html`. A test fails if the two drift apart.
 4. Run `npm test` and `npm run check:links`.
 

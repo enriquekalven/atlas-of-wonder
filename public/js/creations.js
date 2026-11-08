@@ -9,7 +9,15 @@
  *
  * size:   'feature' (big), 'tall' (portrait) or 'standard'
  * status: 'live' renders a link; 'coming-soon' renders a "Not live yet" tile
+ * section: the themed shelf it sits on: 'explore', 'play' or 'grow' (see SECTIONS in validate.js)
  */
+
+/** Accent color for each section's heading and jump-bar link. */
+export const SECTION_ACCENTS = Object.freeze({
+  explore: 'cosmic',
+  play: 'pokeverse',
+  grow: 'safekids',
+});
 
 export const AUDIENCES = Object.freeze({
   kids: 'Kids',
@@ -27,6 +35,7 @@ export const CREATIONS = Object.freeze([
     status: 'live',
     size: 'feature',
     accent: 'cosmic',
+    section: 'explore',
     description:
       'Fly from Earth and the Moon past the Voyager probes to nearby exoplanets, the Milky Way and the edge of the observable universe, with real NASA and ESO imagery.',
     facts: ['6,451 exoplanets', 'Guided tour', 'Space quiz'],
@@ -46,6 +55,7 @@ export const CREATIONS = Object.freeze([
     status: 'live',
     size: 'tall',
     accent: 'anatomy',
+    section: 'explore',
     description:
       'Realistic 3D anatomy you can peel back layer by layer: skin, muscles, skeleton, organs, brain and nerves, with live blood flow.',
     facts: ['2,225 named structures', 'Kids & clinical modes', '11 languages'],
@@ -65,6 +75,7 @@ export const CREATIONS = Object.freeze([
     status: 'live',
     size: 'standard',
     accent: 'chronoverse',
+    section: 'explore',
     description:
       'Fly through 13.8 billion years of history across 30 3D dioramas — from the Big Bang and Pangaea splitting into seven continents to dinosaurs, human evolution and Year 3000.',
     facts: ['30 3D dioramas', '13.8B YA → 3000 CE', 'Pangaea Split Lab'],
@@ -84,6 +95,7 @@ export const CREATIONS = Object.freeze([
     status: 'live',
     size: 'standard',
     accent: 'dino',
+    section: 'explore',
     description:
       'Explore 74 prehistoric species across six geological eras with 3-layer 3D X-ray dissection, bio-acoustic dinosaur calls, Chirp 3 HD read-alouds and a 66 MYA Chicxulub impact lab.',
     facts: ['74 prehistoric species', '3-layer 3D X-ray', 'Chicxulub impact lab'],
@@ -103,6 +115,7 @@ export const CREATIONS = Object.freeze([
     status: 'live',
     size: 'standard',
     accent: 'studio',
+    section: 'explore',
     description:
       'Explode and test-drive iconic real-world machines across 18 categories — supercars, airliners, submarines, rockets, Mars rovers, bullet trains and mechanical watches.',
     facts: ['18 machine categories', '5 interactive modes', 'Drive, fly & launch'],
@@ -115,63 +128,6 @@ export const CREATIONS = Object.freeze([
     },
   },
   {
-    id: 'curious-little-minds',
-    title: 'Curious Little Minds',
-    kind: 'Picture books & read-alouds',
-    url: 'https://curious-little-minds.web.app/',
-    status: 'live',
-    size: 'standard',
-    accent: 'storybook',
-    description:
-      'Cozy watercolor bedtime stories that make AI make sense, starting with Lily & Robo: Day & Night Adventures.',
-    facts: ['Ages 3–7', 'EN · ES · 中文', 'Free read-alouds'],
-    audiences: ['kids', 'parents'],
-    image: {
-      src: 'assets/tiles/curious-little-minds.webp',
-      alt: 'Curious Little Minds home page: the cozy bedtime-stories headline and read-aloud button beside the watercolor cover of Lily & Robo: Day & Night Adventures.',
-      width: 1200,
-      height: 750,
-    },
-  },
-  {
-    id: 'safekids-portal',
-    title: 'SafeKids Portal',
-    kind: 'Parent guide',
-    url: 'https://safe-kids.web.app/',
-    status: 'live',
-    size: 'standard',
-    accent: 'safekids',
-    description:
-      'A calm, research-backed guide for parents: low-stimulus shows, ad-free games, whole-food swaps and screen-free audio, filtered by your child’s age.',
-    facts: ['119 curated picks', 'Ages 0–12', '30 studies cited'],
-    audiences: ['parents'],
-    image: {
-      src: 'assets/tiles/safekids-portal.webp',
-      alt: 'SafeKids Portal home page: a parent hub headline, counts of calm channels, games, whole-food swaps and screen-free audio, and illustrated cards for Watch, Play, Nourish and Listen.',
-      width: 1200,
-      height: 750,
-    },
-  },
-  {
-    id: 'prenatal-clinical-atlas',
-    title: 'Prenatal Clinical Atlas',
-    kind: 'Clinical OB/GYN & embryology',
-    url: 'https://prenatal-clinical-atlas.web.app/',
-    status: 'live',
-    size: 'standard',
-    accent: 'prenatal',
-    description:
-      'ACOG-aligned conception-to-birthday clinical reference spanning Weeks 1–42 with 3D embryology, Doppler heartbeat audio, 15-visit care roadmap and symptom triage.',
-    facts: ['Weeks 1–42', '3D · Photo · SVG', '8 languages'],
-    audiences: ['parents', 'clinicians'],
-    image: {
-      src: 'assets/tiles/prenatal-clinical-atlas.webp',
-      alt: 'Prenatal Clinical Atlas showing a third-trimester fetus curled peacefully in utero next to the placenta and umbilical cord.',
-      width: 1200,
-      height: 750,
-    },
-  },
-  {
     id: 'dragonball-3d-portal',
     title: 'Dragon Ball 3D Portal',
     kind: '3D anime multiverse',
@@ -179,6 +135,7 @@ export const CREATIONS = Object.freeze([
     status: 'live',
     size: 'standard',
     accent: 'dragonball',
+    section: 'play',
     description:
       'Power up 25 fighters through their canon transformations in 3D, fuse heroes in the Capsule Corp lab, battle head-to-head, hunt all seven Dragon Balls and follow the story from Dragon Ball to Super.',
     facts: ['25 fighters', 'Fusion lab & VS battles', '13 languages'],
@@ -198,6 +155,7 @@ export const CREATIONS = Object.freeze([
     status: 'live',
     size: 'standard',
     accent: 'onepiece',
+    section: 'play',
     description:
       'Spin a 3D globe of the Grand Line, sail the Log Pose timeline, meet 38 characters on their Vivre Cards, build a dream pirate crew and collect Devil Fruits, with a spoiler shield for every era.',
     facts: ['38 characters', 'Spoiler-safe eras', '11 languages'],
@@ -217,6 +175,7 @@ export const CREATIONS = Object.freeze([
     status: 'live',
     size: 'standard',
     accent: 'pokeverse',
+    section: 'play',
     description:
       'Browse all 1,025 Pokémon across nine generations and 18 types, spin evolutions and forms in a 3D viewer, hear their cries, and test what you know with flashcards and quizzes.',
     facts: ['1,025 Pokémon', '9 generations', '11 languages'],
@@ -224,6 +183,66 @@ export const CREATIONS = Object.freeze([
     image: {
       src: 'assets/tiles/pokeverse-3d-atlas.webp',
       alt: 'PokéVerse 3D home page with Pikachu on a glowing 3D stage next to a grid of Pokémon cards, from Bulbasaur and Charmander to Squirtle and Butterfree.',
+      width: 1200,
+      height: 750,
+    },
+  },
+  {
+    id: 'curious-little-minds',
+    title: 'Curious Little Minds',
+    kind: 'Picture books & read-alouds',
+    url: 'https://curious-little-minds.web.app/',
+    status: 'live',
+    size: 'standard',
+    accent: 'storybook',
+    section: 'grow',
+    description:
+      'Cozy watercolor bedtime stories that make AI make sense, starting with Lily & Robo: Day & Night Adventures.',
+    facts: ['Ages 3–7', 'EN · ES · 中文', 'Free read-alouds'],
+    audiences: ['kids', 'parents'],
+    image: {
+      src: 'assets/tiles/curious-little-minds.webp',
+      alt: 'Curious Little Minds home page: the cozy bedtime-stories headline and read-aloud button beside the watercolor cover of Lily & Robo: Day & Night Adventures.',
+      width: 1200,
+      height: 750,
+    },
+  },
+  {
+    id: 'safekids-portal',
+    title: 'SafeKids Portal',
+    kind: 'Parent guide',
+    url: 'https://safe-kids.web.app/',
+    status: 'live',
+    size: 'standard',
+    accent: 'safekids',
+    section: 'grow',
+    description:
+      'A calm, research-backed guide for parents: low-stimulus shows, ad-free games, whole-food swaps and screen-free audio, filtered by your child’s age.',
+    facts: ['119 curated picks', 'Ages 0–12', '30 studies cited'],
+    audiences: ['parents'],
+    image: {
+      src: 'assets/tiles/safekids-portal.webp',
+      alt: 'SafeKids Portal home page: a parent hub headline, counts of calm channels, games, whole-food swaps and screen-free audio, and illustrated cards for Watch, Play, Nourish and Listen.',
+      width: 1200,
+      height: 750,
+    },
+  },
+  {
+    id: 'prenatal-clinical-atlas',
+    title: 'Prenatal Clinical Atlas',
+    kind: 'Clinical OB/GYN & embryology',
+    url: 'https://prenatal-clinical-atlas.web.app/',
+    status: 'live',
+    size: 'standard',
+    accent: 'prenatal',
+    section: 'grow',
+    description:
+      'ACOG-aligned conception-to-birthday clinical reference spanning Weeks 1–42 with 3D embryology, Doppler heartbeat audio, 15-visit care roadmap and symptom triage.',
+    facts: ['Weeks 1–42', '3D · Photo · SVG', '8 languages'],
+    audiences: ['parents', 'clinicians'],
+    image: {
+      src: 'assets/tiles/prenatal-clinical-atlas.webp',
+      alt: 'Prenatal Clinical Atlas showing a third-trimester fetus curled peacefully in utero next to the placenta and umbilical cord.',
       width: 1200,
       height: 750,
     },

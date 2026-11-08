@@ -1,9 +1,10 @@
 /**
- * Atlas of Wonder: renders the tiles and wires four small interactions.
+ * Atlas of Wonder: renders the tiles and wires five small interactions.
  *   1. Multi-language switcher (EN, ES, 中文, 粵語, 日本語, 한국어, PT, FR, IT, DE, العربية) with ?lang= and localStorage.
  *   2. "Show worlds for" chips: dim tiles that don't match (shareable ?for=).
  *   3. Explorer passport: a tile gets a "Visited" stamp once it's opened.
  *   4. Day / Night toggle.
+ *   5. Themed sections (Explore, Play, Grow) with a sticky jump bar that highlights the section in view.
  * All DOM is built with createElement/textContent. There are no HTML strings.
  */
 import {
@@ -13,7 +14,7 @@ import {
   trackThemeToggle,
   trackWorldOpen,
 } from './analytics.js';
-import { AUDIENCES, CREATIONS } from './creations.js';
+import { AUDIENCES, CREATIONS, SECTION_ACCENTS } from './creations.js';
 import {
   DEFAULT_LANG,
   LANGUAGES,
@@ -23,7 +24,7 @@ import {
   localizeCreation,
   resolveLanguage,
 } from './i18n.js';
-import { validateCreation } from './validate.js';
+import { SECTIONS, validateCreation } from './validate.js';
 
 const KEYS = Object.freeze({ theme: 'aow-theme', visited: 'aow-visited', lang: 'aow-lang' });
 const THEME_COLORS = Object.freeze({ day: '#f5f0e6', night: '#0c121d' });
@@ -44,11 +45,15 @@ const creations = CREATIONS.filter((creation) => {
 });
 const creationById = new Map(creations.map((creation) => [creation.id, creation]));
 const liveIds = new Set(creations.filter((c) => c.status === 'live').map((c) => c.id));
+// Sections in page order, skipping any that have no valid tiles. Their ids double as #anchors.
+const sectionIds = SECTIONS.filter((id) => creations.some((c) => c.section === id));
 const tiles = new Map();
 const pendingStamps = new Set();
 let visited = new Set();
 let currentAudience = ALL;
 let currentLang = DEFAULT_LANG;
+let currentSection = null;
+let sectionObserver = null;
 
 function t() {
   return UI_STRINGS[currentLang] ?? UI_STRINGS[DEFAULT_LANG];
@@ -148,7 +153,7 @@ function renderFooter(creation, isLive) {
 function renderBody(creation, isLive) {
   const children = [
     el('p', { className: 'tile__kind', text: creation.kind }),
-    el('h3', { className: 'tile__title' }, [isLive ? renderLink(creation) : creation.title]),
+    el('h4', { className: 'tile__title' }, [isLive ? renderLink(creation) : creation.title]),
     el('p', { className: 'tile__desc', text: creation.description }),
   ];
   if (creation.facts.length > 0) {
@@ -175,12 +180,90 @@ function renderTile(baseCreation) {
   return tile;
 }
 
+function renderSection(id) {
+  const { title, tagline } = t().sections[id];
+  const headingId = `section-${id}-title`;
+  const list = el(
+    'ul',
+    { className: 'grid', attrs: { role: 'list' } },
+    creations.filter((c) => c.section === id).map(renderTile),
+  );
+  return el(
+    'section',
+    { className: 'world-section', attrs: { id, 'data-accent': SECTION_ACCENTS[id], 'aria-labelledby': headingId } },
+    [
+      el('div', { className: 'world-section__header' }, [
+        el('h3', { className: 'world-section__title', text: title, attrs: { id: headingId } }),
+        el('p', { className: 'world-section__tagline', text: tagline }),
+      ]),
+      list,
+    ],
+  );
+}
+
 function renderTiles() {
   tiles.clear();
   const items = creations.length > 0
-    ? creations.map(renderTile)
-    : [el('li', { className: 'empty', text: t().emptyWorlds })];
+    ? sectionIds.map(renderSection)
+    : [el('p', { className: 'empty', text: t().emptyWorlds })];
   $('worlds').replaceChildren(...items);
+  observeSections();
+}
+
+// ---------- section jump bar + scroll-spy ----------
+
+function renderSectionNav() {
+  const strings = t();
+  const nav = $('section-nav');
+  const links = sectionIds.map((id) =>
+    el(
+      'a',
+      { className: 'section-nav__link', attrs: { href: `#${id}`, 'data-section': id, 'data-accent': SECTION_ACCENTS[id] } },
+      [
+        el('span', { text: strings.sections[id].title }),
+        el('span', { className: 'chip__count', text: String(creations.filter((c) => c.section === id).length) }),
+      ],
+    ),
+  );
+  nav.setAttribute('aria-label', strings.sectionNavLabel);
+  nav.replaceChildren(...links);
+  nav.hidden = sectionIds.length < 2;
+  setCurrentSection(currentSection);
+}
+
+function setCurrentSection(id) {
+  currentSection = id;
+  for (const link of document.querySelectorAll('.section-nav__link')) {
+    if (link.dataset.section === id) link.setAttribute('aria-current', 'true');
+    else link.removeAttribute('aria-current');
+  }
+}
+
+function observeSections() {
+  if (!('IntersectionObserver' in window)) return;
+  sectionObserver?.disconnect();
+  const inView = new Map();
+  // A thin band just above the middle of the viewport: the section crossing it is "current".
+  sectionObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) inView.set(entry.target.id, entry.isIntersecting);
+      const id = sectionIds.find((sectionId) => inView.get(sectionId));
+      if (id) setCurrentSection(id);
+    },
+    { rootMargin: '-40% 0px -55% 0px' },
+  );
+  for (const id of sectionIds) {
+    const node = document.getElementById(id);
+    if (node) sectionObserver.observe(node);
+  }
+}
+
+// Sections are rendered after the browser's own #hash scroll, so redo it for allow-listed ids only.
+function scrollToHashSection() {
+  const id = window.location.hash.slice(1);
+  if (!sectionIds.includes(id)) return;
+  document.getElementById(id)?.scrollIntoView();
+  setCurrentSection(id);
 }
 
 function renderSummary() {
@@ -353,6 +436,7 @@ function applyLanguage(code, { fromUser }) {
   currentLang = isSupportedLanguage(code) ? code : DEFAULT_LANG;
   paintStaticChrome();
   renderTiles();
+  renderSectionNav();
   renderSummary();
   renderChips();
   applyAudience(currentAudience, { fromUser: false });
@@ -428,6 +512,7 @@ function init() {
   visited = readVisited();
   renderLangSwitch();
   applyLanguage(currentLang, { fromUser: false });
+  scrollToHashSection();
   paintTheme();
   $('theme-toggle').addEventListener('click', toggleTheme);
   $('passport-reset').addEventListener('click', resetPassport);

@@ -21,6 +21,9 @@ export const ACCENTS = Object.freeze([
   'pokeverse',
 ]);
 
+/** Themed sections, in page order. */
+export const SECTIONS = Object.freeze(['explore', 'play', 'grow']);
+
 /**
  * Tiles may only link to these host suffixes (over HTTPS) or local loopback
  * servers (http://127.0.0.1:<port>). This catches typos and pasted
@@ -111,6 +114,7 @@ export function validateCreation(creation, { audiences }) {
   checkEnum(errors, creation.status, 'status', STATUSES);
   checkEnum(errors, creation.size, 'size', SIZES);
   checkEnum(errors, creation.accent, 'accent', ACCENTS);
+  checkEnum(errors, creation.section, 'section', SECTIONS);
   checkUrl(errors, creation);
   // Facts are optional: a coming-soon tile shouldn't carry unverified claims.
   checkList(errors, creation.facts, 'facts', {

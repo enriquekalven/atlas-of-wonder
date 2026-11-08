@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
 import { AUDIENCES, CREATIONS } from '../public/js/creations.js';
-import { validateCreation } from '../public/js/validate.js';
+import { SECTIONS, validateCreation } from '../public/js/validate.js';
 
 const audiences = Object.keys(AUDIENCES);
 
@@ -25,6 +25,12 @@ test('every tile image exists on disk', () => {
 
 test('the bento layout has exactly one feature tile', () => {
   assert.equal(CREATIONS.filter((c) => c.size === 'feature').length, 1);
+});
+
+test('every section has at least one creation', () => {
+  for (const section of SECTIONS) {
+    assert.ok(CREATIONS.some((c) => c.section === section), `section "${section}" is empty`);
+  }
 });
 
 test('every audience filter matches at least one creation', () => {

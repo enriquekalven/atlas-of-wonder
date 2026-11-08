@@ -14,7 +14,7 @@ import {
   matchLanguageTag,
   resolveLanguage,
 } from '../public/js/i18n.js';
-import { validateCreation } from '../public/js/validate.js';
+import { SECTIONS, validateCreation } from '../public/js/validate.js';
 
 const audiences = Object.keys(AUDIENCES);
 const expectedCodes = ['en', 'es', 'zh', 'yue', 'ja', 'ko', 'pt', 'fr', 'it', 'de', 'ar'];
@@ -51,6 +51,11 @@ test('UI_STRINGS has complete key parity and non-empty strings across all 11 lan
 
     assert.deepEqual(Object.keys(bundle.audiences).sort(), [...audiences].sort());
     assert.deepEqual(Object.keys(bundle.audienceNouns).sort(), [...audiences].sort());
+    assert.deepEqual(Object.keys(bundle.sections), [...SECTIONS], `${lang}.sections keys differ`);
+    for (const section of SECTIONS) {
+      assert.ok(bundle.sections[section].title.trim().length > 0, `${lang}.sections.${section}.title is empty`);
+      assert.ok(bundle.sections[section].tagline.trim().length > 0, `${lang}.sections.${section}.tagline is empty`);
+    }
     for (const aud of audiences) {
       assert.ok(bundle.audiences[aud].trim().length > 0, `${lang}.audiences.${aud} is empty`);
       assert.ok(bundle.audienceNouns[aud].trim().length > 0, `${lang}.audienceNouns.${aud} is empty`);

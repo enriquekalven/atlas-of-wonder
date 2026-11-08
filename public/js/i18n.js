@@ -65,6 +65,7 @@ export const UI_STRINGS = Object.freeze({
     mastheadLede: 'Interactive worlds for curious minds, from a first heartbeat to the edge of the universe.',
     worldsHeading: 'Creations',
     filterLabel: 'Show worlds for',
+    sectionNavLabel: 'Jump to a theme',
     everyone: 'Everyone',
     audiences: Object.freeze({
       kids: 'Kids',
@@ -77,6 +78,11 @@ export const UI_STRINGS = Object.freeze({
       students: 'students',
       parents: 'parents',
       clinicians: 'clinicians',
+    }),
+    sections: Object.freeze({
+      explore: Object.freeze({ title: 'Explore', tagline: 'Space, deep time, dinosaurs, the human body and machines, all in 3D.' }),
+      play: Object.freeze({ title: 'Play', tagline: 'Anime and game worlds. Unofficial fan projects; characters belong to their creators.' }),
+      grow: Object.freeze({ title: 'Grow', tagline: 'Bedtime stories, calm parenting and pregnancy, week by week.' }),
     }),
     passportLabel: 'Explorer passport',
     passportReset: 'Reset',
@@ -121,6 +127,7 @@ export const UI_STRINGS = Object.freeze({
       'Mundos interactivos para mentes curiosas, desde el primer latido hasta el confín del universo.',
     worldsHeading: 'Creaciones',
     filterLabel: 'Mostrar mundos para',
+    sectionNavLabel: 'Ir a un tema',
     everyone: 'Todos',
     audiences: Object.freeze({
       kids: 'Niños',
@@ -133,6 +140,11 @@ export const UI_STRINGS = Object.freeze({
       students: 'estudiantes',
       parents: 'padres',
       clinicians: 'clínicos',
+    }),
+    sections: Object.freeze({
+      explore: Object.freeze({ title: 'Explorar', tagline: 'El espacio, el tiempo profundo, los dinosaurios, el cuerpo humano y las máquinas, todo en 3D.' }),
+      play: Object.freeze({ title: 'Jugar', tagline: 'Mundos de anime y videojuegos. Proyectos de fans no oficiales; los personajes pertenecen a sus creadores.' }),
+      grow: Object.freeze({ title: 'Crecer', tagline: 'Cuentos para dormir, crianza tranquila y embarazo, semana a semana.' }),
     }),
     passportLabel: 'Pasaporte de explorador',
     passportReset: 'Reiniciar',
@@ -176,6 +188,7 @@ export const UI_STRINGS = Object.freeze({
     mastheadLede: '为好奇心灵打造的互动世界，从最初的心跳一直探索到宇宙的边缘。',
     worldsHeading: '作品列表',
     filterLabel: '筛选适用人群',
+    sectionNavLabel: '跳转到主题',
     everyone: '全部',
     audiences: Object.freeze({
       kids: '儿童',
@@ -188,6 +201,11 @@ export const UI_STRINGS = Object.freeze({
       students: '学生',
       parents: '家长',
       clinicians: '临床医护',
+    }),
+    sections: Object.freeze({
+      explore: Object.freeze({ title: '探索', tagline: '太空、远古、恐龙、人体与机械，全部以 3D 呈现。' }),
+      play: Object.freeze({ title: '玩乐', tagline: '动漫与游戏世界。非官方粉丝作品，角色版权归原作者所有。' }),
+      grow: Object.freeze({ title: '成长', tagline: '睡前故事、温和育儿，以及逐周孕期指南。' }),
     }),
     passportLabel: '探索护照',
     passportReset: '重置',
@@ -231,6 +249,7 @@ export const UI_STRINGS = Object.freeze({
     mastheadLede: '為充滿好奇心嘅大小朋友打造嘅互動世界，由最初嘅心跳一路探索到宇宙邊緣。',
     worldsHeading: '作品一覽',
     filterLabel: '篩選適合對象',
+    sectionNavLabel: '跳去主題',
     everyone: '全部',
     audiences: Object.freeze({
       kids: '小朋友',
@@ -243,6 +262,11 @@ export const UI_STRINGS = Object.freeze({
       students: '學生',
       parents: '家長',
       clinicians: '醫護人員',
+    }),
+    sections: Object.freeze({
+      explore: Object.freeze({ title: '探索', tagline: '太空、遠古、恐龍、人體同機械，全部用 3D 呈現。' }),
+      play: Object.freeze({ title: '玩樂', tagline: '動漫同遊戲世界。非官方粉絲作品，角色版權屬於原作者。' }),
+      grow: Object.freeze({ title: '成長', tagline: '睡前故事、溫和育兒，仲有逐週懷孕指南。' }),
     }),
     passportLabel: '探索護照',
     passportReset: '重設',
@@ -287,6 +311,7 @@ export const UI_STRINGS = Object.freeze({
       '最初の鼓動から宇宙の果てまで、好奇心あふれる心のためのインタラクティブな世界。',
     worldsHeading: '作品一覧',
     filterLabel: '対象で絞り込む',
+    sectionNavLabel: 'テーマへ移動',
     everyone: 'すべて',
     audiences: Object.freeze({
       kids: '子ども',
@@ -299,6 +324,11 @@ export const UI_STRINGS = Object.freeze({
       students: '学生',
       parents: '保護者',
       clinicians: '医療従事者',
+    }),
+    sections: Object.freeze({
+      explore: Object.freeze({ title: '探検', tagline: '宇宙、太古の時代、恐竜、人体、機械をまるごと3Dで。' }),
+      play: Object.freeze({ title: '遊び', tagline: 'アニメとゲームの世界。非公式のファン作品で、キャラクターの権利は原作者に帰属します。' }),
+      grow: Object.freeze({ title: '成長', tagline: 'おやすみ絵本、穏やかな子育て、週ごとの妊娠ガイド。' }),
     }),
     passportLabel: '探検パスポート',
     passportReset: 'リセット',
@@ -343,6 +373,7 @@ export const UI_STRINGS = Object.freeze({
       '첫 심장 박동부터 우주의 끝까지, 호기심 가득한 마음을 위한 인터랙티브 세계.',
     worldsHeading: '작품 목록',
     filterLabel: '대상별 보기',
+    sectionNavLabel: '테마로 이동',
     everyone: '전체',
     audiences: Object.freeze({
       kids: '어린이',
@@ -355,6 +386,11 @@ export const UI_STRINGS = Object.freeze({
       students: '학생',
       parents: '부모',
       clinicians: '임상의',
+    }),
+    sections: Object.freeze({
+      explore: Object.freeze({ title: '탐험', tagline: '우주, 아득한 과거, 공룡, 인체와 기계를 모두 3D로 만나요.' }),
+      play: Object.freeze({ title: '놀이', tagline: '애니메이션과 게임 세계. 비공식 팬 프로젝트이며 캐릭터의 권리는 원작자에게 있습니다.' }),
+      grow: Object.freeze({ title: '성장', tagline: '잠자리 동화, 차분한 육아, 주차별 임신 가이드.' }),
     }),
     passportLabel: '탐험 패스포트',
     passportReset: '초기화',
@@ -399,6 +435,7 @@ export const UI_STRINGS = Object.freeze({
       'Mundos interativos para mentes curiosas, do primeiro batimento cardíaco até a fronteira do universo.',
     worldsHeading: 'Criações',
     filterLabel: 'Mostrar mundos para',
+    sectionNavLabel: 'Ir para um tema',
     everyone: 'Todos',
     audiences: Object.freeze({
       kids: 'Crianças',
@@ -411,6 +448,11 @@ export const UI_STRINGS = Object.freeze({
       students: 'estudantes',
       parents: 'pais',
       clinicians: 'clínicos',
+    }),
+    sections: Object.freeze({
+      explore: Object.freeze({ title: 'Explorar', tagline: 'O espaço, o tempo profundo, os dinossauros, o corpo humano e as máquinas, tudo em 3D.' }),
+      play: Object.freeze({ title: 'Brincar', tagline: 'Mundos de anime e games. Projetos de fã não oficiais; os personagens pertencem aos seus criadores.' }),
+      grow: Object.freeze({ title: 'Crescer', tagline: 'Histórias para dormir, criação tranquila e gravidez, semana a semana.' }),
     }),
     passportLabel: 'Passaporte de explorador',
     passportReset: 'Redefinir',
@@ -455,6 +497,7 @@ export const UI_STRINGS = Object.freeze({
       'Des mondes interactifs pour les esprits curieux, du premier battement de cœur aux confins de l’univers.',
     worldsHeading: 'Créations',
     filterLabel: 'Mondes pour',
+    sectionNavLabel: 'Aller à un thème',
     everyone: 'Tous',
     audiences: Object.freeze({
       kids: 'Enfants',
@@ -467,6 +510,11 @@ export const UI_STRINGS = Object.freeze({
       students: 'les étudiants',
       parents: 'les parents',
       clinicians: 'les cliniciens',
+    }),
+    sections: Object.freeze({
+      explore: Object.freeze({ title: 'Explorer', tagline: 'L’espace, le temps profond, les dinosaures, le corps humain et les machines, le tout en 3D.' }),
+      play: Object.freeze({ title: 'Jouer', tagline: 'Mondes d’anime et de jeux vidéo. Projets de fans non officiels ; les personnages appartiennent à leurs créateurs.' }),
+      grow: Object.freeze({ title: 'Grandir', tagline: 'Histoires du soir, parentalité sereine et grossesse, semaine après semaine.' }),
     }),
     passportLabel: 'Passeport d’explorateur',
     passportReset: 'Réinitialiser',
@@ -511,6 +559,7 @@ export const UI_STRINGS = Object.freeze({
       'Mondi interattivi per menti curiose, dal primo battito del cuore fino ai confini dell’universo.',
     worldsHeading: 'Creazioni',
     filterLabel: 'Mostra mondi per',
+    sectionNavLabel: 'Vai a un tema',
     everyone: 'Tutti',
     audiences: Object.freeze({
       kids: 'Bambini',
@@ -523,6 +572,11 @@ export const UI_STRINGS = Object.freeze({
       students: 'studenti',
       parents: 'genitori',
       clinicians: 'clinici',
+    }),
+    sections: Object.freeze({
+      explore: Object.freeze({ title: 'Esplora', tagline: 'Lo spazio, il tempo profondo, i dinosauri, il corpo umano e le macchine, tutto in 3D.' }),
+      play: Object.freeze({ title: 'Gioca', tagline: 'Mondi di anime e videogiochi. Progetti di fan non ufficiali; i personaggi appartengono ai loro creatori.' }),
+      grow: Object.freeze({ title: 'Cresci', tagline: 'Storie della buonanotte, genitorialità serena e gravidanza, settimana dopo settimana.' }),
     }),
     passportLabel: 'Passaporto da esploratore',
     passportReset: 'Reimposta',
@@ -567,6 +621,7 @@ export const UI_STRINGS = Object.freeze({
       'Interaktive Welten für neugierige Köpfe – vom ersten Herzschlag bis zum Rand des Universums.',
     worldsHeading: 'Werke',
     filterLabel: 'Welten zeigen für',
+    sectionNavLabel: 'Zu einem Thema springen',
     everyone: 'Alle',
     audiences: Object.freeze({
       kids: 'Kinder',
@@ -579,6 +634,11 @@ export const UI_STRINGS = Object.freeze({
       students: 'Studierende',
       parents: 'Eltern',
       clinicians: 'medizinisches Fachpersonal',
+    }),
+    sections: Object.freeze({
+      explore: Object.freeze({ title: 'Entdecken', tagline: 'Weltall, Urzeit, Dinosaurier, der menschliche Körper und Maschinen – alles in 3D.' }),
+      play: Object.freeze({ title: 'Spielen', tagline: 'Anime- und Spielewelten. Inoffizielle Fanprojekte; die Figuren gehören ihren Schöpfern.' }),
+      grow: Object.freeze({ title: 'Wachsen', tagline: 'Gutenachtgeschichten, gelassene Erziehung und Schwangerschaft, Woche für Woche.' }),
     }),
     passportLabel: 'Entdeckerpass',
     passportReset: 'Zurücksetzen',
@@ -623,6 +683,7 @@ export const UI_STRINGS = Object.freeze({
       'عوالم تفاعلية للعقول الفضولية، من أول نبضة قلب إلى حافة الكون.',
     worldsHeading: 'الإبداعات',
     filterLabel: 'عرض العوالم لـ',
+    sectionNavLabel: 'انتقل إلى موضوع',
     everyone: 'الجميع',
     audiences: Object.freeze({
       kids: 'الأطفال',
@@ -635,6 +696,11 @@ export const UI_STRINGS = Object.freeze({
       students: 'الطلاب',
       parents: 'الآباء',
       clinicians: 'الأطباء',
+    }),
+    sections: Object.freeze({
+      explore: Object.freeze({ title: 'استكشاف', tagline: 'الفضاء والزمن السحيق والديناصورات وجسم الإنسان والآلات، كلها بتقنية ثلاثية الأبعاد.' }),
+      play: Object.freeze({ title: 'لعب', tagline: 'عوالم الأنمي والألعاب. مشاريع معجبين غير رسمية، والشخصيات ملك لمبتكريها.' }),
+      grow: Object.freeze({ title: 'نمو', tagline: 'قصص ما قبل النوم وتربية هادئة ومتابعة الحمل أسبوعاً بأسبوع.' }),
     }),
     passportLabel: 'جواز المستكشف',
     passportReset: 'إعادة ضبط',
