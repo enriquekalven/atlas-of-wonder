@@ -1647,6 +1647,89 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       alt: 'الصفحة الرئيسية لـ PokéVerse 3D تعرض بيكاتشو على منصة ثلاثية الأبعاد مضيئة بجانب شبكة من بطاقات البوكيمون، من بلباسور وتشارماندر إلى سكويرتل وباترفري.',
     }),
   }),
+
+  'shinobi-atlas': Object.freeze({
+    es: Object.freeze({
+      title: 'Atlas del Mundo Shinobi',
+      kind: 'Atlas anime de mundo y poder',
+      description:
+        'Conoce a 43 ninjas de Naruto, Shippuden y Boruto en modo infantil o databook, combate 1v1, recorre el mapa de las Cinco Grandes Naciones y las 10 Bestias con Cola, fusiona chakra y haz el examen Chunin sin spoilers.',
+      facts: Object.freeze(['43 personajes', 'Arena 1v1 y lab de chakra', '11 idiomas']),
+      alt: 'Página de inicio del Atlas del Mundo Shinobi con tarjetas de Isshiki Otsutsuki, Hagoromo Otsutsuki y Naruto Uzumaki junto al expediente del Séptimo Hokage.',
+    }),
+    zh: Object.freeze({
+      title: '忍者世界全图鉴',
+      kind: '动漫忍者世界与战力图鉴',
+      description:
+        '在儿童或暗部设定集模式下认识《火影忍者》《疾风传》与《博人传》的 43 位忍者，进行 1v1 对决，探索五大忍国地图与 10 只尾兽，融合查克拉属性并挑战中忍考试，每个时代均有防剧透护盾。',
+      facts: Object.freeze(['43 位角色', '1v1 竞技场与查克拉融合', '11 种语言']),
+      alt: '忍者世界全图鉴首页：展示大筒木一式、大筒木羽衣与漩涡鸣人的角色卡片，右侧为七代目火影鸣人的设定集档案。',
+    }),
+    yue: Object.freeze({
+      title: '忍者世界全圖鑑',
+      kind: '動漫忍者世界與戰力圖鑑',
+      description:
+        '喺兒童或暗部設定集模式下認識《火影忍者》《疾風傳》同《博人傳》嘅 43 位忍者，進行 1v1 對決，探索五大忍國地圖同 10 隻尾獸，融合查克拉屬性並挑戰中忍考試，每個年代都有防劇透護盾。',
+      facts: Object.freeze(['43 位角色', '1v1 競技場同查克拉融合', '11 種語言']),
+      alt: '忍者世界全圖鑑首頁：展示大筒木一式、大筒木羽衣同漩渦鳴人嘅角色卡，右邊係七代目火影鳴人嘅設定集檔案。',
+    }),
+    ja: Object.freeze({
+      title: '忍界ワールドアトラス',
+      kind: 'アニメ世界＆戦闘力アトラス',
+      description:
+        'キッズ・暗部データブックの2モードで『NARUTO』『疾風伝』『BORUTO』の43人の忍に出会い、1v1闘技場で対決し、五大国マップや10体の尾獣を探検、チャクラ性質の融合や中忍試験クイズも時代別ネタバレ防止つきで楽しもう。',
+      facts: Object.freeze(['キャラクター 43人', '1v1闘技場＆チャクラ融合', '11言語対応']),
+      alt: '大筒木イッシキ・大筒木ハゴロモ・うずまきナルトのカード一覧と、七代目火影ナルトのデータブック詳細が並ぶ「忍界ワールドアトラス」のトップ画面。',
+    }),
+    ko: Object.freeze({
+      title: '시노비 월드 아틀라스',
+      kind: '애니메이션 세계 & 전투력 도감',
+      description:
+        '어린이·데이터북 모드로 나루토, 질풍전, 보루토의 닌자 43명을 만나고, 1v1 대결을 펼치며, 5대국 지도와 미수 10마리를 탐험하고 차크라 융합과 중급닌자 시험 퀴즈를 시대별 스포일러 방지와 함께 즐겨 보세요.',
+      facts: Object.freeze(['캐릭터 43명', '1v1 아레나 & 차크라 융합', '11개 언어 지원']),
+      alt: '오오츠츠키 잇시키, 오오츠츠키 하고로모, 우즈마키 나루토의 캐릭터 카드와 7대 호카게 나루토의 데이터북 프로필을 보여주는 시노비 월드 아틀라스 첫 화면.',
+    }),
+    pt: Object.freeze({
+      title: 'Atlas do Mundo Shinobi',
+      kind: 'Atlas anime de mundo e poder',
+      description:
+        'Conheça 43 ninjas de Naruto, Shippuden e Boruto no modo infantil ou databook, duele 1v1, explore o mapa das Cinco Grandes Nações e as 10 Bestas com Cauda, funda naturezas de chakra e faça o quiz Chunin sem spoilers.',
+      facts: Object.freeze(['43 personagens', 'Arena 1v1 e lab de chakra', '11 idiomas']),
+      alt: 'Página inicial do Atlas do Mundo Shinobi com cartões de Isshiki Otsutsuki, Hagoromo Otsutsuki e Naruto Uzumaki ao lado do dossiê do Sétimo Hokage.',
+    }),
+    fr: Object.freeze({
+      title: 'Atlas du Monde Shinobi',
+      kind: 'Atlas anime de monde & puissance',
+      description:
+        'Rencontrez 43 ninjas de Naruto, Shippuden et Boruto en mode enfant ou databook, affrontez-vous en 1v1, explorez la carte des Cinq Grandes Nations et les 10 Bijuu, fusionnez le chakra et passez le quiz Chunin sans spoilers.',
+      facts: Object.freeze(['43 personnages', 'Arène 1v1 & labo chakra', '11 langues']),
+      alt: 'Page d’accueil de l’Atlas du Monde Shinobi montrant les fiches d’Isshiki Otsutsuki, Hagoromo Otsutsuki et Naruto Uzumaki à côté du dossier du Septième Hokage.',
+    }),
+    it: Object.freeze({
+      title: 'Atlante del Mondo Shinobi',
+      kind: 'Atlante anime di mondo e potenza',
+      description:
+        'Incontra 43 ninja di Naruto, Shippuden e Boruto in modalità ragazzi o databook, sfidati in 1v1, esplora la mappa delle Cinque Grandi Nazioni e i 10 Cercoteri, fondi il chakra e affronta il quiz Chunin senza spoiler.',
+      facts: Object.freeze(['43 personaggi', 'Arena 1v1 e lab chakra', '11 lingue']),
+      alt: 'Home page dell’Atlante del Mondo Shinobi con le schede di Isshiki Otsutsuki, Hagoromo Otsutsuki e Naruto Uzumaki accanto al dossier del Settimo Hokage.',
+    }),
+    de: Object.freeze({
+      title: 'Shinobi-Weltatlas',
+      kind: 'Anime-Welt- & Kraft-Atlas',
+      description:
+        'Triff 43 Ninjas aus Naruto, Shippuden und Boruto im Kinder- oder Databook-Modus, tritt 1v1 an, erkunde die Karte der Fünf Großen Nationen und alle 10 Bijuu, kombiniere Chakra-Naturen und löse das Chunin-Quiz – spoilerfrei je Ära.',
+      facts: Object.freeze(['43 Figuren', '1v1-Arena & Chakra-Labor', '11 Sprachen']),
+      alt: 'Startseite des Shinobi-Weltatlas mit Charakterkarten für Isshiki Otsutsuki, Hagoromo Otsutsuki und Naruto Uzumaki neben dem Dossier des Siebten Hokage.',
+    }),
+    ar: Object.freeze({
+      title: 'أطلس عالم الشينوبي',
+      kind: 'أطلس عالم وقوة الأنمي',
+      description:
+        'تعرّف إلى 43 نينجا من ناروتو وشيبودن وبوروتو بوضع الصغار أو الداتابوك، وخض نزالات 1v1، واستكشف خريطة الأمم العظمى الخمس ووحوش البيجو العشرة، وادمج عناصر التشاكرا واختبر نفسك في امتحان التشونين بلا حرق للأحداث.',
+      facts: Object.freeze(['43 شخصية', 'حلبة 1v1 ومختبر تشاكرا', '11 لغة']),
+      alt: 'الصفحة الرئيسية لأطلس عالم الشينوبي تعرض بطاقات إيشيكي أوتسوتسوكي وهاغورومو أوتسوتسوكي وناروتو أوزوماكي بجانب ملف الهوكاغي السابع.',
+    }),
+  }),
 });
 
 /** True only if `code` is one of the allow-listed language codes. */

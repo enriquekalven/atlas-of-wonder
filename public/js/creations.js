@@ -3,7 +3,8 @@
  *
  * Facts below were checked against each live site and local project on 2026-10-23;
  * ChronoVerse 3D, DinoVerse 3D and Human Body 3D Atlas were re-checked, and Dragon Ball 3D Portal,
- * One Piece Grand Line Atlas and PokéVerse 3D were checked, on 2026-11-07.
+ * One Piece Grand Line Atlas and PokéVerse 3D were checked, on 2026-11-07;
+ * Shinobi World Atlas was checked on 2026-11-12.
  * To add a creation: append an entry, drop its image in assets/tiles/,
  * then run `npm test` (it validates every field) and `npm run check:links`.
  *
@@ -183,6 +184,26 @@ export const CREATIONS = Object.freeze([
     image: {
       src: 'assets/tiles/pokeverse-3d-atlas.webp',
       alt: 'PokéVerse 3D home page with Pikachu on a glowing 3D stage next to a grid of Pokémon cards, from Bulbasaur and Charmander to Squirtle and Butterfree.',
+      width: 1200,
+      height: 750,
+    },
+  },
+  {
+    id: 'shinobi-atlas',
+    title: 'Shinobi World Atlas',
+    kind: 'Anime world & power atlas',
+    url: 'https://shinobi-atlas.web.app/',
+    status: 'live',
+    size: 'standard',
+    accent: 'shinobi',
+    section: 'play',
+    description:
+      'Meet 43 ninjas from Naruto, Shippuden and Boruto in kid or databook mode, clash 1v1, tour the Five Great Nations map and 10 Tailed Beasts, fuse chakra natures and take the Chunin quiz, with a spoiler shield by era.',
+    facts: ['43 characters', '1v1 arena & chakra lab', '11 languages'],
+    audiences: ['kids'],
+    image: {
+      src: 'assets/tiles/shinobi-atlas.webp',
+      alt: 'Shinobi World Atlas home page showing character cards for Isshiki Otsutsuki, Hagoromo Otsutsuki and Naruto Uzumaki alongside Seventh Hokage Naruto’s databook dossier.',
       width: 1200,
       height: 750,
     },

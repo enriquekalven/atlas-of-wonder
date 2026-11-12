@@ -48,6 +48,7 @@
   --accent-dragonball: light-dark(#c2410c, #fdba74);
   --accent-onepiece: light-dark(#3949ab, #9fa8f7);
   --accent-pokeverse: light-dark(#7b2cbf, #c9a3f5);
+  --accent-shinobi: light-dark(#b91c1c, #fca5a5);
   --accent: var(--ink);
 }
 
@@ -80,6 +81,7 @@
     --accent-dragonball: #c2410c;
     --accent-onepiece: #3949ab;
     --accent-pokeverse: #7b2cbf;
+    --accent-shinobi: #b91c1c;
   }
 }
 
@@ -94,6 +96,7 @@
 [data-accent="dragonball"] { --accent: var(--accent-dragonball); }
 [data-accent="onepiece"] { --accent: var(--accent-onepiece); }
 [data-accent="pokeverse"] { --accent: var(--accent-pokeverse); }
+[data-accent="shinobi"] { --accent: var(--accent-shinobi); }
 
 /* ---------- base ---------- */
 

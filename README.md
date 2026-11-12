@@ -4,7 +4,7 @@
 
 A tile portal for Enrique Chan's learning projects, live at **https://atlas-of-wonder.web.app**. It's a static site with no build step and no dependencies.
 
-| Tile | Theme | Status (checked 2026-11-07) |
+| Tile | Theme | Status (checked 2026-11-12) |
 |---|---|---|
 | [Cosmic Explorer 3D](https://cosmic-explorer-universe.web.app/) | Explore | Live (feature tile) |
 | [Human Body 3D Atlas](https://human-body-atlas.web.app/) | Explore | Live |
@@ -14,6 +14,7 @@ A tile portal for Enrique Chan's learning projects, live at **https://atlas-of-w
 | [Dragon Ball 3D Portal](https://dragonball-3d-portal.web.app/) | Play | Live |
 | [One Piece Grand Line Atlas](https://onepiece-grand-line-atlas.web.app/) | Play | Live |
 | [PokéVerse 3D](https://pokeverse-3d-atlas.web.app/) | Play | Live |
+| [Shinobi World Atlas](https://shinobi-atlas.web.app/) | Play | Live |
 | [Curious Little Minds](https://curious-little-minds.web.app/) | Grow | Live |
 | [SafeKids Portal](https://safe-kids.web.app/) | Grow | Live |
 | [Prenatal Clinical Atlas](https://prenatal-clinical-atlas.web.app/) | Grow | Live |
