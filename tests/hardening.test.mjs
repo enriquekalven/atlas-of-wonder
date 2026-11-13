@@ -59,6 +59,14 @@ test('other security headers are set', () => {
   assert.match(header('Permissions-Policy'), /camera=\(\).*microphone=\(\).*geolocation=\(\)/);
 });
 
+test('HTML and unhashed JS/CSS revalidate via ETag instead of going stale for an hour', () => {
+  const rules = JSON.parse(read('firebase.json')).hosting.headers;
+  const cacheFor = (source) => rules.find((r) => r.source === source)?.headers.find((h) => h.key === 'Cache-Control')?.value;
+  assert.equal(cacheFor('/'), 'no-cache');
+  assert.equal(cacheFor('**/*.html'), 'no-cache');
+  assert.equal(cacheFor('**/*.@(js|css)'), 'no-cache');
+});
+
 test('index.html has no inline scripts, styles or event handlers', () => {
   for (const [, attrs] of html.matchAll(/<script\b([^>]*)>/g)) assert.match(attrs, /\ssrc="/);
   assert.doesNotMatch(html, /<style\b/);
