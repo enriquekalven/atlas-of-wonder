@@ -4,7 +4,7 @@
  * Facts below were checked against each live site and local project on 2026-10-23;
  * ChronoVerse 3D, DinoVerse 3D and Human Body 3D Atlas were re-checked, and Dragon Ball 3D Portal,
  * One Piece Grand Line Atlas and PokéVerse 3D were checked, on 2026-11-07;
- * Shinobi World Atlas was checked on 2026-11-12.
+ * Shinobi World Atlas and Hominin Atlas were checked on 2026-11-12.
  * To add a creation: append an entry, drop its image in assets/tiles/,
  * then run `npm test` (it validates every field) and `npm run check:links`.
  *
@@ -104,6 +104,26 @@ export const CREATIONS = Object.freeze([
     image: {
       src: 'assets/tiles/dino-portal-3d.webp',
       alt: 'DinoVerse 3D showing a 3D Tyrannosaurus rex with detailed scales and teeth on a glowing turntable.',
+      width: 1200,
+      height: 750,
+    },
+  },
+  {
+    id: 'hominin-atlas',
+    title: 'Hominin Atlas',
+    kind: '3D human evolution & fossils',
+    url: 'https://hominin-atlas.web.app/',
+    status: 'live',
+    size: 'standard',
+    accent: 'hominin',
+    section: 'explore',
+    description:
+      'Explore 21 hominin and hominid species across 7 million years in 3D: compare skeletons, museum fossil scans and lifelike portraits, and scrub 31 real bone injuries as they heal.',
+    facts: ['21 hominin & hominid taxa', '31 fossil bone lesions', '13 languages'],
+    audiences: ['kids', 'students', 'clinicians'],
+    image: {
+      src: 'assets/tiles/hominin-atlas.webp',
+      alt: 'Hominin Atlas home page showing a 3D Neanderthal skeleton with amber injury markers beside a lifelike portrait and a 7-million-year human evolution timeline.',
       width: 1200,
       height: 750,
     },

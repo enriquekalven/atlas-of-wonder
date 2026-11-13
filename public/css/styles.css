@@ -44,6 +44,7 @@
   --accent-safekids: light-dark(#1d7350, #74d3a2);
   --accent-chronoverse: light-dark(#94540f, #f2bd6b);
   --accent-dino: light-dark(#2b6e3f, #82d99b);
+  --accent-hominin: light-dark(#784c20, #efb875);
   --accent-studio: light-dark(#12607a, #6fd2f0);
   --accent-dragonball: light-dark(#c2410c, #fdba74);
   --accent-onepiece: light-dark(#3949ab, #9fa8f7);
@@ -77,6 +78,7 @@
     --accent-safekids: #1d7350;
     --accent-chronoverse: #94540f;
     --accent-dino: #2b6e3f;
+    --accent-hominin: #784c20;
     --accent-studio: #12607a;
     --accent-dragonball: #c2410c;
     --accent-onepiece: #3949ab;
@@ -92,6 +94,7 @@
 [data-accent="safekids"] { --accent: var(--accent-safekids); }
 [data-accent="chronoverse"] { --accent: var(--accent-chronoverse); }
 [data-accent="dino"] { --accent: var(--accent-dino); }
+[data-accent="hominin"] { --accent: var(--accent-hominin); }
 [data-accent="studio"] { --accent: var(--accent-studio); }
 [data-accent="dragonball"] { --accent: var(--accent-dragonball); }
 [data-accent="onepiece"] { --accent: var(--accent-onepiece); }

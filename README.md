@@ -10,6 +10,7 @@ A tile portal for Enrique Chan's learning projects, live at **https://atlas-of-w
 | [Human Body 3D Atlas](https://human-body-atlas.web.app/) | Explore | Live |
 | [ChronoVerse 3D](https://chronoverse-3d.web.app/) | Explore | Live |
 | [DinoVerse 3D](https://dino-portal-3d.web.app/) | Explore | Live |
+| [Hominin Atlas](https://hominin-atlas.web.app/) | Explore | Live |
 | [Inside Out Studio](https://inside-out-explorer.web.app/) | Explore | Live |
 | [Dragon Ball 3D Portal](https://dragonball-3d-portal.web.app/) | Play | Live |
 | [One Piece Grand Line Atlas](https://onepiece-grand-line-atlas.web.app/) | Play | Live |

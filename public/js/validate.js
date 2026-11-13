@@ -20,6 +20,7 @@ export const ACCENTS = Object.freeze([
   'onepiece',
   'pokeverse',
   'shinobi',
+  'hominin',
 ]);
 
 /** Themed sections, in page order. */

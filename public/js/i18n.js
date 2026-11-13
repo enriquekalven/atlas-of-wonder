@@ -1730,6 +1730,89 @@ export const CREATION_TRANSLATIONS = Object.freeze({
       alt: 'الصفحة الرئيسية لأطلس عالم الشينوبي تعرض بطاقات إيشيكي أوتسوتسوكي وهاغورومو أوتسوتسوكي وناروتو أوزوماكي بجانب ملف الهوكاغي السابع.',
     }),
   }),
+
+  'hominin-atlas': Object.freeze({
+    es: Object.freeze({
+      title: 'Atlas de Homínidos',
+      kind: 'Evolución humana y fósiles 3D',
+      description:
+        'Explora 21 especies de homininos y homínidos a lo largo de 7 millones de años en 3D: compara esqueletos, escaneos fósiles y retratos realistas, y recorre la curación de 31 lesiones óseas.',
+      facts: Object.freeze(['21 taxones homínidos', '31 lesiones óseas fósiles', '13 idiomas']),
+      alt: 'Inicio de Atlas de Homínidos mostrando un esqueleto 3D de neandertal con marcadores ámbar de lesiones junto a un retrato realista y una línea temporal de 7 millones de años.',
+    }),
+    zh: Object.freeze({
+      title: '古人类骨骼图谱',
+      kind: '3D 人类演化与古病理图鉴',
+      description:
+        '以 3D 探索横跨 700 万年的 21 个人族与人科物种：对比骨骼、博物馆化石扫描与写实复原像，并滑动查看 31 处真实化石骨伤的愈合过程。',
+      facts: Object.freeze(['21 个古人类类群', '31 处化石骨伤病理', '支持 13 种语言']),
+      alt: '古人类骨骼图谱首页：带有琥珀色伤病标记的 3D 尼安德特人骨骼，旁配写实复原肖像与 700 万年人类演化时间轴。',
+    }),
+    yue: Object.freeze({
+      title: '古人類骨骼圖譜',
+      kind: '3D 人類演化與古病理圖鑑',
+      description:
+        '用 3D 探索橫跨 700 萬年嘅 21 個人族同人科物種：對比骨骼、博物館化石掃描同寫實復原像，仲可以拉動時間軸觀察 31 處真實化石骨傷嘅癒合過程。',
+      facts: Object.freeze(['21 個古人類類群', '31 處化石骨傷病理', '支援 13 種語言']),
+      alt: '古人類骨骼圖譜首頁：帶有琥珀色傷患標記嘅 3D 尼安德特人骨骼，旁邊配有寫實復原肖像同 700 萬年人類演化時間軸。',
+    }),
+    ja: Object.freeze({
+      title: 'ホミニン骨格アトラス',
+      kind: '3D 人類進化・古病理図鑑',
+      description:
+        '700万年にわたる21種の人類・大型類人猿を3Dで探求。骨格・博物館の化石スキャン・リアルな復元像を比較し、31例の化石骨損傷が治癒する過程をたどれます。',
+      facts: Object.freeze(['人類系統 21分類群', '化石の骨病変 31例', '13言語対応']),
+      alt: '「ホミニン骨格アトラス」のホーム画面：琥珀色の損傷マーカーが付いたネアンデルタール人の3D骨格と復元ポートレート、700万年の人類進化タイムライン。',
+    }),
+    ko: Object.freeze({
+      title: '호미닌 골격 아틀라스',
+      kind: '3D 인류 진화 & 화석 도감',
+      description:
+        '700만 년에 걸친 호미닌·호미니드 21종을 3D로 탐험하세요. 골격과 박물관 화석 스캔, 생생한 복원 초상화를 비교하고 31건의 실제 화석 골절 치유 과정을 따라가 볼 수 있습니다.',
+      facts: Object.freeze(['고인류 21개 분류군', '화석 골병변 31건', '13개 언어 지원']),
+      alt: '호박색 부상 마커가 표시된 3D 네안데르탈인 골격과 생생한 복원 초상화, 700만 년 인류 진화 연대표를 보여주는 호미닌 골격 아틀라스 홈 화면.',
+    }),
+    pt: Object.freeze({
+      title: 'Atlas dos Hominíneos',
+      kind: 'Evolução humana e fósseis 3D',
+      description:
+        'Explore 21 espécies de hominíneos e hominídeos ao longo de 7 milhões de anos em 3D: compare esqueletos, fósseis de museu e retratos realistas, e acompanhe a cicatrização de 31 lesões ósseas.',
+      facts: Object.freeze(['21 táxons hominídeos', '31 lesões ósseas fósseis', '13 idiomas']),
+      alt: 'Página inicial do Atlas dos Hominíneos mostrando um esqueleto 3D de Neandertal com marcadores âmbar de lesões ao lado de um retrato realista e uma linha do tempo de 7 milhões de anos.',
+    }),
+    fr: Object.freeze({
+      title: 'Atlas des Hominines',
+      kind: 'Évolution humaine & fossiles 3D',
+      description:
+        'Explorez 21 espèces d’hominines et d’hominidés sur 7 millions d’années en 3D : comparez squelettes, scans de fossiles et portraits réalistes, et suivez la guérison de 31 lésions osseuses.',
+      facts: Object.freeze(['21 taxons d’hominidés', '31 lésions osseuses', '13 langues']),
+      alt: 'Page d’accueil de l’Atlas des Hominines montrant un squelette 3D de Néandertalien avec des repères ambrés de blessures à côté d’un portrait réaliste et d’une frise de 7 millions d’années.',
+    }),
+    it: Object.freeze({
+      title: 'Atlante degli Ominini',
+      kind: 'Evoluzione umana e fossili 3D',
+      description:
+        'Esplora 21 specie di ominini e ominidi lungo 7 milioni di anni in 3D: confronta scheletri, scansioni fossili e ritratti realistici, e segui la guarigione di 31 lesioni ossee.',
+      facts: Object.freeze(['21 taxa di ominidi', '31 lesioni ossee fossili', '13 lingue']),
+      alt: 'Home page dell’Atlante degli Ominini con uno scheletro 3D di Neanderthal con indicatori ambrati delle lesioni accanto a un ritratto realistico e a una linea del tempo di 7 milioni di anni.',
+    }),
+    de: Object.freeze({
+      title: 'Hominin Atlas',
+      kind: '3D-Menschenevolution & Fossilien',
+      description:
+        'Erkunde 21 Homininen- und Hominidenarten aus 7 Millionen Jahren in 3D: vergleiche Skelette, Museums-Fossilscans und lebensechte Porträts und verfolge die Heilung von 31 Knochenverletzungen.',
+      facts: Object.freeze(['21 Hominiden-Taxa', '31 fossile Knochenläsionen', '13 Sprachen']),
+      alt: 'Startseite des Hominin Atlas mit einem 3D-Neandertalerskelett samt bernsteinfarbenen Verletzungsmarkern neben einem lebensechten Porträt und einer 7-Millionen-Jahre-Zeitleiste.',
+    }),
+    ar: Object.freeze({
+      title: 'أطلس أشباه البشر',
+      kind: 'تطور الإنسان والأحافير 3D',
+      description:
+        'استكشف 21 نوعاً من أشباه البشر والقردة العليا عبر 7 ملايين سنة بتقنية ثلاثية الأبعاد: قارن الهياكل العظمية ومسوحات المتاحف والصور الواقعية، وتتبّع التئام 31 إصابة عظمية.',
+      facts: Object.freeze(['21 صنفاً من أشباه البشر', '31 إصابة عظمية أحفورية', '13 لغة']),
+      alt: 'الصفحة الرئيسية لأطلس أشباه البشر تعرض هيكلاً عظمياً ثلاثي الأبعاد لإنسان نياندرتال مع علامات إصابات كهرمانية بجانب صورة واقعية وخط زمني يمتد 7 ملايين سنة.',
+    }),
+  }),
 });
 
 /** True only if `code` is one of the allow-listed language codes. */
