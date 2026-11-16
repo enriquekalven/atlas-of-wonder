@@ -25,6 +25,7 @@ import {
   resolveLanguage,
 } from './i18n.js';
 import { SECTIONS, validateCreation } from './validate.js';
+import { SEASON_THEME_COLORS, initSeasonalExperience } from './seasons.js';
 
 const KEYS = Object.freeze({ theme: 'aow-theme', visited: 'aow-visited', lang: 'aow-lang' });
 const THEME_COLORS = Object.freeze({ day: '#f5f0e6', night: '#0c121d' });
@@ -54,6 +55,7 @@ let currentAudience = ALL;
 let currentLang = DEFAULT_LANG;
 let currentSection = null;
 let sectionObserver = null;
+let seasonalController = null;
 
 function t() {
   return UI_STRINGS[currentLang] ?? UI_STRINGS[DEFAULT_LANG];
@@ -442,6 +444,7 @@ function applyLanguage(code, { fromUser }) {
   applyAudience(currentAudience, { fromUser: false });
   syncStamps();
   renderPassport();
+  seasonalController?.setLanguage(currentLang);
   if (!fromUser) return;
   if (currentLang !== prevLang) {
     trackLanguageSwitch({ toLanguage: currentLang, fromLanguage: prevLang });
@@ -464,7 +467,10 @@ function effectiveTheme() {
 function paintTheme() {
   const theme = effectiveTheme();
   $('theme-toggle').setAttribute('aria-pressed', String(theme === 'night'));
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', THEME_COLORS[theme]);
+  const activeSeason = document.documentElement.dataset.season;
+  const seasonColors = activeSeason ? SEASON_THEME_COLORS[activeSeason] : null;
+  const metaColor = seasonColors ? seasonColors[theme] : THEME_COLORS[theme];
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', metaColor);
 }
 
 function toggleTheme() {
@@ -510,6 +516,10 @@ function init() {
   });
   currentAudience = new URLSearchParams(window.location.search).get('for') ?? ALL;
   visited = readVisited();
+  seasonalController = initSeasonalExperience({
+    getLanguage: () => currentLang,
+    onSeasonPainted: () => paintTheme(),
+  });
   renderLangSwitch();
   applyLanguage(currentLang, { fromUser: false });
   scrollToHashSection();

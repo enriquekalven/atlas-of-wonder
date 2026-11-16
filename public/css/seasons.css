@@ -1,0 +1,623 @@
+/* Atlas of Wonder — Seasonal & Global Holiday Theme Engine
+   Strict CSP compliant: zero inline styles, light-dark() tokens for Day & Night,
+   logical properties for full RTL (Arabic) compatibility, and reduced-motion safe. */
+
+:root {
+  --season-accent: light-dark(#b45309, #f59e0b);
+  --season-soft: light-dark(rgb(180 83 9 / 0.1), rgb(245 158 11 / 0.16));
+  --season-border: light-dark(rgb(180 83 9 / 0.34), rgb(245 158 11 / 0.42));
+  --season-on-accent: light-dark(#ffffff, #140d08);
+  --season-glow: light-dark(rgb(180 83 9 / 0.08), rgb(245 158 11 / 0.12));
+}
+
+/* ---------- 1. SPRING BLOSSOM ---------- */
+:root[data-season="spring"] {
+  --bg: light-dark(#fbf5f8, #0c1312);
+  --surface: light-dark(#fffbfd, #131e1d);
+  --surface-sunk: light-dark(#f4e8ee, #0f1817);
+  --rule: light-dark(#e5d1dc, #243634);
+  --rule-strong: light-dark(#cfaebe, #38524e);
+  --gold: light-dark(#be185d, #f472b6);
+  --season-accent: light-dark(#be185d, #f472b6);
+  --season-soft: light-dark(rgb(190 24 93 / 0.1), rgb(244 114 182 / 0.16));
+  --season-border: light-dark(rgb(190 24 93 / 0.34), rgb(244 114 182 / 0.44));
+  --season-on-accent: light-dark(#ffffff, #1a0711);
+  --season-glow: light-dark(rgb(219 39 119 / 0.08), rgb(244 114 182 / 0.12));
+}
+
+/* ---------- 2. GOLDEN SUMMER ---------- */
+:root[data-season="summer"] {
+  --bg: light-dark(#fcf8ec, #08141b);
+  --surface: light-dark(#fffef9, #10202b);
+  --surface-sunk: light-dark(#f3ebd6, #0b1821);
+  --rule: light-dark(#dfd3b7, #203746);
+  --rule-strong: light-dark(#c8b790, #345266);
+  --gold: light-dark(#0f766e, #2dd4bf);
+  --season-accent: light-dark(#0f766e, #2dd4bf);
+  --season-soft: light-dark(rgb(15 118 110 / 0.1), rgb(45 212 191 / 0.16));
+  --season-border: light-dark(rgb(15 118 110 / 0.34), rgb(45 212 191 / 0.44));
+  --season-on-accent: light-dark(#ffffff, #041b18);
+  --season-glow: light-dark(rgb(217 119 6 / 0.08), rgb(45 212 191 / 0.12));
+}
+
+/* ---------- 3. CRISP AUTUMN + THANKSGIVING + INDIGENOUS PEOPLES ---------- */
+:root[data-season="fall"],
+:root[data-season="thanksgiving"],
+:root[data-season="indigenous-peoples-day"] {
+  --bg: light-dark(#fbf3e6, #140d09);
+  --surface: light-dark(#fffaf2, #1f150f);
+  --surface-sunk: light-dark(#f2e4cf, #18100b);
+  --ink: light-dark(#28160b, #f5ebe0);
+  --ink-muted: light-dark(#634634, #bfa896);
+  --rule: light-dark(#e2cdb2, #362419);
+  --rule-strong: light-dark(#c9ab88, #523727);
+  --gold: light-dark(#b45309, #f59e0b);
+  --season-accent: light-dark(#b45309, #f59e0b);
+  --season-soft: light-dark(rgb(180 83 9 / 0.11), rgb(245 158 11 / 0.17));
+  --season-border: light-dark(rgb(180 83 9 / 0.36), rgb(245 158 11 / 0.45));
+  --season-on-accent: light-dark(#ffffff, #1a0d04);
+  --season-glow: light-dark(rgb(194 65 12 / 0.09), rgb(234 88 12 / 0.14));
+}
+
+/* ---------- 4. WINTER WONDERLAND ---------- */
+:root[data-season="winter"] {
+  --bg: light-dark(#f2f7fc, #080f1c);
+  --surface: light-dark(#fbfdff, #101b2e);
+  --surface-sunk: light-dark(#e4eef8, #0b1424);
+  --rule: light-dark(#cddceb, #21324d);
+  --rule-strong: light-dark(#adc3da, #354d73);
+  --gold: light-dark(#0369a1, #7dd3fc);
+  --season-accent: light-dark(#0369a1, #7dd3fc);
+  --season-soft: light-dark(rgb(3 105 161 / 0.1), rgb(125 211 252 / 0.16));
+  --season-border: light-dark(rgb(3 105 161 / 0.34), rgb(125 211 252 / 0.44));
+  --season-on-accent: light-dark(#ffffff, #061523);
+  --season-glow: light-dark(rgb(3 105 161 / 0.08), rgb(125 211 252 / 0.13));
+}
+
+/* ---------- 5. LUNAR / CHINESE NEW YEAR & MID-AUTUMN ---------- */
+:root[data-season="lunar-new-year"],
+:root[data-season="mid-autumn"] {
+  --bg: light-dark(#fff6ec, #170809);
+  --surface: light-dark(#fffcf7, #240e10);
+  --surface-sunk: light-dark(#fae8d4, #1b0a0c);
+  --ink: light-dark(#2b0d0f, #fbf0e4);
+  --ink-muted: light-dark(#6b3033, #cfb0a5);
+  --rule: light-dark(#e8c7b5, #3d1a1d);
+  --rule-strong: light-dark(#d4a088, #5c282c);
+  --gold: light-dark(#b91c1c, #fbbf24);
+  --season-accent: light-dark(#b91c1c, #fbbf24);
+  --season-soft: light-dark(rgb(185 28 28 / 0.1), rgb(251 191 36 / 0.17));
+  --season-border: light-dark(rgb(185 28 28 / 0.36), rgb(251 191 36 / 0.46));
+  --season-on-accent: light-dark(#ffffff, #1f0a06);
+  --season-glow: light-dark(rgb(220 38 38 / 0.09), rgb(239 68 68 / 0.15));
+}
+:root[data-season="mid-autumn"] {
+  --bg: light-dark(#fcf6ea, #0f0d1e);
+  --surface: light-dark(#fffdf7, #181530);
+  --surface-sunk: light-dark(#f2e6cf, #121025);
+  --rule: light-dark(#dfd0b2, #2c2752);
+  --rule-strong: light-dark(#c7b086, #453e78);
+}
+
+/* ---------- 6. HOLI · FESTIVAL OF COLORS ---------- */
+:root[data-season="holi"] {
+  --bg: light-dark(#fcf5ff, #12091d);
+  --surface: light-dark(#fffbff, #1c102e);
+  --surface-sunk: light-dark(#f4e6fb, #160c24);
+  --rule: light-dark(#e2c9ee, #332052);
+  --rule-strong: light-dark(#caa4de, #4e327a);
+  --gold: light-dark(#be185d, #f472b6);
+  --season-accent: light-dark(#be185d, #f472b6);
+  --season-soft: light-dark(rgb(190 24 93 / 0.11), rgb(244 114 182 / 0.17));
+  --season-border: light-dark(rgb(190 24 93 / 0.36), rgb(244 114 182 / 0.46));
+  --season-on-accent: light-dark(#ffffff, #1d0614);
+  --season-glow: light-dark(rgb(190 24 93 / 0.09), rgb(34 211 238 / 0.14));
+}
+
+/* ---------- 7. DIWALI · FESTIVAL OF LIGHTS ---------- */
+:root[data-season="diwali"] {
+  --bg: light-dark(#fff8ec, #140a20);
+  --surface: light-dark(#fffdf7, #201133);
+  --surface-sunk: light-dark(#f8ead2, #180c27);
+  --rule: light-dark(#e6cfa8, #382057);
+  --rule-strong: light-dark(#cfb07c, #553282);
+  --gold: light-dark(#b45309, #fbbf24);
+  --season-accent: light-dark(#b45309, #fbbf24);
+  --season-soft: light-dark(rgb(180 83 9 / 0.11), rgb(251 191 36 / 0.17));
+  --season-border: light-dark(rgb(180 83 9 / 0.36), rgb(251 191 36 / 0.46));
+  --season-on-accent: light-dark(#ffffff, #1d0f04);
+  --season-glow: light-dark(rgb(217 119 6 / 0.1), rgb(251 191 36 / 0.15));
+}
+
+/* ---------- 8. HALLOWEEN ---------- */
+:root[data-season="halloween"] {
+  --bg: light-dark(#faf3eb, #0e0816);
+  --surface: light-dark(#fffaf4, #180f26);
+  --surface-sunk: light-dark(#f1e4d4, #120b1d);
+  --rule: light-dark(#dfd0be, #301f4a);
+  --rule-strong: light-dark(#c7b097, #4b3173);
+  --gold: light-dark(#c2410c, #fb923c);
+  --season-accent: light-dark(#c2410c, #fb923c);
+  --season-soft: light-dark(rgb(194 65 12 / 0.11), rgb(251 146 60 / 0.17));
+  --season-border: light-dark(rgb(194 65 12 / 0.36), rgb(251 146 60 / 0.46));
+  --season-on-accent: light-dark(#ffffff, #1c0b04);
+  --season-glow: light-dark(rgb(194 65 12 / 0.09), rgb(168 85 247 / 0.15));
+}
+
+/* ---------- 9. CHRISTMAS & YULETIDE ---------- */
+:root[data-season="christmas"] {
+  --bg: light-dark(#f4faf6, #07140f);
+  --surface: light-dark(#fcfffd, #0f221a);
+  --surface-sunk: light-dark(#e5f2e9, #0a1913);
+  --rule: light-dark(#cce0d2, #1f3d30);
+  --rule-strong: light-dark(#abcab5, #315e4a);
+  --gold: light-dark(#047857, #34d399);
+  --season-accent: light-dark(#b91c1c, #34d399);
+  --season-soft: light-dark(rgb(185 28 28 / 0.1), rgb(52 211 153 / 0.16));
+  --season-border: light-dark(rgb(185 28 28 / 0.34), rgb(52 211 153 / 0.44));
+  --season-on-accent: light-dark(#ffffff, #041b12);
+  --season-glow: light-dark(rgb(4 120 87 / 0.08), rgb(16 185 129 / 0.14));
+}
+
+/* ---------- 10. NEW YEAR'S + MLK + LABOR + FATHER'S ---------- */
+:root[data-season="new-year"],
+:root[data-season="mlk-day"],
+:root[data-season="labor-day"],
+:root[data-season="fathers-day"] {
+  --bg: light-dark(#faf8f0, #090c16);
+  --surface: light-dark(#fffef9, #121729);
+  --surface-sunk: light-dark(#f0ebdc, #0d111f);
+  --rule: light-dark(#ded6c1, #252e4d);
+  --rule-strong: light-dark(#c6ba9c, #3b4975);
+  --gold: light-dark(#a16207, #fbbf24);
+  --season-accent: light-dark(#a16207, #fbbf24);
+  --season-soft: light-dark(rgb(161 98 7 / 0.1), rgb(251 191 36 / 0.16));
+  --season-border: light-dark(rgb(161 98 7 / 0.34), rgb(251 191 36 / 0.44));
+  --season-on-accent: light-dark(#ffffff, #191104);
+}
+
+/* ---------- 11. USA CIVIC & PATRIOTIC HOLIDAYS ---------- */
+:root[data-season="independence-day"],
+:root[data-season="memorial-day"],
+:root[data-season="veterans-day"],
+:root[data-season="presidents-day"] {
+  --bg: light-dark(#f5f8fc, #080f1d);
+  --surface: light-dark(#ffffff, #101b30);
+  --surface-sunk: light-dark(#e8eef7, #0b1425);
+  --rule: light-dark(#d0dceb, #223354);
+  --rule-strong: light-dark(#b0c3dc, #365080);
+  --gold: light-dark(#1d4ed8, #60a5fa);
+  --season-accent: light-dark(#1d4ed8, #60a5fa);
+  --season-soft: light-dark(rgb(29 78 216 / 0.1), rgb(96 165 250 / 0.16));
+  --season-border: light-dark(rgb(29 78 216 / 0.34), rgb(96 165 250 / 0.44));
+  --season-on-accent: light-dark(#ffffff, #061226);
+}
+
+/* ---------- 12. JUNETEENTH ---------- */
+:root[data-season="juneteenth"] {
+  --bg: light-dark(#fcf8f0, #130b0a);
+  --surface: light-dark(#fffdf9, #1f1412);
+  --surface-sunk: light-dark(#f3eadb, #170f0d);
+  --rule: light-dark(#e0d2bc, #382420);
+  --rule-strong: light-dark(#c7b293, #543630);
+  --gold: light-dark(#b91c1c, #fbbf24);
+  --season-accent: light-dark(#b91c1c, #fbbf24);
+  --season-soft: light-dark(rgb(185 28 28 / 0.1), rgb(251 191 36 / 0.16));
+  --season-border: light-dark(rgb(185 28 28 / 0.34), rgb(251 191 36 / 0.44));
+  --season-on-accent: light-dark(#ffffff, #1c1004);
+}
+
+/* ---------- 13. VALENTINE'S + MOTHER'S DAY + EASTER ---------- */
+:root[data-season="valentines"],
+:root[data-season="mothers-day"],
+:root[data-season="easter"] {
+  --bg: light-dark(#fdf5f8, #140911);
+  --surface: light-dark(#fffbfd, #21101d);
+  --surface-sunk: light-dark(#f7e6ee, #190c16);
+  --rule: light-dark(#e6cbd8, #3b1e33);
+  --rule-strong: light-dark(#cfa6ba, #592e4d);
+  --gold: light-dark(#be123c, #fb7185);
+  --season-accent: light-dark(#be123c, #fb7185);
+  --season-soft: light-dark(rgb(190 18 60 / 0.1), rgb(251 113 133 / 0.16));
+  --season-border: light-dark(rgb(190 18 60 / 0.34), rgb(251 113 133 / 0.44));
+  --season-on-accent: light-dark(#ffffff, #21060c);
+}
+
+/* ---------- 14. ST. PATRICK'S DAY ---------- */
+:root[data-season="st-patricks"] {
+  --bg: light-dark(#f2fbf6, #06150e);
+  --surface: light-dark(#fbfffd, #0d2419);
+  --surface-sunk: light-dark(#e2f3ea, #091b12);
+  --rule: light-dark(#c7e3d4, #1d4230);
+  --rule-strong: light-dark(#a3cfb8, #2e664b);
+  --gold: light-dark(#047857, #34d399);
+  --season-accent: light-dark(#047857, #34d399);
+  --season-soft: light-dark(rgb(4 120 87 / 0.1), rgb(52 211 153 / 0.16));
+  --season-border: light-dark(rgb(4 120 87 / 0.34), rgb(52 211 153 / 0.44));
+  --season-on-accent: light-dark(#ffffff, #041c12);
+}
+
+/* Fallback for browsers without light-dark() */
+@supports not (color: light-dark(#000, #fff)) {
+  :root {
+    --season-accent: #b45309;
+    --season-soft: rgb(180 83 9 / 0.1);
+    --season-border: rgb(180 83 9 / 0.34);
+    --season-on-accent: #ffffff;
+    --season-glow: rgb(180 83 9 / 0.08);
+  }
+}
+
+/* ---------- Ambient Canvas ---------- */
+
+.season-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.season-canvas[data-calm="true"] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .season-canvas {
+    display: none;
+  }
+}
+
+/* ---------- Topbar Season & Holiday Picker ---------- */
+
+.season-picker {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+html:not(.js) .season-picker,
+html:not(.js) .season-ribbon,
+html:not(.js) .season-canvas {
+  display: none;
+}
+
+.season-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 40px;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--season-border);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.season-trigger[aria-expanded="true"] {
+  border-color: var(--season-accent);
+  background: var(--season-soft);
+}
+
+.season-trigger__caret {
+  font-size: 0.75rem;
+  opacity: 0.75;
+  transition: transform 0.2s ease;
+}
+
+.season-trigger[aria-expanded="true"] .season-trigger__caret {
+  transform: rotate(180deg);
+}
+
+.season-popover {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  inset-inline-end: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: min(22.5rem, calc(100vw - 2rem));
+  padding: var(--space-4);
+  border: 1px solid var(--season-border);
+  border-radius: var(--radius-tile);
+  background: var(--surface);
+  box-shadow: 0 20px 48px var(--shadow-color);
+}
+
+.season-auto-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-small);
+  background: var(--surface-sunk);
+  color: var(--ink);
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+.season-auto-btn[aria-pressed="true"] {
+  border-color: var(--season-accent);
+  background: var(--season-soft);
+}
+
+.season-auto-btn__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.season-auto-btn__badge {
+  padding: 0.1em 0.55em;
+  border: 1px solid var(--season-border);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--season-accent);
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.season-auto-btn__sub {
+  color: var(--ink-muted);
+  font-size: 0.75rem;
+}
+
+.season-heading {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.season-grid-seasons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-1);
+}
+
+.season-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 52px;
+  padding: var(--space-1);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-small);
+  background: var(--surface-sunk);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.season-chip[aria-pressed="true"] {
+  border-color: var(--season-accent);
+  background: var(--season-soft);
+  color: var(--season-accent);
+}
+
+.season-chip__emoji {
+  font-size: 1.05rem;
+  line-height: 1.1;
+}
+
+.season-grid-holidays {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-1);
+  max-height: 13.5rem;
+  overflow-y: auto;
+  padding-inline-end: 2px;
+}
+
+.season-holiday {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+  min-height: 40px;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-small);
+  background: var(--surface-sunk);
+  color: var(--ink);
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+.season-holiday[aria-pressed="true"] {
+  border-color: var(--season-accent);
+  background: var(--season-soft);
+}
+
+.season-holiday__emoji {
+  flex: none;
+  font-size: 1rem;
+}
+
+.season-holiday__meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.season-holiday__name {
+  overflow: hidden;
+  font-size: 0.75rem;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.season-holiday__date {
+  overflow: hidden;
+  color: var(--ink-muted);
+  font-size: 0.6875rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.season-popover__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--rule);
+}
+
+.season-calm-btn {
+  min-height: 34px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--ink-muted);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.season-celebrate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  min-height: 34px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--season-accent);
+  border-radius: var(--radius-pill);
+  background: var(--season-accent);
+  color: var(--season-on-accent);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ---------- Masthead Festive Greeting Ribbon ---------- */
+
+.season-ribbon {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  max-width: 100%;
+  margin-bottom: var(--space-4);
+  padding: 0.35rem 0.65rem 0.35rem 0.45rem;
+  border: 1px solid var(--season-border);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  box-shadow: 0 8px 24px var(--season-glow);
+}
+
+.season-ribbon__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.2em 0.65em;
+  border: 1px solid var(--season-border);
+  border-radius: var(--radius-pill);
+  background: var(--season-soft);
+  color: var(--season-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.season-ribbon__text {
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 550;
+}
+
+.season-ribbon__actions {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.season-ribbon__celebrate {
+  min-height: 30px;
+  padding: 0 0.75rem;
+  border: 1px solid var(--season-accent);
+  border-radius: var(--radius-pill);
+  background: var(--season-accent);
+  color: var(--season-on-accent);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.season-ribbon__cycle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--season-border);
+  border-radius: 50%;
+  background: var(--season-soft);
+  color: var(--season-accent);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Focus rings matching Atlas of Wonder accessibility standards */
+.season-trigger:focus-visible,
+.season-auto-btn:focus-visible,
+.season-chip:focus-visible,
+.season-holiday:focus-visible,
+.season-calm-btn:focus-visible,
+.season-celebrate-btn:focus-visible,
+.season-ribbon__celebrate:focus-visible,
+.season-ribbon__cycle:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .season-trigger:hover,
+  .season-auto-btn:hover,
+  .season-chip:hover,
+  .season-holiday:hover,
+  .season-calm-btn:hover {
+    border-color: var(--season-accent);
+  }
+}
+
+@media (max-width: 36rem) {
+  .season-trigger__label {
+    display: none;
+  }
+  .season-trigger {
+    padding: 0 var(--space-3);
+  }
+  .season-ribbon {
+    border-radius: var(--radius-tile);
+  }
+}
