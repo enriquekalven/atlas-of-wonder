@@ -1586,7 +1586,7 @@ export function initSeasonalExperience({ getLanguage, onSeasonPainted }) {
     renderRibbon();
     renderPicker();
     setupCanvas();
-    onSeasonPainted?.(resolved);
+    onSeasonPainted?.(resolved, selection);
 
     if (!fromUser) return;
     writeLocal(SEASON_STORAGE_KEY, selection);

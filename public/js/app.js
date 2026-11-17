@@ -209,7 +209,24 @@ function renderTiles() {
     ? sectionIds.map(renderSection)
     : [el('p', { className: 'empty', text: t().emptyWorlds })];
   $('worlds').replaceChildren(...items);
+  syncTileSeasonLinks();
   observeSections();
+}
+
+function syncTileSeasonLinks(selectionOverride) {
+  const chosenSeason =
+    selectionOverride ??
+    new URLSearchParams(window.location.search).get('season') ??
+    readStore('aow-season');
+  for (const [id, tile] of tiles) {
+    const link = tile.querySelector('.tile__link');
+    const base = creationById.get(id)?.url;
+    if (!link || !base) continue;
+    const url = new URL(base);
+    if (chosenSeason && chosenSeason !== 'auto') url.searchParams.set('season', chosenSeason);
+    else url.searchParams.delete('season');
+    link.setAttribute('href', url.toString());
+  }
 }
 
 // ---------- section jump bar + scroll-spy ----------
@@ -518,7 +535,10 @@ function init() {
   visited = readVisited();
   seasonalController = initSeasonalExperience({
     getLanguage: () => currentLang,
-    onSeasonPainted: () => paintTheme(),
+    onSeasonPainted: (_resolved, selection) => {
+      paintTheme();
+      syncTileSeasonLinks(selection);
+    },
   });
   renderLangSwitch();
   applyLanguage(currentLang, { fromUser: false });
